@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <?php include('../../templates/head.php'); ?>
-        <link rel="stylesheet" href="/mining/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
+        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Vayamos NFT</title>
     </head>
     <body class="body-background">
