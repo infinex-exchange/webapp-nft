@@ -11,6 +11,10 @@
     <ul class="navbar-nav mx-auto text-center">
         <?php include(__DIR__.'/menu_inner.html'); ?>
     </ul>
+    
+    <ul class="navbar-nav mx-auto text-center">
+        <?php include(__DIR__.'/menu_inner_right.html'); ?>
+    </ul>
 </nav>
 
 <div style="height: 53px; margin-bottom: min(10px, env(safe-area-inset-bottom, 0));" class="d-block d-lg-none"></div>
