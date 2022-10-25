@@ -1,0 +1,25 @@
+/* Jumbotron background */
+
+@media (min-width: 992px) {
+    .jumbotron {
+        background-image: url("/nft/img/nft_jumbotron.png");
+        background-position: bottom right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Navbar */
+
+.navbar-nft {
+    background-color: var(--color-input) !important;
+    z-index: 999 !important;
+}
+
+.navbar-mobile .nav-separ {
+    display: none !important;
+}
+
+.navbar-nft br {
+    display: none !important;
+}

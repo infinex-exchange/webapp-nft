@@ -1,0 +1,5 @@
+Options -MultiViews -Indexes
+
+RewriteEngine on
+
+RewriteRule ^wallet/?$ wallet.php [L]
