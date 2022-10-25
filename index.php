@@ -30,7 +30,7 @@
                 <div class="col-12 plan-item" data-planid="${planid}">
         	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
-        	                <div class="col-12 pt-2 pb-4">
+        	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Trending collections</h3>
         		            </div>
         		            <div class="col-12 col-lg-6">
@@ -45,7 +45,7 @@
                 <div class="col-12 plan-item" data-planid="${planid}">
         	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
-        	                <div class="col-12 pt-2 pb-4">
+        	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Trending collections</h3>
         		            </div>
         		            <div class="col-12 col-lg-6">
@@ -60,7 +60,7 @@
                 <div class="col-12 plan-item" data-planid="${planid}">
         	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
-        	                <div class="col-12 pt-2 pb-4">
+        	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Trending collections</h3>
         		            </div>
         		            <div class="col-12 col-lg-6">
@@ -75,7 +75,7 @@
                 <div class="col-12 plan-item" data-planid="${planid}">
         	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
-        	                <div class="col-12 pt-2 pb-4">
+        	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Trending collections</h3>
         		            </div>
         		            <div class="col-12 col-lg-6">
