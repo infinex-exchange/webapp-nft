@@ -97,7 +97,7 @@
         </div>
         
         <?php include('../../templates/modals.php'); ?>
-        <script src="/mining/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
+        <script src="/nft/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
         <!-- Footer -->
         <?php include('../../templates/footer.html'); ?>
