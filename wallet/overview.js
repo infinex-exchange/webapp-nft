@@ -43,8 +43,8 @@ $(document).on('authChecked', function() {
 										<div class="card-body">
 											<h5 class="card-title">${nft.name}</h5>
 											<span class="small secondary">
-											    <img src="${data.networks[nft.netid].icon_url}" width="16" height="16">
-											    ${data.networks[nft.netid].description}
+											    <img src="${data.networks[nft.network].icon_url}" width="16" height="16">
+											    ${data.networks[nft.network].description}
 											</span>
 									    </div>
 									</div>
