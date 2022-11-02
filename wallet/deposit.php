@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../templates/head.php'); ?>
-        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../js/ajax_scroll.js'); ?>"></script>
-        <?php include('../imports/qrcode.html'); ?>
-        <title>Deposit | Vayamos Exchange</title>
+        <?php include('../../../templates/head.php'); ?>
+        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
+        <?php include('../../../imports/qrcode.html'); ?>
+        <title>Deposit | Vayamos NFT</title>
     </head>
     <body>
     
         <!-- Preloader -->
-        <?php include('../templates/preloader.html'); ?>
+        <?php include('../../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../templates/navbar.php'); ?>
+        <?php include('../../../templates/navbar.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 p-0 user-only">
@@ -27,27 +27,16 @@
             
             <div class="row py-2">
                 <div class="col-12">
-                    <h3>&#9312 Select coin to deposit:</h3>
+                    <h3>&#9312 Select deposit network:</h3>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <?php include('../templates/select_coin.php'); ?>
+                    <?php include('../../../templates/select_net.php'); ?>
                 </div>
             </div>
             
             <div id="deposit-step2" style="display: none">
                 <div class="row py-2">
-                    <div class="col-12">
-                        <h3>&#9313 Select deposit network:</h3>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <?php include('../templates/select_net.php'); ?>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="deposit-step3" style="display: none">
-                <div class="row py-2">
-                    <h3>&#9314 Complete deposit:</h3>
+                    <h3>&#9313 Complete deposit:</h3>
                 </div>
                 
                 <div class="row">
@@ -63,12 +52,15 @@
                         </div>
                     </div>
                     
-                    <div id="deposit-warning" class="col-12">
+                    <div class="col-12">
                         <div class="alert alert-warning d-flex align-items-center my-2" role="alert">
                             <div class="px-2">
                                 <i class="fa-solid fa-triangle-exclamation fa-2x"></i>
                             </div>
-                            <div class="px-2" id="deposit-warning-content">
+                            <div class="px-2">
+                                Use this address only for NFT deposits.
+                                <br>
+                                Any cryptocurrencies sent to this address will be lost.
                             </div>
                         </div>
                     </div>
