@@ -3,6 +3,7 @@
     <head>
         <?php include('../../../templates/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
+        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <?php include('../../../imports/qrcode.html'); ?>
         <title>Deposit | Vayamos NFT</title>
     </head>
@@ -85,41 +86,11 @@
                                 <a href="#_" class="secondary copy-button" data-copy="#deposit-addr"><i class="fa-solid fa-copy fa-xl"></i></a>
                             </div>
                         </div>
-                        <div id="deposit-memo-wrapper">
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <span class="secondary" id="deposit-memo-name"></span>
-                                </div>
-                            </div>
-                            <div class="row flex-nowrap">
-                                <div class="col-10 col-lg-auto my-auto">
-                                    <h4 class="wrap" id="deposit-memo"></h4>
-                                </div>
-                                <div class="col-auto my-auto">
-                                    <a href="#_" class="secondary copy-button" data-copy="#deposit-memo"><i class="fa-solid fa-copy fa-xl"></i></a>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row mt-5">
                             <div class="col-12">
                                 <span class="secondary">Confirmations target:</span><br>
                                 <h5 class="wrap d-inline" id="deposit-confirmations"></h5>
                                 <h5 class="d-inline">confirmations</h5>
-                            </div>
-                        </div>
-                        <div id="deposit-contract-wrapper">
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <span class="secondary">Token contract / ID:</span>
-                                </div>
-                            </div>
-                            <div class="row flex-nowrap">
-                                <div class="col-10 col-lg-auto my-auto">
-                                    <h4 class="wrap" id="deposit-contract"></h4>
-                                </div>
-                                <div class="col-auto my-auto">
-                                    <a href="#_" class="secondary copy-button" data-copy="#deposit-contract"><i class="fa-solid fa-copy fa-xl"></i></a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -147,10 +118,10 @@
         </div>
         
         <?php include('../templates/tx_history.html'); ?>
-        <script src="/wallet/deposit.js?<?php echo filemtime(__DIR__.'/deposit.js'); ?>"></script>
+        <script src="/nft/wallet/deposit.js?<?php echo filemtime(__DIR__.'/deposit.js'); ?>"></script>
         
-        <?php include('../templates/modals.php'); ?>
-        <?php include('../templates/vanilla_mobile_nav.php'); ?>
+        <?php include('../../../templates/modals.php'); ?>
+        <?php include('../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
