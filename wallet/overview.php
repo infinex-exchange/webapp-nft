@@ -33,9 +33,11 @@
                     <input id="nft-search" type="text" size="7" placeholder="Search" class="form-control input-search">
                 </div>
                 
+                <!--
                 <div class="col-auto order-2 order-lg-3 ms-auto ms-lg-0 my-auto p-1 p-lg-2">
                     <a href="/nft/create" class="btn btn-primary btn-sm">Create NFT</a>
                 </div>
+                -->
             </div>
             </form>
             
