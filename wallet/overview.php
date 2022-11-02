@@ -29,7 +29,7 @@
                 </div>
                 
                 <div class="col-12 col-lg-auto order-3 order-lg-2 my-auto p-1 p-lg-2">
-                    <input id="asset-search" type="text" size="7" placeholder="Search" class="form-control input-search">
+                    <input id="nft-search" type="text" size="7" placeholder="Search" class="form-control input-search">
                 </div>
                 
                 <div class="col-auto order-2 order-lg-3 ms-auto ms-lg-0 my-auto p-1 p-lg-2">
