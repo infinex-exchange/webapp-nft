@@ -37,8 +37,8 @@ $(document).on('authChecked', function() {
                     if(data.success) {
                         $.each(data.nfts, function(nftid, nft) {
                             thisAS.append(`
-                                <div class="nft-item col-12 col-md-3 col-lg-3 hoverable">
-                                    <div class="card">
+                                <div class="nft-item col-12 col-md-3 col-lg-3">
+                                    <div class="card bg-dark hoverable">
 										<img src="${nft.preview}" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title">${nft.name}</h5>
