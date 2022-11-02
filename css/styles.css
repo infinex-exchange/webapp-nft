@@ -23,3 +23,9 @@
 .navbar-nft br {
     display: none !important;
 }
+
+/* Card */
+
+.card {
+    background-color: var(--color-bg-light);
+}
