@@ -8,7 +8,7 @@
     <body>
     
         <!-- Preloader -->
-        <?php include(__DIR__'/../../../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
         <?php include(__DIR__.'/../../../templates/navbar.php'); ?>
