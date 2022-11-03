@@ -5,15 +5,17 @@
         <?php include('../imports/bignumber.html'); ?>
         <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../js/validate.js'); ?>"></script>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../js/ajax_scroll.js'); ?>"></script>
-        <title>Withdrawal | Vayamos Exchange</title>
+        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
+        <title>Withdrawal | Vayamos NFT</title>
     </head>
     <body>
     
         <!-- Preloader -->
-        <?php include('../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../../../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../templates/navbar.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 p-0 user-only">
@@ -28,28 +30,17 @@
             
             <div class="row py-2">
                 <div class="col-12">
-                    <h3>&#9312 Select coin to withdraw:</h3>
+                    <h3>&#9312 Select NFT to withdraw:</h3>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <?php include('../templates/select_coin.php'); ?>
+                    <?php include(__DIR__.'/../templates/select_nft.php'); ?>
                 </div>
             </div>
             
             <div id="withdraw-step2" style="display: none">
                 <div class="row py-2">
                     <div class="col-12">
-                        <h3>&#9313 Select withdrawal network:</h3>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <?php include('../templates/select_net.php'); ?>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="withdraw-step3" style="display: none">
-                <div class="row py-2">
-                    <div class="col-12">
-                        <h3>&#9314 Complete withdrawal:</h3>
+                        <h3>&#9313 Complete withdrawal:</h3>
                     </div>
                 </div>
                 
@@ -71,14 +62,8 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 py-2">
                             <label for="select-adbk">Address:</label>
-                            <?php include('../templates/select_adbk.php'); ?>
+                            <?php include(__DIR__'/../templates/select_nft_adbk.php'); ?>
                             <small id="help-address" class="form-text" style="display: none">Address is invalid</small>
-                        </div>
-                        
-                        <div class="col-12 col-lg-6 py-2" id="withdraw-memo-wrapper">
-                            <label id="withdraw-memo-name" for="withdraw-memo"></label>
-                            <input type="text" class="form-control" id="withdraw-memo" placeholder="Optional">
-                            <small id="help-memo" class="form-text" style="display: none">Invalid format</small>
                         </div>
                     </div>
                     
@@ -114,16 +99,6 @@
                     </div>
                     
                     <div class="row">
-                        <div class="col-12 col-lg-6 py-2 order-lg-1">
-                            <label for="withdraw-amount">Amount:</label>
-                            <input type="text" class="form-control" id="withdraw-amount" data-val="">
-                        </div>
-                        
-                        <div class="col-12 col-lg-6 py-2 order-lg-3 mt-auto">
-                            <span class="range-value" for="withdraw-amount-range" suffix="%"></span>
-                            <input id="withdraw-amount-range" type="range" class="form-range" min="0" max="100" step="1" value="0">
-                        </div>
-                        
                         <div class="col-12 col-lg-6 py-2 order-lg-2">
                             <label for="withdraw-fee">Fee:</label>
                             <input type="text" class="form-control" id="withdraw-fee" readonly>
@@ -143,22 +118,6 @@
                         
                         <div class="col-12 col-lg-6 py-2 order-lg-6 my-auto">
                             <button type="submit" class="btn btn-primary w-100">Submit</button>
-                        </div>
-                        
-                        <div class="col-12 col-lg-8 py-2 order-lg-7" id="withdraw-contract-wrapper">
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <span class="secondary">Token contract / ID:</span>
-                                </div>
-                            </div>
-                            <div class="row flex-nowrap">
-                                <div class="col-10 col-lg-auto my-auto">
-                                    <h4 class="wrap" id="withdraw-contract"></h4>
-                                </div>
-                                <div class="col-auto my-auto">
-                                    <a href="#_" class="secondary copy-button" data-copy="#withdraw-contract"><i class="fa-solid fa-copy fa-xl"></i></a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                         
@@ -185,12 +144,12 @@
         </div>
         </div>
         
-        <?php include('../templates/tx_history.html'); ?>
-        <script src="/wallet/withdraw.js?<?php echo filemtime(__DIR__.'/withdraw.js'); ?>"></script>
+        <?php include(__DIR__.'/../templates/tx_history.html'); ?>
+        <script src="/nft/wallet/withdraw.js?<?php echo filemtime(__DIR__.'/withdraw.js'); ?>"></script>
         
-        <?php include('../templates/modals.php'); ?>
-        <?php include('../templates/2fa.php'); ?>
-        <?php include('../templates/vanilla_mobile_nav.php'); ?>
+        <?php include(__DIR__.'/../../../templates/modals.php'); ?>
+        <?php include(__DIR__.'/../../../templates/2fa.php'); ?>
+        <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
