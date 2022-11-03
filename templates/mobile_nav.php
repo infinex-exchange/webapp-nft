@@ -13,7 +13,7 @@
     </ul>
     
     <ul class="navbar-nav mx-auto text-center">
-        <?php include(__DIR__.'/menu_inner_right.html'); ?>
+        <?php include(__DIR__.'/menu_inner_right.php'); ?>
     </ul>
 </nav>
 
