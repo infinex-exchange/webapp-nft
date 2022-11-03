@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include(__DIR__.'../../../templates/head.php'); ?>
+        <?php include(__DIR__.'/../../../templates/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <title>NFT wallet | Vayamos NFT</title>
@@ -53,8 +53,8 @@
         
         <script src="/nft/wallet/overview.js?<?php echo filemtime(__DIR__.'/overview.js'); ?>"></script>
         
-        <?php include(__DIR__.'../../../templates/modals.php'); ?>
-        <?php include(__DIR__.'../templates/mobile_nav.php'); ?>
+        <?php include(__DIR__.'/../../../templates/modals.php'); ?>
+        <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
