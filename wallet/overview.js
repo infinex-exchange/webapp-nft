@@ -49,15 +49,27 @@ $(document).on('authChecked', function() {
                                                         ${data.networks[nft.network].description}
                                                     </span>
                                                 </div>
-                                                <div class="col-1 ps-0 my-auto text-right secondary dropdown">
+                                                <div class="col-1 ps-0 my-auto text-center secondary dropdown">
                                     			    <a class="nav-link" href="#_" data-bs-toggle="dropdown">
                                                         <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
                                                     </a>
                                                     <ul class="dropdown-menu dropdown-menu-end">
                                                         <li>
-                                                            <a class="dropdown-item" href="#_" onClick="">
+                                                            <a class="dropdown-item" href="/nft/show/${nftid}">
                                                                 <i class="fa-solid fa-xmark"></i>
-                                                                Close offer
+                                                                Show
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="/nft/wallet/withdraw/${nftid}">
+                                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                                                Withdraw
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="/nft/wallet/transfer/${nftid}">
+                                                                <i class="fa-solid fa-people-arrows"></i>
+                                                                Transfer
                                                             </a>
                                                         </li>
                                                     </ul>
