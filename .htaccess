@@ -1,7 +1,7 @@
 Options -MultiViews -Indexes
 
 RewriteEngine on
-RewriteBase /nft
+RewriteBase /
 
 RewriteRule ^wallet/?$ wallet/overview.php [L]
 RewriteRule ^wallet/deposit/([^/]+)/?$ wallet/deposit.php [L]
