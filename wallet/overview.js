@@ -42,14 +42,14 @@ $(document).on('authChecked', function() {
 										<img src="${nft.preview}" class="card-img-top h-100">
 										<div class="card-body">
                                             <div class="row">
-                                                <div class="col-10">
+                                                <div class="col-11">
                                                     <h5 class="card-title">${nft.name}</h5>
                                                     <span class="small secondary">
                                                         <img src="${data.networks[nft.network].icon_url}" width="16" height="16">
                                                         ${data.networks[nft.network].description}
                                                     </span>
                                                 </div>
-                                                <div class="col-2 ps-0 my-auto text-center secondary dropdown">
+                                                <div class="col-1 ps-0 my-auto text-right secondary dropdown">
                                     			    <a class="nav-link" href="#_" data-bs-toggle="dropdown">
                                                         <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
                                                     </a>
