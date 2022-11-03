@@ -12,7 +12,7 @@
         <?php include(__DIR__.'/menu_inner.html'); ?>
     </ul>
     
-    <ul class="navbar-nav mx-auto text-center">
+    <ul class="navbar-nav mx-auto text-center dropup">
         <?php include(__DIR__.'/menu_inner_right.php'); ?>
     </ul>
 </nav>
