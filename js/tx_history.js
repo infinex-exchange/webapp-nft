@@ -156,7 +156,7 @@ function renderTxHistoryItem(data, forceSmall) {
     return `
         <div class="row hoverable tx-history-item px-1 py-2" onClick="mobileTxDetails(this)" data-nxid="${data.nxid}"
          data-type="${data.type}" data-nftid="${data.nftid}" data-network="${networkDescription}"
-         data-nft-name="${data.nftid}" data-status="${data.status}" data-create-time="${cTime}"
+         data-nft-name="${data.nft_name}" data-status="${data.status}" data-create-time="${cTime}"
          data-address="${data.address}" data-exec-time="${eTime}" data-confirms="${confHtml}"
          data-txid="${txid}" data-height="${height}" data-fee="${fee}" data-icon-url="${data.preview}"
          data-delayed="${delayed}">
