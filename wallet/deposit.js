@@ -49,12 +49,12 @@ $(document).ready(function() {
             msgBoxNoConn(false);
         });
     });
-    
-    initSelectNet(null, '/nft/wallet/networks');
 });
 
 $(document).on('authChecked', function() {
     if(window.loggedIn) {
+        initSelectNet(null, '/nft/wallet/networks');
+        
         window.qrcode = new QRCode("deposit-qrcode", {
             correctLevel : QRCode.CorrectLevel.H
         });
