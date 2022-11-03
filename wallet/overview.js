@@ -57,7 +57,7 @@ $(document).on('authChecked', function() {
                                                         <li>
                                                             <a class="dropdown-item" href="/nft/show/${nftid}">
                                                                 <i class="fa-solid fa-eye"></i>
-                                                                Show
+                                                                Details
                                                             </a>
                                                         </li>
                                                         <li>
