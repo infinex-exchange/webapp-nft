@@ -23,15 +23,21 @@
             
             <form>
             <div class="row">
-                <div class="col-auto my-auto p-1 p-lg-2">
+                <div class="col-auto order-1 my-auto p-1 p-lg-2">
                     <a href="/nft/wallet/deposit" class="btn btn-primary btn-sm">Deposit</a>
                     <a href="/nft/wallet/withdraw" class="btn btn-primary btn-sm">Withdraw</a>
                     <a href="/nft/wallet/transfer" class="btn btn-primary btn-sm">Transfer</a>
                 </div>
                 
-                <div class="col-12 col-lg-auto my-auto p-1 p-lg-2">
+                <div class="col-12 col-lg-auto order-3 order-lg-2 my-auto p-1 p-lg-2">
                     <input id="nft-search" type="text" size="7" placeholder="Search" class="form-control input-search">
                 </div>
+                
+                <!--
+                <div class="col-auto order-2 order-lg-3 ms-auto ms-lg-0 my-auto p-1 p-lg-2">
+                    <a href="/nft/create" class="btn btn-primary btn-sm">Create NFT</a>
+                </div>
+                -->
             </div>
             </form>
             
@@ -45,7 +51,7 @@
         </div>
         </div>
         
-        <script src="/nft/wallet/index.js?<?php echo filemtime(__DIR__.'/index.js'); ?>"></script>
+        <script src="/nft/wallet/overview.js?<?php echo filemtime(__DIR__.'/overview.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>
         <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
