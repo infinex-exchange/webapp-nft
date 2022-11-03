@@ -25,13 +25,13 @@ var txExecTimeDict = {
     TRANSFER_OUT: 'Execute time'
 };
 
-function cancelWithdrawal(xid) {
+function cancelWithdrawal(nxid) {
     $.ajax({
-        url: config.apiUrl + '/wallet/withdraw/cancel',
+        url: config.apiUrl + '/nft/wallet/withdraw/cancel',
         type: 'POST',
         data: JSON.stringify({
             api_key: window.apiKey,
-            xid: xid
+            nxid: nxid
         }),
         contentType: "application/json",
         dataType: "json",
@@ -54,7 +54,7 @@ function mobileTxDetails(item, update = false) {
     var status = $(item).data('status');
     var confirms = $(item).data('confirms');
     var memoName = $(item).data('memo-name');
-    var xid = $(item).data('xid');
+    var nxid = $(item).data('nxid');
     
     $('#mtd-status').html(status);
     $('#mtd-status-icon').removeClass()
@@ -80,7 +80,7 @@ function mobileTxDetails(item, update = false) {
         $('#mtd-cancel-btn').hide();
     
     if(!update) {
-        $('#modal-mobile-tx-details').attr('data-xid', xid);
+        $('#modal-mobile-tx-details').attr('data-nxid', nxid);
         
         $('#mtd-icon').attr('src', $(item).data('icon-url'));
         $('#mtd-op-icon').removeClass()
@@ -108,7 +108,7 @@ function mobileTxDetails(item, update = false) {
         $('#mtd-exec-time-title').html(txExecTimeDict[type] + ':');
         
         $('#mtd-cancel-btn').unbind('click').on('click', function() {
-            cancelWithdrawal(xid);
+            cancelWithdrawal(nxid);
         });
         
         $('#modal-mobile-tx-details').modal('show');
@@ -138,16 +138,6 @@ function renderTxHistoryItem(data, forceSmall) {
         }
     }
     
-    var memoName = '';
-    if(typeof(data.memo_name) !== 'undefined')
-        memoName = data.memo_name;
-    else if(data.type == 'TRANSFER_IN' || data.type == 'TRANSFER_OUT')
-        memoName = 'Title';
-    
-    var memo = '-';
-    if(typeof(data.memo) !== 'undefined')
-        memo = data.memo;
-    
     var eTime = '-';
     if(typeof(data.exec_time) !== 'undefined')
         eTime = new Date(data.exec_time * 1000).toLocaleString();
@@ -173,12 +163,11 @@ function renderTxHistoryItem(data, forceSmall) {
         networkDescription = data.network_description;
     
     return `
-        <div class="row hoverable tx-history-item px-1 py-2" onClick="mobileTxDetails(this)" data-xid="${data.xid}"
-         data-type="${data.type}" data-asset="${data.asset}" data-network="${networkDescription}"
-         data-amount="${data.amount}" data-status="${data.status}" data-create-time="${cTime}"
-         data-address="${data.address}" data-memo="${memo}" data-exec-time="${eTime}"
-         data-confirms="${confHtml}" data-txid="${txid}" data-height="${height}"
-         data-fee="${fee}" data-icon-url="${data.icon_url}" data-memo-name="${memoName}"
+        <div class="row hoverable tx-history-item px-1 py-2" onClick="mobileTxDetails(this)" data-nxid="${data.nxid}"
+         data-type="${data.type}" data-nftid="${data.nftid}" data-network="${networkDescription}"
+         data-nft-name="${data.nftid}" data-status="${data.status}" data-create-time="${cTime}"
+         data-address="${data.address}" data-exec-time="${eTime}" data-confirms="${confHtml}"
+         data-txid="${txid}" data-height="${height}" data-fee="${fee}" data-icon-url="${data.preview}"
          data-delayed="${delayed}">
             
             
@@ -193,12 +182,12 @@ function renderTxHistoryItem(data, forceSmall) {
             </div>
             
             <div class="my-auto ${dNoneDLgBlock}" style="width: 20%">
-                <img width="16" height="16" src="${data.icon_url}">
-                ${data.asset}
+                <img width="32" height="32" src="${data.preview}">
+                ${data.nftid}
             </div>
             
             <div class="text-end my-auto ${dNoneDLgBlock}" style="width: 20%">
-                ${data.amount}
+                ${data.nftid}
             </div>
             
             <div class="text-end my-auto ${dNoneDLgBlock}" style="width: 20%">
@@ -212,7 +201,7 @@ function renderTxHistoryItem(data, forceSmall) {
             
             <div style="width: 60px" class="my-auto ${dLgNone}">
                 <div class="p-2" style="position: relative">
-                    <img width="40" height="40" src="${data.icon_url}">
+                    <img width="40" height="40" src="${data.preview}">
                     <div class="tx-history-icon-wrapper">
                         <i class="tx-history-icon ${txTypeIconDict[data.type]}"></i>
                     </div>
@@ -221,7 +210,7 @@ function renderTxHistoryItem(data, forceSmall) {
             
             <div style="width: 50%" class="my-auto ${dLgNone}">
                 <h6 class="secondary">${txTypeDict[data.type]}</h6>
-                <span>${data.amount} ${data.asset}</span>
+                <span>${data.nftid}</span>
             </div>
             
             <div style="width: calc(50% - 60px)" class="my-auto text-end ${dLgNone}">
@@ -247,7 +236,7 @@ function initTxHistory(container, preloader, data, forceSmall = false, disableSc
             var thisAS = this;
                 
             $.ajax({
-                url: config.apiUrl + '/wallet/transactions',
+                url: config.apiUrl + '/nft/wallet/transactions',
                 type: 'POST',
                 data: JSON.stringify(thisAS.data),
                 contentType: "application/json",
@@ -259,11 +248,11 @@ function initTxHistory(container, preloader, data, forceSmall = false, disableSc
                     $.each(data.transactions, function() {
                         thisAS.append(renderTxHistoryItem(this, forceSmall));
                         
-                        if(typeof(window.xidOldest) === 'undefined' || this.xid < window.xidOldest)
-                            window.xidOldest = this.xid;
+                        if(typeof(window.nxidOldest) === 'undefined' || this.nxid < window.nxidOldest)
+                            window.nxidOldest = this.nxid;
                             
-                        if(typeof(window.xidLatest) === 'undefined' || this.xid > window.xidLatest)
-                            window.xidLatest = this.xid;
+                        if(typeof(window.nxidLatest) === 'undefined' || this.nxid > window.nxidLatest)
+                            window.nxidLatest = this.nxid;
                     });
                     
                     thisAS.done();
@@ -299,7 +288,7 @@ function updateTxHistory(offset = 0) {
     data.offset = offset;
     
     $.ajax({
-        url: config.apiUrl + '/wallet/transactions',
+        url: config.apiUrl + '/nft/wallet/transactions',
         type: 'POST',
         data: JSON.stringify(data),
         contentType: "application/json",
@@ -313,19 +302,19 @@ function updateTxHistory(offset = 0) {
             $.each(data.transactions, function() {
                 i++;
                 
-                if(typeof(window.xidLatest) == 'undefined' || this.xid > window.xidLatest) {
+                if(typeof(window.nxidLatest) == 'undefined' || this.nxid > window.nxidLatest) {
                     window.TxHistoryAS.prepend(renderTxHistoryItem(this, window.TxHistoryAS.forceSmall));
-                    window.xidLatest = this.xid;
+                    window.nxidLatest = this.nxid;
                     $(document).trigger('newWalletTransaction');
                 }
                 
-                else if(typeof(window.xidOldest) == 'undefined' || this.xid < window.xidOldest) {
-                    window.xidOldest = this.xid;
+                else if(typeof(window.nxidOldest) == 'undefined' || this.nxid < window.nxidOldest) {
+                    window.nxidOldest = this.nxid;
                     end = true;
                     return false;
                 }
                 
-                var item = $('.tx-history-item[data-xid="' + this.xid + '"]');
+                var item = $('.tx-history-item[data-nxid="' + this.nxid + '"]');
                 if(item.length) {
                     // Dynamic fields:
                     //  - status
@@ -334,8 +323,8 @@ function updateTxHistory(offset = 0) {
                     //  - txid
                     //  - height
                     item.replaceWith(renderTxHistoryItem(this, window.TxHistoryAS.forceSmall));
-                    if($('#modal-mobile-tx-details[data-xid="' + this.xid + '"]').length)
-                        mobileTxDetails($('.tx-history-item[data-xid="' + this.xid + '"]'), true);
+                    if($('#modal-mobile-tx-details[data-nxid="' + this.nxid + '"]').length)
+                        mobileTxDetails($('.tx-history-item[data-nxid="' + this.nxid + '"]'), true);
                 }
             });
             
