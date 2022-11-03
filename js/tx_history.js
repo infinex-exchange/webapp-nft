@@ -210,7 +210,7 @@ function renderTxHistoryItem(data, forceSmall) {
             
             <div style="width: 50%" class="my-auto ${dLgNone}">
                 <h6 class="secondary">${txTypeDict[data.type]}</h6>
-                <span>${data.nftid}</span>
+                <span class="wrap">${data.nftid}</span>
             </div>
             
             <div style="width: calc(50% - 60px)" class="my-auto text-end ${dLgNone}">
