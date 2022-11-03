@@ -117,7 +117,7 @@
         </div>
         </div>
         
-        <?php include(__DIR__'/../templates/tx_history.html'); ?>
+        <?php include(__DIR__'./../templates/tx_history.html'); ?>
         <script src="/nft/wallet/deposit.js?<?php echo filemtime(__DIR__.'/deposit.js'); ?>"></script>
         
         <?php include(__DIR__'/../../../templates/modals.php'); ?>
