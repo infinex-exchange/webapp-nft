@@ -2,12 +2,12 @@ Options -MultiViews -Indexes
 
 RewriteEngine on
 
-RewriteRule ^wallet/?$ nft_wallet/overview.php [L]
-RewriteRule ^wallet/deposit/([^/]+)/?$ nft_wallet/deposit.php [L]
-RewriteRule ^wallet/deposit/?$ nft_wallet/deposit.php [L]
-RewriteRule ^wallet/withdraw/([^/]+)/?$ nft_wallet/withdraw.php [L]
-RewriteRule ^wallet/withdraw/?$ nft_wallet/withdraw.php [L]
-RewriteRule ^wallet/transfer/([^/]+)/?$ nft_wallet/transfer.php [L]
-RewriteRule ^wallet/transfer/?$ nft_wallet/transfer.php [L]
-RewriteRule ^wallet/transactions/?$ nft_wallet/transactions.php [L]
-RewriteRule ^wallet/addressbook/?$ nft_wallet/addressbook.php [L]
+RewriteRule ^wallet/?$ wallet/overview.php [L]
+RewriteRule ^wallet/deposit/([^/]+)/?$ wallet/deposit.php [L]
+RewriteRule ^wallet/deposit/?$ wallet/deposit.php [L]
+RewriteRule ^wallet/withdraw/([^/]+)/?$ wallet/withdraw.php [L]
+RewriteRule ^wallet/withdraw/?$ wallet/withdraw.php [L]
+RewriteRule ^wallet/transfer/([^/]+)/?$ wallet/transfer.php [L]
+RewriteRule ^wallet/transfer/?$ wallet/transfer.php [L]
+RewriteRule ^wallet/transactions/?$ wallet/transactions.php [L]
+RewriteRule ^wallet/addressbook/?$ wallet/addressbook.php [L]
