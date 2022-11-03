@@ -25,12 +25,11 @@ $(document).ready(function() {
         var nftid = $('#select-nft').data('nftid');
         
         $.ajax({
-            url: config.apiUrl + '/wallet/withdraw/info',
+            url: config.apiUrl + '/nft/wallet/withdraw/info',
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey,
-                asset: $('#select-coin').val(),
-                network: $('#select-net').data('network')
+                nftid: nftid
             }),
             contentType: "application/json",
             dataType: "json",
@@ -46,7 +45,6 @@ $(document).ready(function() {
                 // Reset form
                 $('#withdraw-form').get(0).reset();
                 $('small[id^="help-"]').hide();
-                $('#withdraw-amount').data('val', '').val('').trigger('prevalidated');
                 $('#withdraw-save').trigger('change');
                 
                 // Operating warning
@@ -55,64 +53,39 @@ $(document).ready(function() {
                 else
                     $('#withdraw-operating-warning').removeClass('d-none');
                 
-                // Precision
-                window.wdAmountPrec = data.prec;
+                // Addressbook
+                initSelectNftAdbk(data.netid);
                 
-                // Round raw balance to this precision
-                window.wdBalance = window.wdRawBalance.dp(data.prec, BigNumber.ROUND_DOWN);
-                $('#withdraw-balance').html(window.wdBalance.toString());
-                
-                window.wdFeeMinOrig = data.fee_min;
-                window.wdFeeMaxOrig = data.fee_max;
-                updateFees(data.fee_min, data.fee_max);
-                
-                // Memo
-                if(typeof(data.memo_name) !== 'undefined') {
-                    $('#withdraw-memo-name').html(data.memo_name + ':');
-                    $('#withdraw-memo-wrapper').removeClass('d-none');
-                }
-                else {
-                    $('#withdraw-memo-wrapper').addClass('d-none');
-                }
-                
-                // Contract
-                if(typeof(data.contract) !== 'undefined') {
-                    $('#withdraw-contract').html(data.contract);
-                    $('#withdraw-contract-wrapper').removeClass('d-none');
-                }
-                else {
-                    $('#withdraw-contract-wrapper').addClass('d-none');
-                }
-                
-                initSelectAdbk($('#select-coin').val(), $('#select-net').data('network'));
-                
+                // Fee asset balance
                 $.ajax({
-            url: config.apiUrl + '/wallet/balances',
-            type: 'POST',
-            data: JSON.stringify({
-                api_key: window.apiKey,
-                symbols: [ asset ]
-            }),
-            contentType: "application/json",
-            dataType: "json",
-        })
-        .retry(config.retry)
-        .done(function (data) {
-            if(data.success) {
-                window.wdRawBalance = new BigNumber(data.balances[asset].avbl);
-                initSelectNet(asset);
-            } else {
-                msgBox(data.error);
-            }
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            msgBoxNoConn(false);
-        });
-                
-                $('#withdraw-step3').show();
-                $('html, body').animate({
-                    scrollTop: $("#withdraw-step3").offset().top
-                }, 1000);
+		            url: config.apiUrl + '/wallet/balances',
+		            type: 'POST',
+		            data: JSON.stringify({
+		                api_key: window.apiKey,
+		                symbols: [ asset ]
+		            }),
+		            contentType: "application/json",
+		            dataType: "json",
+		        })
+		        .retry(config.retry)
+		        .done(function (dataBal) {
+		            if(data.success) {
+		                window.wdRawBalance = new BigNumber(dataBal.balances[asset].avbl);
+		                
+		                // Fee
+		                updateFees(dataBal.fee_min, dataBal.fee_max);
+		                
+		                $('#withdraw-step2').show();
+		                $('html, body').animate({
+		                    scrollTop: $("#withdraw-step3").offset().top
+		                }, 1000);
+		            } else {
+		                msgBox(data.error);
+		            }
+		        })
+		        .fail(function (jqXHR, textStatus, errorThrown) {
+		            msgBoxNoConn(false);
+		        });
             } else {
                 msgBox(data.error);
             }
