@@ -32,11 +32,8 @@
                 <div style="width: 20%">
                     <h5>Type</h5>
                 </div>
-                <div style="width: 20%">
-                    <h5>Asset</h5>
-                </div>
-                <div class="text-end" style="width: 20%">
-                    <h5>Amount</h5>
+                <div style="width: 40%">
+                    <h5>NFT</h5>
                 </div>
                 <div class="text-end" style="width: 20%">
                     <h5>Status</h5>

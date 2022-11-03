@@ -181,12 +181,8 @@ function renderTxHistoryItem(data, forceSmall) {
                 ${txTypeDict[data.type]}
             </div>
             
-            <div class="my-auto ${dNoneDLgBlock}" style="width: 20%">
+            <div class="my-auto ${dNoneDLgBlock}" style="width: 40%">
                 <img width="32" height="32" src="${data.preview}">
-                ${data.nftid}
-            </div>
-            
-            <div class="text-end my-auto ${dNoneDLgBlock}" style="width: 20%">
                 ${data.nftid}
             </div>
             
