@@ -56,7 +56,7 @@
         <script src="/nft/wallet/transactions.js?<?php echo filemtime(__DIR__.'/transactions.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../../templates/modals.php'); ?>
-        <?php include(__DIR__'/../templates/mobile_nav.php'); ?>
+        <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
