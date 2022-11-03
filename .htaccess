@@ -1,7 +1,6 @@
 Options -MultiViews -Indexes
 
 RewriteEngine on
-RewriteBase /
 
 RewriteRule ^wallet/?$ wallet/overview.php [L]
 RewriteRule ^wallet/deposit/([^/]+)/?$ wallet/deposit.php [L]
