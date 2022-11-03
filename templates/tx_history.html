@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="pt-2 mx-auto primary">
-                        <h5 class="d-inline" id="mtd-asset"></h5>
+                        <h5 class="d-inline">NFT</h5>
                         <h5 class="d-inline" id="mtd-type"></h5>
                     </div>
                     <div class="py-2 mx-auto secondary">
@@ -48,6 +48,25 @@
                     
             <div class="modal-body">
                 <div class="row">
+                    <div class="col-6 my-auto">
+                        <h5>NFT name:</h5>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="wrap" id="mtd-nft-name"></span>
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-6 my-auto">
+                        <h5>NFT ID:</h5>
+                    </div>
+                    <div class="col-6 text-end">
+                        <span class="wrap" id="mtd-nftid"></span>
+                    </div>
+                </div>
+                
+                <div class="py-3"></div>
+                
+                <div class="row py-2">
                     <div class="col-6 py-2">
                         <h5>Network:</h5>
                     </div>
@@ -63,25 +82,9 @@
                         <span class="wrap" id="mtd-address"></span>
                     </div>
                 </div>
-                <div id="mtd-memo-wrapper" class="row py-2">
-                    <div class="col-6">
-                        <h5 id="mtd-memo-name"></h5>
-                    </div>
-                    <div class="col-6 text-end">
-                        <span id="mtd-memo"></span>
-                    </div>
-                </div>
                 
                 <div class="py-3"></div>
                 
-                <div class="row py-2">
-                    <div class="col-6">
-                        <h5>Amount:</h5>
-                    </div>
-                    <div class="col-6 text-end">
-                        <span id="mtd-amount"></span>
-                    </div>
-                </div>
                 <div class="row py-2">
                     <div class="col-6">
                         <h5>Fee:</h5>
@@ -136,10 +139,9 @@
                                 <i class="fa-solid fa-stopwatch fa-shake fa-2x"></i>
                             </div>
                             <div class="px-2">
-                                This withdrawal is delayed. It can be caused when:<br>
-                                <strong>1.</strong> Connection to the selected network has stopped working.<br>
-                                <strong>2.</strong> There is not enough amount in the exchange's wallet as most deposits are made on a different network.<br>
-                                You can cancel your withdrawal and make it using another network.
+                                This withdrawal is delayed.
+                                <br>
+                                We are working on fixing the issue.
                             </div>
                         </div>
                     </div>

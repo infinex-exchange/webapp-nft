@@ -53,7 +53,6 @@ function mobileTxDetails(item, update = false) {
     var type = $(item).data('type');
     var status = $(item).data('status');
     var confirms = $(item).data('confirms');
-    var memoName = $(item).data('memo-name');
     var nxid = $(item).data('nxid');
     
     $('#mtd-status').html(status);
@@ -86,21 +85,13 @@ function mobileTxDetails(item, update = false) {
         $('#mtd-op-icon').removeClass()
                          .addClass('tx-history-icon')
                          .addClass(txTypeIconDict[type]);
-        $('#mtd-asset').html( $(item).data('asset') );
+        $('#mtd-nftid').html( $(item).data('nftid') );
+        $('#mtd-nft-name').html( $(item).data('nft-name') );
         $('#mtd-type').html(txTypeDict[type]);
         
         $('#mtd-network').html( $(item).data('network') );
         $('#mtd-address').html( $(item).data('address') );
-        if(memoName != '') {
-            $('#mtd-memo').html( $(item).data('memo') );
-            $('#mtd-memo-name').html(memoName + ':');
-            $('#mtd-memo-wrapper').show();
-        }
-        else {
-            $('#mtd-memo-wrapper').hide();
-        }
     
-        $('#mtd-amount').html( $(item).data('amount') );
         $('#mtd-fee').html( $(item).data('fee') );
         
         $('#mtd-create-time').html( $(item).data('create-time') );
