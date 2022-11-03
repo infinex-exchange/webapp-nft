@@ -183,7 +183,7 @@ function renderTxHistoryItem(data, forceSmall) {
             
             <div class="my-auto ${dNoneDLgBlock}" style="width: 40%">
                 <img width="32" height="32" src="${data.preview}">
-                ${data.nftid}
+                <span class="wrap">${data.nft_name}</span>
             </div>
             
             <div class="text-end my-auto ${dNoneDLgBlock}" style="width: 20%">
@@ -206,7 +206,7 @@ function renderTxHistoryItem(data, forceSmall) {
             
             <div style="width: 50%" class="my-auto ${dLgNone}">
                 <h6 class="secondary">${txTypeDict[data.type]}</h6>
-                <span class="wrap">${data.nftid}</span>
+                <span class="wrap">${data.nft_name}</span>
             </div>
             
             <div style="width: calc(50% - 60px)" class="my-auto text-end ${dLgNone}">
