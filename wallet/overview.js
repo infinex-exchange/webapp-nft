@@ -41,12 +41,29 @@ $(document).on('authChecked', function() {
                                     <div class="card h-100 hoverable">
 										<img src="${nft.preview}" class="card-img-top h-100">
 										<div class="card-body">
-											<h5 class="card-title">${nft.name}</h5>
-											<span class="small secondary">
-											    <img src="${data.networks[nft.network].icon_url}" width="16" height="16">
-											    ${data.networks[nft.network].description}
-											</span>
-									    </div>
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <h5 class="card-title">${nft.name}</h5>
+                                                    <span class="small secondary">
+                                                        <img src="${data.networks[nft.network].icon_url}" width="16" height="16">
+                                                        ${data.networks[nft.network].description}
+                                                    </span>
+                                                </div>
+                                                <div class="col-2 ps-0 my-auto text-center secondary dropdown">
+                                    			    <a class="nav-link" href="#_" data-bs-toggle="dropdown">
+                                                        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#_" onClick="">
+                                                                <i class="fa-solid fa-xmark"></i>
+                                                                Close offer
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                    			</div>
+                                            </div>
+                                        </div>
 									</div>
                                 </div>
                             `);
