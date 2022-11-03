@@ -15,50 +15,14 @@ function updateFees(feeMin, feeMax) {
 $(document).ready(function() {
     window.renderingStagesTarget = 2;
     
-    $('#select-coin').on('dataLoaded', function() {
+    $('#select-nft').on('dataLoaded', function() {
         $(document).trigger('renderingStage');
     });
     
-    // Download balance and init net selector when coin selected
-    $('#select-coin').on('change', function() {
+    // Fetch net and fee when nft selected
+    $('#select-nft').on('change', function() {
         $('#withdraw-step2').hide();
-        $('#withdraw-step3').hide();
-        var asset = $('#select-coin').val();
-        
-         $.ajax({
-            url: config.apiUrl + '/wallet/balances',
-            type: 'POST',
-            data: JSON.stringify({
-                api_key: window.apiKey,
-                symbols: [ asset ]
-            }),
-            contentType: "application/json",
-            dataType: "json",
-        })
-        .retry(config.retry)
-        .done(function (data) {
-            if(data.success) {
-                window.wdRawBalance = new BigNumber(data.balances[asset].avbl);
-                initSelectNet(asset);
-            } else {
-                msgBox(data.error);
-            }
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            msgBoxNoConn(false);
-        });
-    });
-    
-    // Show net selector when networks list downloaded
-    $('#select-net').on('dataLoaded', function() {
-        $('#withdraw-step2').show();
-    });
-    
-    // Download info and show step3 when network selected
-    $('#select-net').on('change', function() {        
-        $('#withdraw-step3').hide();
-        
-        initSelectAdbk($('#select-coin').val(), $('#select-net').data('network'));
+        var nftid = $('#select-nft').data('nftid');
         
         $.ajax({
             url: config.apiUrl + '/wallet/withdraw/info',
@@ -120,6 +84,31 @@ $(document).ready(function() {
                     $('#withdraw-contract-wrapper').addClass('d-none');
                 }
                 
+                initSelectAdbk($('#select-coin').val(), $('#select-net').data('network'));
+                
+                $.ajax({
+            url: config.apiUrl + '/wallet/balances',
+            type: 'POST',
+            data: JSON.stringify({
+                api_key: window.apiKey,
+                symbols: [ asset ]
+            }),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                window.wdRawBalance = new BigNumber(data.balances[asset].avbl);
+                initSelectNet(asset);
+            } else {
+                msgBox(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(false);
+        });
+                
                 $('#withdraw-step3').show();
                 $('html, body').animate({
                     scrollTop: $("#withdraw-step3").offset().top
@@ -133,9 +122,6 @@ $(document).ready(function() {
         });
     });
     
-    
-    
-    
     // Fee range -> fee input
     $('#withdraw-fee-range').on('input', function() {
         window.wdAmountMax = window.wdBalance.minus( $(this).val() ).dp(window.wdAmountPrec);
@@ -145,86 +131,6 @@ $(document).ready(function() {
         $('#withdraw-fee').val($(this).val());
         $('#withdraw-amount').trigger('prevalidated');
     });
-    
-    
-    
-    
-    // Lock format and precision of amount input
-    $('#withdraw-amount').on('input', function () {
-        var regex = new RegExp("^[0-9]*(\\.[0-9]{0," + window.wdAmountPrec + "})?$");
-        var newVal = $(this).val();
-        
-        // Revert bad format (real visible value)
-        if (!regex.test(newVal)) {
-            $(this).val( $(this).data('val') );
-        }
-        
-        // Drop . on last position (data-val only)
-        else if(newVal.slice(-1) == '.') {
-            $(this).data('val', newVal.substring(0, newVal.length - 1));
-        }
-        
-        // Change . to 0. on first position (data-val only)
-        else if(newVal.startsWith('.')) {
-            $(this).data('val', '0' + newVal);
-        }
-        
-        // Save data-val when everythink ok
-        else $(this).data('val', newVal);
-    
-        $(this).trigger('prevalidated');
-    });
-    
-    // Move data-val to real visible value
-    $('#withdraw-amount').on('focusout', function() {
-        $(this).val( $(this).data('val') );
-    });
-    
-    
-    
-    
-    // Amount input -> amount range
-    $('#withdraw-amount').on('prevalidated', function() {
-        var amount = new BigNumber($(this).data('val'));
-        var perc = 0;
-        if(!amount.isNaN())
-            perc = amount.dividedBy(window.wdAmountMax).multipliedBy(100).toFixed(0);
-        $('#withdraw-amount-range').val(perc).trigger('_input');
-    });
-    
-    // Amount range -> amount input
-    $('#withdraw-amount-range').on('input', function() {
-        var amount = window.wdAmountMax.
-            multipliedBy( $(this).val() ).
-            dividedBy(100).
-            dp(window.wdAmountPrec).
-            toString();
-        
-        $('#withdraw-amount').data('val', amount)
-                             .val(amount);
-    });
-    
-    
-    
-    
-    // Drop amount to available balance
-    $('#withdraw-amount').on('prevalidated', function() {
-        var amount = new BigNumber($(this).data('val'));
-        if(amount.gt(window.wdAmountMax)) {
-            $('#withdraw-amount, #withdraw-amount-max').addClass('blink-red');
-            setTimeout(function() {
-                $('#withdraw-amount, #withdraw-amount-max').removeClass('blink-red');
-                
-                var max = window.wdAmountMax.toString();
-                $('#withdraw-amount').data('val', max)
-                                    .val(max)
-                                    .trigger('prevalidated');
-            }, 1000);
-        }
-    });
-    
-    
-    
     
     // Validate address
     $('#select-adbk').on('input', function() {
@@ -273,53 +179,6 @@ $(document).ready(function() {
             
         }, 750);
     });
-    
-    // Validate memo
-    $('#withdraw-memo').on('input', function() {
-        if(typeof(window.memoTypingTimeout) !== 'undefined')
-            clearTimeout(window.memoTypingTimeout);
-        window.memoTypingTimeout = setTimeout(function() {
-            if($('#withdraw-memo').val() == '') {
-                window.validMemo = false;
-                $('#help-memo').hide();
-                return;
-            }
-            
-            $.ajax({
-                url: config.apiUrl + '/wallet/withdraw/validate',
-                type: 'POST',
-                data: JSON.stringify({
-                    api_key: window.apiKey,
-                    asset: $('#select-coin').val(),
-                    network: $('#select-net').data('network'),
-                    memo: $('#withdraw-memo').val()
-                }),
-                contentType: "application/json",
-                dataType: "json",
-            })
-            .retry(config.retry)
-            .done(function (data) {
-                if(!data.success) {
-                    msgBox(data.error);
-                }
-                else if(!data.valid_memo) {
-	                window.validMemo = false;
-                    $('#help-memo').show();
-                }
-                else {
-	                window.validMemo = true;
-                    $('#help-memo').hide();
-                }
-            })
-            .fail(function (jqXHR, textStatus, errorThrown) {
-                msgBoxNoConn(false);
-            });
-            
-        }, 750);
-    });
-    
-    
-    
     
     // Submit withdraw
     $('#withdraw-form, #2fa-form').on('submit', function(event) {
@@ -403,9 +262,6 @@ $(document).ready(function() {
         });
     });
     
-    
-    
-    
     // Expand save name
     $('#withdraw-save').on('change', function() {
         if (this.checked) {
@@ -460,17 +316,17 @@ $(document).on('authChecked', function() {
         var pathArray = window.location.pathname.split('/');
         var pathLast = pathArray[pathArray.length - 1];
         if(pathLast != 'withdraw' && pathLast != '') {
-            var symbol = pathLast.toUpperCase();
-            $('#select-coin').val(symbol).trigger('change');
+            var nftid = pathLast;
+            $('#select-nft').val(symbol).trigger('change');
         }
     }
 });
 
 $(document).on('newWalletTransaction', function() {
-    if(typeof(window.latestWithdrawalXid) === 'undefied')
+    if(typeof(window.latestWithdrawalNxid) === 'undefied')
         return;
     
-    var newItem = $('.tx-history-item[data-xid="' + window.latestWithdrawalXid + '"]');
+    var newItem = $('.tx-history-item[data-nxid="' + window.latestWithdrawalNxid + '"]');
     if(newItem.length)
         mobileTxDetails(newItem);
 });
