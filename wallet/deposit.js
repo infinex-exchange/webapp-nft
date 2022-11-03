@@ -50,7 +50,7 @@ $(document).ready(function() {
         });
     });
     
-    initSelectNet(null, '/nft/wallet/networks');
+    initSelectNet(null, '/nft/wallet/networks', false);
 });
 
 $(document).on('authChecked', function() {
