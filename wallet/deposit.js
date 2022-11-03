@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    window.renderingStagesTarget = 1;
+    window.renderingStagesTarget = 2;
     
     $('#select-net').on('dataLoaded', function() {
         $(document).trigger('renderingStage');
