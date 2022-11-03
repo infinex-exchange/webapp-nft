@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 py-2">
                             <label for="select-adbk">Address:</label>
-                            <?php include(__DIR__'/../templates/select_nft_adbk.php'); ?>
+                            <?php include(__DIR__.'/../templates/select_nft_adbk.php'); ?>
                             <small id="help-address" class="form-text" style="display: none">Address is invalid</small>
                         </div>
                     </div>
