@@ -3,7 +3,7 @@
         <i class="fa-solid fa-wallet"></i><br>
         NFT Wallet
     </a>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu dropdown-menu-end">
         <ul class="nav flex-column">
             <?php include('menu_nft_wallet.html'); ?>
         </ul>
