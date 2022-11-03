@@ -13,6 +13,7 @@
         
         <!-- Navbar -->
         <?php include('../../../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../templates/navbar.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 p-0 user-only">
