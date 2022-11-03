@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../../templates/head.php'); ?>
+        <?php include(__DIR__.'/../../../templates/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
-        <?php include('../../../imports/qrcode.html'); ?>
+        <?php include(__DIR__.'/../../../imports/qrcode.html'); ?>
         <title>Deposit | Vayamos NFT</title>
     </head>
     <body>
     
         <!-- Preloader -->
-        <?php include('../../../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../../../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../../../templates/navbar.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 p-0 user-only">
@@ -31,7 +31,7 @@
                     <h3>&#9312 Select deposit network:</h3>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <?php include('../../../templates/select_net.php'); ?>
+                    <?php include(__DIR__.'/../../../templates/select_net.php'); ?>
                 </div>
             </div>
             
@@ -117,11 +117,11 @@
         </div>
         </div>
         
-        <?php include('../templates/tx_history.html'); ?>
+        <?php include(__DIR__'/../templates/tx_history.html'); ?>
         <script src="/nft/wallet/deposit.js?<?php echo filemtime(__DIR__.'/deposit.js'); ?>"></script>
         
-        <?php include('../../../templates/modals.php'); ?>
-        <?php include('../templates/mobile_nav.php'); ?>
+        <?php include(__DIR__'/../../../templates/modals.php'); ?>
+        <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
