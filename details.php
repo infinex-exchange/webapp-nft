@@ -34,11 +34,10 @@
                 
                 <div class="col-12 col-lg-7 mt-4 mt-lg-0">
                     <div class="ui-card-light p-2">
-                    <div class="row">
-                        <div class="col-12">
+                        <div class="row">
                             <h4>NFT</h4>
                         </div>
-                        
+                            
                         <div class="row py-2">
                             <div class="col-6 my-auto">
                                 <h5 class="secondary">NFT ID:</h5>
@@ -56,7 +55,7 @@
                                 <span class="wrap nft-name"></span>
                             </div>
                         </div>
-                    </div>                        
+                        </div>                        
                     </div>
                     
                     <div class="ui-card-light p-2 mt-4">
