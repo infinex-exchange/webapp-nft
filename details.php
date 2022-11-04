@@ -100,7 +100,9 @@
                             </div>
                         </div>                                
                     </div>
-                    
+                </div>
+                
+                <div class="col-12 col-lg-7 mt-4 mt-lg-0">
                     <div id="collection-wrapper" class="ui-card-light p-3 mt-4">
                         <div class="row pb-4">
                             <h4>Collection</h4>
