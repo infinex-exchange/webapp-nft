@@ -27,14 +27,14 @@
             
             <div class="row">
                 <div class="col-12 col-lg-5">
-                    <div class="ui-card-light p-2">
+                    <div class="ui-card-light p-3">
                         <img src="/nft/img/no_preview.png" class="img-fluid w-100" id="nft-preview">
                     </div>
                 </div>
                 
                 <div class="col-12 col-lg-7 mt-4 mt-lg-0">
-                    <div class="ui-card-light p-2">
-                        <div class="row py-2">
+                    <div class="ui-card-light p-3">
+                        <div class="row pb-4">
                             <h4>NFT</h4>
                         </div>
                             
@@ -57,14 +57,14 @@
                         </div>                      
                     </div>
                     
-                    <div class="ui-card-light p-2 mt-4">
-                        <div class="row py-2">
+                    <div class="ui-card-light p-3 mt-4">
+                        <div class="row pb-4">
                             <h4>Collection</h4>
                         </div>                        
                     </div>
                     
-                    <div class="ui-card-light p-2 mt-4">
-                        <div class="row py-2">
+                    <div class="ui-card-light p-3 mt-4">
+                        <div class="row pb-4">
                             <h4>Author</h4>
                         </div>                        
                     </div>
