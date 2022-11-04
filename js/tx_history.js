@@ -153,6 +153,10 @@ function renderTxHistoryItem(data, forceSmall) {
     if(typeof(data.network_description) !== 'undefined')
         networkDescription = data.network_description;
     
+    var nftPreview = '/nft/img/no_preview.png';
+    if(data.preview != null)
+        nftPreview = data.preview;
+    
     return `
         <div class="row hoverable tx-history-item px-1 py-2" onClick="mobileTxDetails(this)" data-nxid="${data.nxid}"
          data-type="${data.type}" data-nftid="${data.nftid}" data-network="${networkDescription}"
@@ -173,7 +177,7 @@ function renderTxHistoryItem(data, forceSmall) {
             </div>
             
             <div class="my-auto ${dNoneDLgBlock}" style="width: 40%">
-                <img width="32" height="32" src="${data.preview}">
+                <img width="32" height="32" src="${nftPreview}">
                 <span class="wrap">${data.nft_name}</span>
             </div>
             
