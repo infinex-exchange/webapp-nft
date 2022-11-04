@@ -38,6 +38,24 @@
                         <div class="col-12">
                             <h4>NFT</h4>
                         </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-6 my-auto">
+                                <h5>NFT ID:</h5>
+                            </div>
+                            <div class="col-6 text-end">
+                                <span class="wrap" id="nftid"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-6 my-auto">
+                                <h5>Name:</h5>
+                            </div>
+                            <div class="col-6 text-end">
+                                <span class="wrap nft-name"></span>
+                            </div>
+                        </div>
                     </div>                        
                     </div>
                     
