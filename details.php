@@ -39,28 +39,28 @@
                         </div>
                             
                         <div class="row py-2">
-                            <div class="col-4 my-auto">
+                            <div class="col-3 my-auto">
                                 <h5 class="secondary">NFT ID:</h5>
                             </div>
-                            <div class="col-8 text-end">
+                            <div class="col-9 text-end">
                                 <span class="wrap" id="nftid"></span>
                             </div>
                         </div>
                         
                         <div class="row py-2">
-                            <div class="col-4 my-auto">
+                            <div class="col-3 my-auto">
                                 <h5 class="secondary">Name:</h5>
                             </div>
-                            <div class="col-8 text-end">
+                            <div class="col-9 text-end">
                                 <span class="wrap nft-name"></span>
                             </div>
                         </div>
                         
                         <div class="row py-2">
-                            <div class="col-4 my-auto">
+                            <div class="col-3 my-auto">
                                 <h5 class="secondary">Description:</h5>
                             </div>
-                            <div class="col-8 text-end">
+                            <div class="col-9 text-end">
                                 <span class="wrap" id="nft-description"></span>
                             </div>
                         </div>
@@ -68,10 +68,10 @@
                         <div class="py-3"></div>
                         
                         <div class="row py-2">
-                            <div class="col-4 my-auto">
+                            <div class="col-3 my-auto">
                                 <h5 class="secondary">Data hash:</h5>
                             </div>
-                            <div class="col-8 text-end">
+                            <div class="col-9 text-end">
                                 <span class="wrap" id="nft-data-hash"></span>
                             </div>
                         </div>
