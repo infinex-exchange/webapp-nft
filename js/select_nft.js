@@ -25,10 +25,10 @@ $(document).ready(function() {
     $('#select-nft-search').on('input', function() {
         var query = $(this).val();
         if(query == '')
-            delete window.selectFpmInstaAS.data.search;
+            delete window.selectNftAS.data.search;
         else
-            window.selectFpmInstaAS.data.search = query;
-        window.selectFpmInstaAS.reset();
+            window.selectNftAS.data.search = query;
+        window.selectNftAS.reset();
     });
 });
 
