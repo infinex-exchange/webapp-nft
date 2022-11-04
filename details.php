@@ -27,8 +27,10 @@
             
             <div class="row">
                 <div class="col-12 col-lg-5">
-                    <div class="ui-card-light p-3 h-100">
-                        <img src="/nft/img/no_preview.png" class="img-fluid w-100" id="nft-preview">
+                    <div class="ui-card-light p-3 h-100 d-flex">
+                        <div class="my-auto">
+                            <img src="/nft/img/no_preview.png" class="img-fluid w-100" id="nft-preview">
+                        </div>
                     </div>
                 </div>
                 
