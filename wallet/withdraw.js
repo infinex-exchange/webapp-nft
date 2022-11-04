@@ -273,12 +273,12 @@ $(document).ready(function() {
 		    $('#help-save-name').show();
 	    }
     });
-    
-    initSelectNft();
 });
 
 $(document).on('authChecked', function() {
     if(window.loggedIn) {
+        initSelectNft();
+        
         var txHistoryData = {
             api_key: window.apiKey,
             type: 'WITHDRAWAL'
