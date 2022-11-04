@@ -39,19 +39,19 @@
                         </div>
                             
                         <div class="row py-2">
-                            <div class="col-6 my-auto">
+                            <div class="col-4 my-auto">
                                 <h5 class="secondary">NFT ID:</h5>
                             </div>
-                            <div class="col-6 text-end">
+                            <div class="col-8 text-end">
                                 <span class="wrap" id="nftid"></span>
                             </div>
                         </div>
                         
                         <div class="row py-2">
-                            <div class="col-6 my-auto">
+                            <div class="col-4 my-auto">
                                 <h5 class="secondary">Name:</h5>
                             </div>
-                            <div class="col-6 text-end">
+                            <div class="col-8 text-end">
                                 <span class="wrap nft-name"></span>
                             </div>
                         </div>
