@@ -29,9 +29,9 @@ $(document).ready(function() {
             
             $.each(data.nft.data_uris, function(k, v) {
                 $('#nft-data-uris').append(`
-                    <div class="py-1">
+                    <li>
                         <a href="${v}">${v}</a>
-                    </div>
+                    </li>
                 `);
             });
             
