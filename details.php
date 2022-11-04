@@ -41,7 +41,7 @@
                     </div>                        
                     </div>
                     
-                    <div class="ui-card-light p-2">
+                    <div class="ui-card-light p-2 mt-2">
                     <div class="row">
                         <div class="col-12">
                             <h4>Collection</h4>
@@ -49,7 +49,7 @@
                     </div>                        
                     </div>
                     
-                    <div class="ui-card-light p-2">
+                    <div class="ui-card-light p-2 mt-2">
                     <div class="row">
                         <div class="col-12">
                             <h4>Author</h4>
