@@ -18,6 +18,9 @@ $(document).ready(function() {
         if(data.success) {
             $('.nft-name').html(data.nft.name);
             
+            if(data.preview != null)
+                $('#nft-preview').attr('src', data.preview);
+            
             $(document).trigger('renderingStage');
         }
         
