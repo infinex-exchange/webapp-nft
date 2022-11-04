@@ -58,14 +58,16 @@ function initSelectNft(endpoint = '/nft/wallet/nfts') {
             .done(function (data) {
                 if(data.success) {
                     $.each(data.nfts, function(k, v) {
+                        shortNftid = showTxid(k);
+                        
                         thisAS.append(`
                             <div class="select-nft-item row p-1 hoverable" data-nftid="${k}" data-name="${v.name}">
                                 <div class="col-auto my-auto text-center" style="width: 32px">
                                     <img width="24px" height="24px" src="${v.preview}">
                                 </div>
-                                <div class="col-auto my-auto">
+                                <div class="col-auto wrap my-auto">
                                     <h5 class="secondary">${v.name}</h5>
-                                    ${k}
+                                    ${shortNftid}
                                 </div>
                             </div>
                         `);
