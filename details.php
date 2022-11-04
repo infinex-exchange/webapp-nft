@@ -56,7 +56,7 @@
                             </div>
                         </div>
                         
-                        <div class="row py-2">
+                        <div class="row pt-2 pb-4">
                             <div class="col-12">
                                 <h5 class="secondary">Description:</h5>
                             </div>
@@ -64,8 +64,6 @@
                                 <span class="wrap" id="nft-description"></span>
                             </div>
                         </div>
-                        
-                        <div class="py-3"></div>
                         
                         <div class="row py-2">
                             <div class="col-12">
