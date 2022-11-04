@@ -61,6 +61,11 @@ $(document).on('authChecked', function() {
                                                             </a>
                                                         </li>
                                                         <li>
+                                                            <a class="dropdown-item" href="/nft/sell/${nftid}">
+                                                                <i class="fa-solid fa-badge-dollar"></i>
+                                                                Sell
+                                                            </a>
+                                                        <li>
                                                             <a class="dropdown-item" href="/nft/wallet/withdraw/${nftid}">
                                                                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
                                                                 Withdraw
