@@ -24,6 +24,17 @@
             <div class="row p-2">
                 <h3 class="nft-name"></h3>
             </div>
+            
+            <div class="row">
+                <div class="col-12 col-lg-5">
+                    <div class="ui-card-light p-2">
+                        <img src="/nft/img/no_preview.png" class="img-fluid" id="nft-preview">
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-7">
+                </div>
+            </div>
         
         <!-- / Main column -->
         </div>
