@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-7">
+                <div class="col-12 col-lg-7 mt-2 mt-lg-0">
                     <div class="ui-card-light p-2">
                     <div class="row">
                         <div class="col-12">
