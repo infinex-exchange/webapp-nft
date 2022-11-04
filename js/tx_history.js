@@ -162,7 +162,7 @@ function renderTxHistoryItem(data, forceSmall) {
          data-type="${data.type}" data-nftid="${data.nftid}" data-network="${networkDescription}"
          data-nft-name="${data.nft_name}" data-status="${data.status}" data-create-time="${cTime}"
          data-address="${data.address}" data-exec-time="${eTime}" data-confirms="${confHtml}"
-         data-txid="${txid}" data-height="${height}" data-fee="${fee}" data-icon-url="${data.preview}"
+         data-txid="${txid}" data-height="${height}" data-fee="${fee}" data-icon-url="${nftPreview}"
          data-delayed="${delayed}">
             
             
