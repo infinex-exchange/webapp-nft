@@ -94,7 +94,6 @@ function initSelectNft(endpoint = '/nft/wallet/nfts') {
                 thisAS.done();
                 thisAS.noMoreData();
             }); 
-        },
-        false
+        }
     );
 }
