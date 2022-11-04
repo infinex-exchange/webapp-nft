@@ -21,7 +21,7 @@ $(document).ready(function() {
             if(data.nft.preview != null)
                 $('#nft-preview').attr('src', data.nft.preview);
             
-            $('#nftid').html(data.nft.nftid);
+            $('#nftid').html(nftid);
             
             $(document).trigger('renderingStage');
         }
