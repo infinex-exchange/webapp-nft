@@ -73,6 +73,8 @@ $(document).ready(function() {
                 $('#collection-wrapper').hide();
             }
             
+            $('#author-id').html(data.nft.author.authorid);
+            
             $(document).trigger('renderingStage');
         }
         

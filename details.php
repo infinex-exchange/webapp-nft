@@ -153,6 +153,14 @@
                             <h4>Author</h4>
                         </div>                        
                     </div>
+                    
+                    <div class="row py-2">
+                            <div class="col-4">
+                                <h5 class="secondary">Author ID:</h5>
+                            </div>
+                            <div class="col-12 wrap" id="author-id">
+                            </div>
+                        </div>
                 </div>
             </div>
         
