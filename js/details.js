@@ -23,6 +23,16 @@ $(document).ready(function() {
             
             $('#nftid').html(nftid);
             
+            $('#nft-data-hash').html(data.nft.data_hash);
+            
+            $.each(data.nft.data_uris, function(k, v) {
+                $('#nft-data-uris').append(`
+                    <div class="py-1">
+                        <a href="${v}">${v}</a>
+                    </div>
+                `);
+            });
+            
             $(document).trigger('renderingStage');
         }
         
