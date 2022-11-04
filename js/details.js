@@ -35,21 +35,25 @@ $(document).ready(function() {
                 `);
             });
             
+            var licenseUrisHtml = '';
             $.each(data.nft.license_uris, function(k, v) {
-                $('#nft-license-uris').append(`
+                licenseUrisHtml += `
                     <li>
                         <a href="${v}">${v}</a>
                     </li>
-                `);
+                `;
             });
+            $('#nft-license-uris').html(licenseUrisHtml == '' ? '-' : `<ul>${licenseUrisHtml}</ul>`);
             
+            var attributesHtml = '';
             $.each(data.nft.attributes, function(k, v) {
-                $('#nft-attributes').append(`
+                attributesHtml += `
                     <li>
                         <span class="secondary">${v.key}</span>: ${v.value}
                     </li>
-                `);
+                `;
             });
+            $('#nft-attributes').html(attributesHtml == '' ? '-' : `<ul>${attributesHtml}</ul>`);
             
             $(document).trigger('renderingStage');
         }

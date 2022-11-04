@@ -88,9 +88,7 @@
                             <div class="col-12">
                                 <h5 class="secondary">License URLs:</h5>
                             </div>
-                            <div class="col-12 wrap">
-                                <ul id="nft-license-uris">
-                                </ul>
+                            <div class="col-12 wrap" id="nft-license-uris">
                             </div>
                         </div>
                         
@@ -98,9 +96,7 @@
                             <div class="col-12">
                                 <h5 class="secondary">Attributes:</h5>
                             </div>
-                            <div class="col-12 wrap">
-                                <ul id="nft-attributes">
-                                </ul>
+                            <div class="col-12 wrap" id="nft-attributes">
                             </div>
                         </div>                                
                     </div>
