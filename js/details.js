@@ -35,6 +35,14 @@ $(document).ready(function() {
                 `);
             });
             
+            $.each(data.nft.attributes, function(k, v) {
+                $('#nft-attributes').append(`
+                    <li>
+                        <span class="secondary">${v.key}</span>: ${v.value}
+                    </li>
+                `);
+            });
+            
             $(document).trigger('renderingStage');
         }
         
