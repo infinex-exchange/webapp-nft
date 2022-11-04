@@ -11,3 +11,5 @@ RewriteRule ^wallet/transfer/([^/]+)/?$ wallet/transfer.php [L]
 RewriteRule ^wallet/transfer/?$ wallet/transfer.php [L]
 RewriteRule ^wallet/transactions/?$ wallet/transactions.php [L]
 RewriteRule ^wallet/addressbook/?$ wallet/addressbook.php [L]
+
+RewriteRule ^details/([^/]+)/?$ details.php [L]
