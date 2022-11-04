@@ -59,7 +59,7 @@ $(document).ready(function() {
                 var colNameHtml = data.nft.collection.name;
                 
                 if(data.nft.collection.icon_url !== null)
-                    colNameHtml = `<img src="${data.nft.icon_url}" width="16" height="16"> ${colNameHtml}`;
+                    colNameHtml = `<img src="${data.nft.collection.icon_url}" width="16" height="16"> ${colNameHtml}`;
                 
                 $('#col-icon-name-wrapper').html(colNameHtml);
             }
