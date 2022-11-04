@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-12 col-lg-5">
                     <div class="ui-card-light p-2">
-                        <img src="/nft/img/no_preview.png" class="img-fluid" id="nft-preview">
+                        <img src="/nft/img/no_preview.png" class="img-fluid w-100" id="nft-preview">
                     </div>
                 </div>
                 
