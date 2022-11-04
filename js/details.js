@@ -23,6 +23,8 @@ $(document).ready(function() {
             
             $('#nftid').html(nftid);
             
+            $('#nft-description').html(data.nft.description === null ? '-' : data.nft.description);
+            
             $('#nft-data-hash').html(data.nft.data_hash);
             
             $.each(data.nft.data_uris, function(k, v) {
