@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         
-                        <div class="row pt-2 pb-4">
+                        <div class="row pt-2">
                             <div class="col-12">
                                 <h5 class="secondary">Attributes:</h5>
                             </div>
@@ -101,9 +101,26 @@
                         </div>                                
                     </div>
                     
-                    <div class="ui-card-light p-3 mt-4">
+                    <div id="collection-wrapper" class="ui-card-light p-3 mt-4">
                         <div class="row pb-4">
                             <h4>Collection</h4>
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <h5 class="secondary">Name:</h5>
+                            </div>
+                            <div class="col-8 wrap" id="col-icon-name-wrapper">
+                            </div>
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Name:</h5>
+                            </div>
+                            <div class="col-12">
+                                <span class="wrap nft-name"></span>
+                            </div>
                         </div>                        
                     </div>
                     

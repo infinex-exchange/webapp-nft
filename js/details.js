@@ -55,6 +55,18 @@ $(document).ready(function() {
             });
             $('#nft-attributes').html(attributesHtml == '' ? '-' : `<ul>${attributesHtml}</ul>`);
             
+            if(typeof(data.nft.collection) !== 'undefined') {
+                var colNameHtml = data.nft.collection.name;
+                
+                if(data.nft.collection.icon_url !== null)
+                    colNameHtml = `<img src="${data.nft.icon_url}" width="16" height="16"> ${colNameHtml}`;
+                
+                $('#col-icon-name-wrapper').html(colNameHtml);
+            }
+            else {
+                $('#collection-wrapper').hide();
+            }
+            
             $(document).trigger('renderingStage');
         }
         
