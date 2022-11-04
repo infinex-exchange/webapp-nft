@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../templates/head.php'); ?>
-        <?php include('../imports/bignumber.html'); ?>
-        <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../js/validate.js'); ?>"></script>
-        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../js/ajax_scroll.js'); ?>"></script>
+        <?php include('../../../templates/head.php'); ?>
+        <?php include('../../../imports/bignumber.html'); ?>
+        <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../../../js/validate.js'); ?>"></script>
+        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <title>Withdrawal | Vayamos NFT</title>
     </head>
@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-6 py-2">
                             <label for="select-adbk">Address:</label>
-                            <?php include(__DIR__'/../templates/select_nft_adbk.php'); ?>
+                            <?php include(__DIR__.'/../templates/select_nft_adbk.php'); ?>
                             <small id="help-address" class="form-text" style="display: none">Address is invalid</small>
                         </div>
                     </div>
