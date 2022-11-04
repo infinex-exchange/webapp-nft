@@ -74,12 +74,22 @@
                             </div>
                         </div>
                         
-                        <div class="row pt-2 pb-4">
+                        <div class="row py-2">
                             <div class="col-12">
                                 <h5 class="secondary">Data URLs:</h5>
                             </div>
                             <div class="col-12 wrap">
                                 <ul id="nft-data-uris">
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="row pt-2 pb-4">
+                            <div class="col-12">
+                                <h5 class="secondary">License URLs:</h5>
+                            </div>
+                            <div class="col-12 wrap">
+                                <ul id="nft-license-uris">
                                 </ul>
                             </div>
                         </div>

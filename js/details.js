@@ -35,6 +35,14 @@ $(document).ready(function() {
                 `);
             });
             
+            $.each(data.nft.license_uris, function(k, v) {
+                $('#nft-license-uris').append(`
+                    <li>
+                        <a href="${v}">${v}</a>
+                    </li>
+                `);
+            });
+            
             $.each(data.nft.attributes, function(k, v) {
                 $('#nft-attributes').append(`
                     <li>
