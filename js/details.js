@@ -65,9 +65,9 @@ $(document).ready(function() {
                 
                 $('#col-description').html(data.nft.collection.description === null ? '-' : data.nft.collection.description);
                 $('#col-website').html(data.nft.collection.website === null ? '-' :
-                    `<a href="${data.nft.collection.website}>${data.nft.collection.website}</a>`);
+                    `<a href="${data.nft.collection.website}">${data.nft.collection.website}</a>`);
                 $('#col-twitter').html(data.nft.collection.twitter === null ? '-' :
-                    `<a href="https://twitter.com/${data.nft.collection.twitter}>@${data.nft.collection.twitter}</a>`);
+                    `<a href="https://twitter.com/${data.nft.collection.twitter}">@${data.nft.collection.twitter}</a>`);
             }
             else {
                 $('#collection-wrapper').hide();
