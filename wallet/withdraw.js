@@ -39,7 +39,6 @@ $(document).ready(function() {
             if(data.success) {
                 // Reset validation variables
                 window.validAddress = false;
-                window.validMemo = false;
                 window.validAdbkName = false;
                 
                 // Reset form
@@ -275,7 +274,7 @@ $(document).ready(function() {
 	    }
     });
     
-    initSelectCoin();
+    initSelectNft();
 });
 
 $(document).on('authChecked', function() {
