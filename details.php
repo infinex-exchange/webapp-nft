@@ -110,18 +110,36 @@
                             <div class="col-4">
                                 <h5 class="secondary">Name:</h5>
                             </div>
-                            <div class="col-8 wrap" id="col-icon-name-wrapper">
+                            <div class="col-12 wrap" id="col-icon-name-wrapper">
                             </div>
                         </div>
                         
                         <div class="row py-2">
                             <div class="col-12">
-                                <h5 class="secondary">Name:</h5>
+                                <h5 class="secondary">Description:</h5>
                             </div>
                             <div class="col-12">
-                                <span class="wrap nft-name"></span>
+                                <span class="wrap" id="col-description"></span>
                             </div>
-                        </div>                        
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Website:</h5>
+                            </div>
+                            <div class="col-12">
+                                <span class="wrap" id="col-website"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Twitter:</h5>
+                            </div>
+                            <div class="col-12">
+                                <span class="wrap" id="col-twitter"></span>
+                            </div>
+                        </div>                             
                     </div>
                     
                     <div class="ui-card-light p-3 mt-4">
