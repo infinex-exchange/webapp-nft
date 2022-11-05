@@ -35,7 +35,7 @@
                             <div class="col-12 col-lg-7 py-4 text-center my-auto order-1 order-lg-2">
                                 <h3>Stay tuned!</h3>
                                 <h4 class="pb-4">We'll launch NFT trading soon.</h4>
-                                <p>You can already transfer your NFTs to Vayamos and use all the features of the new NFT wallet.</p>
+                                <p>You can already transfer your NFTs to Vayamos and enjoy all the features of the new NFT wallet.</p>
         		            </div>
         	            </div>
         	        </div>
