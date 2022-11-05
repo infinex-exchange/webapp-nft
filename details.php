@@ -153,13 +153,29 @@
                             <h4>Author</h4>
                         </div>
                         
-                        <div class="row py-2">
-                            <div class="col-4">
+                        <div class="row pt-2 pb-4">
+                            <div class="col-12">
                                 <h5 class="secondary">Author ID:</h5>
                             </div>
                             <div class="col-12 wrap" id="author-id">
                             </div>
-                        </div>                        
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Royalty percentage:</h5>
+                            </div>
+                            <div class="col-12" id="author-royalty-perc">
+                            </div>
+                        </div>      
+                        
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Royalty address:</h5>
+                            </div>
+                            <div class="col-12 wrap" id="author-royalty-address">
+                            </div>
+                        </div>                            
                     </div>
                 </div>
             </div>

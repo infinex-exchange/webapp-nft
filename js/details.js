@@ -74,6 +74,8 @@ $(document).ready(function() {
             }
             
             $('#author-id').html(data.nft.author.authorid);
+            $('#author-royalty-perc').html(data.nft.author.royalty_perc + '%');
+            $('#author-royalty-address').html(data.nft.author.royalty_address === null ? '-' : data.nft.author.royalty_address);
             
             $(document).trigger('renderingStage');
         }
