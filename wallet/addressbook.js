@@ -38,7 +38,7 @@ function renderAdbkItem(nadbkid, data) {
         <div class="adbk-item row p-2 hoverable" onClick="mobileAdbkDetails(this)"
             data-nadbkid="${nadbkid}" data-name="${data.name}" data-network="${data.network_description}"
             data-address="${data.address}">
-            <div class="my-auto d-none d-lg-block" style="width: 10%">
+            <div class="my-auto d-none d-lg-block" style="width: 15%">
                 <img width="16" height="16" src="${data.icon_url}">
                 ${data.network_description}
             </div>
