@@ -32,7 +32,7 @@
                             <div class="col-8 col-lg-5 mx-auto order-2 order-lg-1">
                                 <img src="/nft/img/wallet_preview.png" class="img-fluid">
         		            </div>
-                            <div class="col-12 col-lg-7 pt-2 pb-4 text-center my-auto order-1 order-lg-2">
+                            <div class="col-12 col-lg-7 py-4 text-center my-auto order-1 order-lg-2">
                                 <h3>Stay tuned!</h3>
                                 <h4 class="pb-4">We'll launch NFT trading soon.</h4>
                                 <p>You can already transfer your NFTs to Vayamos and use all the features of the new NFT wallet.</p>
