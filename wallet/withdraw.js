@@ -114,7 +114,7 @@ $(document).ready(function() {
     });
     
     // Validate address
-    $('#select-adbk').on('input', function() {
+    $('#select-nft-adbk').on('input', function() {
         if(typeof(window.addrTypingTimeout) !== 'undefined')
             clearTimeout(window.addrTypingTimeout);
         window.addrTypingTimeout = setTimeout(function() {
