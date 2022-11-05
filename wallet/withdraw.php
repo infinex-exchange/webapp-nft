@@ -111,9 +111,6 @@
                         <div class="col-12 col-lg-6 py-2 order-lg-5 my-auto">
                             <span class="secondary">Available:</span>
                             <span class="float-end" id="withdraw-balance"></span>
-                            <br>
-                            <span class="secondary">After pay fee:</span>
-                            <span class="float-end" id="withdraw-amount-max"></span><strong></strong>
                         </div>
                         
                         <div class="col-12 col-lg-6 py-2 order-lg-6 my-auto">

@@ -55,9 +55,6 @@ $(document).ready(function() {
                 // Addressbook
                 initSelectNftAdbk(data.netid);
                 
-                // Fee
-		        updateFees(data.fee_min, data.fee_max);
-                
                 // Fee asset balance
                 $.ajax({
 		            url: config.apiUrl + '/wallet/balances',
@@ -72,7 +69,12 @@ $(document).ready(function() {
 		        .retry(config.retry)
 		        .done(function (dataBal) {
 		            if(data.success) {
-		                window.wdRawBalance = new BigNumber(dataBal.balances[data.native_assetid].avbl);
+		                // Balance
+                        window.nativeBalance = new BigNumber(dataBal.balances[data.native_assetid].avbl);
+                        $('#withdraw-balance').html(dataBal.balances[data.native_assetid].avbl + ' ' + data.native_assetid);
+                        
+                        // Fee
+		                updateFees(data.fee_min, data.fee_max);
 		                
 		                $('#withdraw-step2').show();
 		                $('html, body').animate({
