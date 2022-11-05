@@ -166,7 +166,7 @@ $(document).ready(function() {
         event.preventDefault();
         
         // Validate data
-        var address = $('#select-adbk').val();
+        var address = $('#select-nft-adbk').val();
         if(address == '') {
             msgBox('Missing address');
             return;
