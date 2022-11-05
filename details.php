@@ -89,7 +89,7 @@
                                 <h5 class="secondary">Data URLs:</h5>
                             </div>
                             <div class="col-12 wrap">
-                                <ul id="nft-data-uris">
+                                <ul class="m-0" id="nft-data-uris">
                                 </ul>
                             </div>
                         </div>

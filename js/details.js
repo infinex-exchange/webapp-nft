@@ -43,7 +43,7 @@ $(document).ready(function() {
                     </li>
                 `;
             });
-            $('#nft-license-uris').html(licenseUrisHtml == '' ? '-' : `<ul>${licenseUrisHtml}</ul>`);
+            $('#nft-license-uris').html(licenseUrisHtml == '' ? '-' : `<ul class="m-0">${licenseUrisHtml}</ul>`);
             
             var attributesHtml = '';
             $.each(data.nft.attributes, function(k, v) {
@@ -53,7 +53,7 @@ $(document).ready(function() {
                     </li>
                 `;
             });
-            $('#nft-attributes').html(attributesHtml == '' ? '-' : `<ul>${attributesHtml}</ul>`);
+            $('#nft-attributes').html(attributesHtml == '' ? '-' : `<ul class="m-0">${attributesHtml}</ul>`);
             
             if(typeof(data.nft.collection) !== 'undefined') {
                 var colNameHtml = data.nft.collection.name;
