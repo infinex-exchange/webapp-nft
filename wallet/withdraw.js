@@ -75,7 +75,9 @@ $(document).ready(function() {
                         $('#withdraw-balance').html(dataBal.balances[data.native_assetid].avbl + ' ' + data.native_assetid);
                         
                         // Fee
-		                updateFees(data.fee_min, data.fee_max);
+		                window.wdFeeMinOrig = data.fee_min;
+                        window.wdFeeMaxOrig = data.fee_max;
+                        updateFees(data.fee_min, data.fee_max);
 		                
 		                $('#withdraw-step2').show();
 		                $('html, body').animate({
@@ -118,13 +120,12 @@ $(document).ready(function() {
         window.addrTypingTimeout = setTimeout(function() {
             
             $.ajax({
-                url: config.apiUrl + '/wallet/withdraw/validate',
+                url: config.apiUrl + '/nft/wallet/withdraw/validate',
                 type: 'POST',
                 data: JSON.stringify({
                     api_key: window.apiKey,
-                    asset: $('#select-coin').val(),
-                    network: $('#select-net').data('network'),
-                    address: $('#select-adbk').val()
+                    nftid: $('#select-nft').data('nftid'),
+                    address: $('#select-nft-adbk').val()
                 }),
                 contentType: "application/json",
                 dataType: "json",
@@ -171,9 +172,8 @@ $(document).ready(function() {
             return;
         }
         
-        var amount = new BigNumber($('#withdraw-amount').data('val'));
-        if(amount.isNaN() || amount.isZero()) {
-            msgBox('Missing amount');
+        if(!window.validFee) {
+            msgBox('Insufficient balance to pay withdrawal fee');
             return;
         }
         
@@ -188,15 +188,9 @@ $(document).ready(function() {
         
         var data = new Object();
         data['api_key'] = window.apiKey;
-        data['asset'] = $('#select-coin').val();
-        data['network'] = $('#select-net').data('network');
+        data['nftid'] = $('#select-nft').data('nftid');
         data['address'] = address;
-        data['amount'] = amount.toFixed(window.wdAmountPrec);
         data['fee'] = fee.toFixed(window.wdAmountPrec);
-        
-        var memo = $('#withdraw-memo').val();
-        if(memo != '')
-            data['memo'] = memo;
             
         var tfa = $('#2fa-code').val();
         if(tfa != '')
@@ -206,7 +200,6 @@ $(document).ready(function() {
 	        data['adbk_name'] = adbkName;
         
         if(!window.validAddress ||
-           (memo != '' && !window.validMemo) ||
            (adbkSave && !window.validAdbkName))
         {
 	        msgBox('Fill the form correctly');
@@ -215,7 +208,7 @@ $(document).ready(function() {
             
         // Post
         $.ajax({
-            url: config.apiUrl + '/wallet/withdraw',
+            url: config.apiUrl + '/nft/wallet/withdraw',
             type: 'POST',
             data: JSON.stringify(data),
             contentType: "application/json",
@@ -225,7 +218,6 @@ $(document).ready(function() {
         .done(function (data) {
             if(data.success) {
                 $('#withdraw-step2').hide();
-                $('#withdraw-step3').hide();
                 window.latestWithdrawalXid = data.xid;
                 updateTxHistory();
             }
