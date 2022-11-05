@@ -43,8 +43,8 @@ $(document).on('authChecked', function() {
                             thisAS.append(`
                                 <div class="nft-item col-12 col-md-3 col-lg-3 py-2">
                                     <div class="card h-100 hoverable">
-                                        <a href="/nft/details/${nftid}">
-											<img src="${nftPreview}" class="card-img-top h-100">
+                                        <a href="/nft/details/${nftid}" class="card-img-top d-flex h-100">
+											<img src="${nftPreview}" class="img-fluid my-auto">
 										</a>
 										<div class="card-body">
                                             <div class="row">
