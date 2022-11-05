@@ -9,13 +9,13 @@ $(document).ready(function() {
     });
 });
 
-function removeAdbk(adbkid) {
+function removeAdbk(nadbkid) {
     $.ajax({
-        url: config.apiUrl + '/wallet/addressbook/delete',
+        url: config.apiUrl + '/nft/wallet/addressbook/delete',
         type: 'POST',
         data: JSON.stringify({
             api_key: window.apiKey,
-            adbkid: adbkid
+            nadbkid: nadbkid
         }),
         contentType: "application/json",
         dataType: "json",
@@ -23,7 +23,7 @@ function removeAdbk(adbkid) {
     .retry(config.retry)
     .done(function (data) {
         if(data.success) {
-            $('.adbk-item[data-adbkid="' + adbkid + '"]').remove();
+            $('.adbk-item[data-nadbkid="' + nadbkid + '"]').remove();
         } else {
             msgBox(data.error);
         }
@@ -33,46 +33,24 @@ function removeAdbk(adbkid) {
     });     
 }
 
-function renderAdbkItem(adbkid, data) {
-	var memo = '';
-    var memoName = '';
-    var memoInner = '';
-    if(typeof(data.memo) !== 'undefined' && typeof(data.memo_name) !== 'undefined') {
-        memoName = data.memo_name;
-        memo = data.memo;
-        memoInner = `
-            <br>
-            <h6 class="d-inline secondary">
-                ${data.memo_name}:
-            </h6>
-            <small>
-                ${data.memo}
-            </small>
-        `;
-    }
-    
+function renderAdbkItem(nadbkid, data) {
     return `
         <div class="adbk-item row p-2 hoverable" onClick="mobileAdbkDetails(this)"
-            data-adbkid="${adbkid}" data-name="${data.name}" data-network="${data.network_description}"
-            data-asset="${data.asset}" data-address="${data.address}" data-memo-name="${memoName}"
-            data-memo="${memo}">
+            data-nadbkid="${nadbkid}" data-name="${data.name}" data-network="${data.network_description}"
+            data-address="${data.address}">
             <div class="my-auto d-none d-lg-block" style="width: 10%">
                 <img width="16" height="16" src="${data.icon_url}">
-                ${data.asset}
-            </div>
-            <div class="my-auto d-none d-lg-block" style="width: 15%">
                 ${data.network_description}
             </div>
-            <div class="my-auto wrap d-none d-lg-block" style="width: 20%">
+            <div class="my-auto wrap d-none d-lg-block" style="width: 30%">
 	            <span class="name">${data.name}</span>
             </div>
             <div class="my-auto wrap d-none d-lg-block" style="width: 35%">
 	            ${data.address}
-                ${memoInner}
             </div>
             <div class="my-auto text-end d-none d-lg-block" style="width: 20%">
-                <button type="button" class="btn btn-primary btn-sm" style="width: 70px" onClick="showRenameAdbkPrompt(${adbkid})">Rename</a>
-                <button type="button" class="btn btn-primary btn-sm" style="width: 70px" onClick="removeAdbk(${adbkid})">Remove</a>
+                <button type="button" class="btn btn-primary btn-sm" style="width: 70px" onClick="showRenameAdbkPrompt(${nadbkid})">Rename</a>
+                <button type="button" class="btn btn-primary btn-sm" style="width: 70px" onClick="removeAdbk(${nadbkid})">Remove</a>
             </div>
             
             <div class="m-auto d-lg-none" style="width: 60px">
@@ -81,14 +59,13 @@ function renderAdbkItem(adbkid, data) {
             <div class="d-lg-none" style="width: calc(100% - 60px)">
                 <h5 class="secondary name">${data.name}</h5>
                 ${data.address}
-                ${memoInner}
             </div>
         </div>
     `;
 }
 
-function showRenameAdbkPrompt(adbkid) {
-    var item = $('.adbk-item[data-adbkid="' + adbkid + '"]');
+function showRenameAdbkPrompt(nadbkid) {
+    var item = $('.adbk-item[data-nadbkid="' + nadbkid + '"]');
     var oldName = item.data('name');
     
     $('#adbk-rename-form').unbind('submit');
@@ -105,11 +82,11 @@ function showRenameAdbkPrompt(adbkid) {
         $('#modal-adbk-rename').modal('hide');
         
         $.ajax({
-            url: config.apiUrl + '/wallet/addressbook/rename',
+            url: config.apiUrl + '/nft/wallet/addressbook/rename',
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey,
-                adbkid: adbkid,
+                nadbkid: nadbkid,
                 new_name: name
             }),
             contentType: "application/json",
@@ -137,7 +114,7 @@ function showRenameAdbkPrompt(adbkid) {
 $(document).on('authChecked', function() {
     if(window.loggedIn) {
         $.ajax({
-            url: config.apiUrl + '/wallet/addressbook',
+            url: config.apiUrl + '/nft/wallet/addressbook',
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey
@@ -148,8 +125,8 @@ $(document).on('authChecked', function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                $.each(data.addressbook, function(adbkid, data) {
-                    $('#adbk-data').append(renderAdbkItem(adbkid, data));
+                $.each(data.addressbook, function(nadbkid, data) {
+                    $('#adbk-data').append(renderAdbkItem(nadbkid, data));
                 });
                         
                 $(document).trigger('renderingStage');
@@ -166,29 +143,19 @@ $(document).on('authChecked', function() {
 function mobileAdbkDetails(item) {
     if($(window).width() > 991) return;
     
-    var adbkid = $(item).data('adbkid');
+    var nadbkid = $(item).data('nadbkid');
     
     $('#madbk-name').html($(item).data('name'));
     $('#madbk-rename-btn').unbind('click').on('click', function() {
         $('#modal-adbk-details').modal('hide');
-        showRenameAdbkPrompt(adbkid);
+        showRenameAdbkPrompt(nadbkid);
     });
     $('#madbk-remove-btn').unbind('click').on('click', function() {
         $('#modal-adbk-details').modal('hide');
-        removeAdbk(adbkid);
+        removeAdbk(nadbkid);
     });
     $('#madbk-address').html($(item).data('address'));
     $('#madbk-network').html($(item).data('network'));
-    $('#madbk-asset').html($(item).data('asset'));
-    
-    var memo = $(item).data('memo');
-    if(memo != '') {
-        $('#madbk-memo-name').html($(item).data('memo-name') + ':');
-        $('#madbk-memo').html(memo);
-        $('#madbk-memo-wrapper').show();
-    }
-    else
-        $('#madbk-memo-wrapper').hide();
     
     $('#modal-adbk-details').modal('show');
 }

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../templates/head.php'); ?>
-        <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../js/validate.js'); ?>"></script>
-        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../js/ajax_scroll.js'); ?>"></script>
-        <title>Address book | Vayamos Exchange</title>
+        <?php include('../../../templates/head.php'); ?>
+        <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../../../js/validate.js'); ?>"></script>
+        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
+        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
+        <title>Address book | Vayamos NFT</title>
     </head>
     <body>
     
         <!-- Preloader -->
-        <?php include('../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../../../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../templates/navbar.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 p-0 user-only">
@@ -25,13 +27,10 @@
             </div>
             
             <div class="row p-2 secondary d-none d-lg-flex scrollable">
-                <div style="width: 10%">
-                    <h5>Asset</h5>
-                </div>
                 <div style="width: 15%">
                     <h5>Network</h5>
                 </div>
-                <div style="width: 20%">
+                <div style="width: 30%">
                     <h5>Name</h5>
                 </div>
                 <div style="width: 35%">
@@ -63,14 +62,6 @@
                     <div class="modal-body">
                         <div class="row py-2">
                             <div class="col-6">
-                                <h5>Asset:</h5>
-                            </div>
-                            <div class="col-6 text-end">
-                                <span id="madbk-asset"></span>
-                            </div>
-                        </div>
-                        <div class="row py-2">
-                            <div class="col-6">
                                 <h5>Network:</h5>
                             </div>
                             <div class="col-6 text-end">
@@ -91,14 +82,6 @@
                             </div>
                             <div class="col-6 text-end">
                                 <span id="madbk-address" class="wrap"></span>
-                            </div>
-                        </div>
-                        <div id="madbk-memo-wrapper" class="row py-2">
-                            <div class="col-6">
-                                <h5 id="madbk-memo-name"></h5>
-                            </div>
-                            <div class="col-6 text-end">
-                                <span id="madbk-memo" class="wrap"></span>
                             </div>
                         </div>
                     </div>
@@ -135,10 +118,10 @@
     </div>
 </div>
         
-        <script src="/wallet/addressbook.js?<?php echo filemtime(__DIR__.'/addressbook.js'); ?>"></script>
+        <script src="/nft/wallet/addressbook.js?<?php echo filemtime(__DIR__.'/addressbook.js'); ?>"></script>
         
-        <?php include('../templates/modals.php'); ?>
-        <?php include('../templates/vanilla_mobile_nav.php'); ?>
+        <?php include(__DIR__.'/../../../templates/modals.php'); ?>
+        <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
