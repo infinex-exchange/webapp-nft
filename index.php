@@ -29,10 +29,10 @@
                 <div class="col-12">
         	        <div class="p-2 p-lg-4 ui-card-light rounded">
         	            <div class="row">
-                            <div class="col-8 order-2 order-lg-1">
+                            <div class="col-8 col-lg-4 order-2 order-lg-1">
                                 <img src="/nft/img/wallet_preview.png" class="img-fluid">
         		            </div>
-                            <div class="col-12 col-lg-4 pt-2 pb-4 text-center order-1 order-lg2">
+                            <div class="col-12 col-lg-8 pt-2 pb-4 text-center order-1 order-lg2">
                                 <h3>Stay tuned!</h3>
                                 <h4>We'll launch NFT trading soon.</h4>
                                 <p>You can hold your NFT on the Vayamos Exchange and use all the features of the NFT wallet already.</p>
