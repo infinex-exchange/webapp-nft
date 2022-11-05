@@ -287,8 +287,7 @@ $(document).on('authChecked', function() {
         var pathArray = window.location.pathname.split('/');
         var pathLast = pathArray[pathArray.length - 1];
         if(pathLast != 'withdraw' && pathLast != '') {
-            var nftid = pathLast;
-            $('#select-nft').val(nftid).data('nftid', nftid).trigger('change');
+            $('#select-nft').val(pathLast).data('nftid', pathLast).trigger('change');
         }
     }
 });
