@@ -218,7 +218,7 @@ $(document).ready(function() {
         .done(function (data) {
             if(data.success) {
                 $('#withdraw-step2').hide();
-                window.latestWithdrawalXid = data.xid;
+                window.latestWithdrawalNid = data.nxid;
                 updateTxHistory();
             }
             else if(data.need_2fa) {
