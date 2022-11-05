@@ -288,7 +288,7 @@ $(document).on('authChecked', function() {
         var pathLast = pathArray[pathArray.length - 1];
         if(pathLast != 'withdraw' && pathLast != '') {
             var nftid = pathLast;
-            $('#select-nft').val(symbol).trigger('change');
+            $('#select-nft').val(nftid).data('nftid', nftid).trigger('change');
         }
     }
 });
