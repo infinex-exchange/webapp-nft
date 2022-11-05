@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../templates/head.php'); ?>
-        <?php include('../imports/bignumber.html'); ?>
-        <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../js/validate.js'); ?>"></script>
-        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../js/ajax_scroll.js'); ?>"></script>
-        <title>Internal transfer | Vayamos Exchange</title>
+        <?php include('../../../templates/head.php'); ?>
+        <?php include('../../../imports/bignumber.html'); ?>
+        <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../../../js/validate.js'); ?>"></script>
+        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
+        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
+        <title>Internal transfer | Vayamos NFT</title>
     </head>
     <body>
     
         <!-- Preloader -->
-        <?php include('../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../../../templates/navbar.php'); ?>
+        <?php include(__DIR__.'/../templates/navbar.php'); ?>
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 p-0 user-only">
@@ -28,10 +30,10 @@
             
             <div class="row py-2">
                 <div class="col-12">
-                    <h3>&#9312 Select coin to transfer:</h3>
+                    <h3>&#9312 Select NFT to transfer:</h3>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <?php include('../templates/select_coin.php'); ?>
+                    <?php include(__DIR__.'/../templates/select_nft.php'); ?>
                 </div>
             </div>
             
@@ -49,33 +51,7 @@
                             <input type="text" class="form-control" id="transfer-address">
                             <small id="help-address" class="form-text" style="display: none">E-mail is invalid</small>
                         </div>
-                        
-                        <div class="col-12 col-lg-6 py-2">
-                            <label for="withdraw-memo">Message:</label>
-                            <input type="text" class="form-control" id="transfer-memo" placeholder="Optional">
-                            <small id="help-memo" class="form-text" style="display: none">Invalid format</small>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-12 col-lg-6 py-2 order-lg-1">
-                            <label for="transfer-amount">Amount:</label>
-                            <input type="text" class="form-control" id="transfer-amount" data-val="">
-                        </div>
-                        
-                        <div class="col-12 col-lg-6 py-2 order-lg-3 mt-auto">
-                            <span class="range-value" for="transfer-amount-range" suffix="%"></span>
-                            <input id="transfer-amount-range" type="range" class="form-range" min="0" max="100" step="1" value="0">
-                        </div>
-                        
-                        <div class="col-12 col-lg-6 py-2 order-lg-5 my-auto">
-                            <span class="secondary">Available:</span>
-                            <span class="float-end" id="transfer-balance"></span>
-                            <br>
-                            <span class="secondary">Fee:</span>
-                            <span class="float-end">0</span>
-                        </div>
-                        
+ 
                         <div class="col-12 col-lg-6 py-2 order-lg-6 my-auto">
                             <button type="submit" class="btn btn-primary w-100">Submit</button>
                         </div>
@@ -120,12 +96,12 @@
         </div>
         </div>
         
-        <?php include('../templates/tx_history.html'); ?>
-        <script src="/wallet/transfer.js?<?php echo filemtime(__DIR__.'/transfer.js'); ?>"></script>
+        <?php include(__DIR__.'/../templates/tx_history.html'); ?>
+        <script src="/nft/wallet/transfer.js?<?php echo filemtime(__DIR__.'/transfer.js'); ?>"></script>
         
-        <?php include('../templates/modals.php'); ?>
-        <?php include('../templates/2fa.php'); ?>
-        <?php include('../templates/vanilla_mobile_nav.php'); ?>
+        <?php include(__DIR__.'/../../../templates/modals.php'); ?>
+        <?php include(__DIR__.'/../../../templates/2fa.php'); ?>
+        <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
 </html>
