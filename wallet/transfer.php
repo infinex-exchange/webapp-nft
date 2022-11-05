@@ -51,7 +51,9 @@
                             <input type="text" class="form-control" id="transfer-address">
                             <small id="help-address" class="form-text" style="display: none">E-mail is invalid</small>
                         </div>
- 
+                    </div>
+                    
+                    <div class="row">
                         <div class="col-12 col-lg-6 py-2 order-lg-6 my-auto">
                             <button type="submit" class="btn btn-primary w-100">Submit</button>
                         </div>
