@@ -41,7 +41,7 @@ function initSelectNftAdbk(network) {
                     <div class="select-nft-adbk-item row p-1 hoverable" data-address="${v.address}">
                         <div class="col-12">
                             <h5 class="secondary">${v.name}</h5>
-                            ${v.address}
+                            <span class="wrap">${v.address}</span>
                         </div>
                     </div>
                 `);
