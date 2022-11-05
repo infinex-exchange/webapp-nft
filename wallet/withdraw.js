@@ -40,6 +40,7 @@ $(document).ready(function() {
                 // Reset validation variables
                 window.validAddress = false;
                 window.validAdbkName = false;
+                window.validFee = false;
                 
                 // Reset form
                 $('#withdraw-form').get(0).reset();
@@ -99,6 +100,15 @@ $(document).ready(function() {
     // Fee range -> fee input
     $('#withdraw-fee-range').on('input', function() {
         $('#withdraw-fee').val($(this).val());
+        
+        if(window.nativeBalance.lt($(this).val())) {
+            $('#withdraw-fee, #withdraw-balance').addClass('text-red');
+            window.validFee = false;
+        }
+        else {
+            $('#withdraw-fee, #withdraw-balance').removeClass('text-red');
+            window.validFee = true;
+        }
     });
     
     // Validate address
