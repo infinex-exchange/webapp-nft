@@ -61,7 +61,7 @@ $(document).ready(function() {
 		            type: 'POST',
 		            data: JSON.stringify({
 		                api_key: window.apiKey,
-		                symbols: [ asset ]
+		                symbols: [ data.native_assetid ]
 		            }),
 		            contentType: "application/json",
 		            dataType: "json",
@@ -69,14 +69,14 @@ $(document).ready(function() {
 		        .retry(config.retry)
 		        .done(function (dataBal) {
 		            if(data.success) {
-		                window.wdRawBalance = new BigNumber(dataBal.balances[asset].avbl);
+		                window.wdRawBalance = new BigNumber(dataBal.balances[data.native_assetid].avbl);
 		                
 		                // Fee
 		                updateFees(dataBal.fee_min, dataBal.fee_max);
 		                
 		                $('#withdraw-step2').show();
 		                $('html, body').animate({
-		                    scrollTop: $("#withdraw-step3").offset().top
+		                    scrollTop: $("#withdraw-step2").offset().top
 		                }, 1000);
 		            } else {
 		                msgBox(data.error);
