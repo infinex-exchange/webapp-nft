@@ -29,3 +29,9 @@
 .card {
     background-color: var(--color-bg-light);
 }
+
+/* NFT content link */
+
+.nft-content-link, .nft-content-link:hover {
+    color: var(--color-primary);
+}

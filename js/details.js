@@ -30,7 +30,7 @@ $(document).ready(function() {
             $.each(data.nft.data_uris, function(k, v) {
                 $('#nft-data-uris').append(`
                     <li>
-                        <a href="${v}">${v}</a>
+                        <a class="nft-content-link" href="${v}">${v}</a>
                     </li>
                 `);
             });
@@ -39,7 +39,7 @@ $(document).ready(function() {
             $.each(data.nft.license_uris, function(k, v) {
                 licenseUrisHtml += `
                     <li>
-                        <a href="${v}">${v}</a>
+                        <a class="nft-content-link" href="${v}">${v}</a>
                     </li>
                 `;
             });
@@ -65,9 +65,9 @@ $(document).ready(function() {
                 
                 $('#col-description').html(data.nft.collection.description === null ? '-' : data.nft.collection.description);
                 $('#col-website').html(data.nft.collection.website === null ? '-' :
-                    `<a href="${data.nft.collection.website}">${data.nft.collection.website}</a>`);
+                    `<a class="nft-content-link" href="${data.nft.collection.website}">${data.nft.collection.website}</a>`);
                 $('#col-twitter').html(data.nft.collection.twitter === null ? '-' :
-                    `<a href="https://twitter.com/${data.nft.collection.twitter}">@${data.nft.collection.twitter}</a>`);
+                    `<a class="nft-content-link" href="https://twitter.com/${data.nft.collection.twitter}">@${data.nft.collection.twitter}</a>`);
             }
             else {
                 $('#collection-wrapper').hide();
