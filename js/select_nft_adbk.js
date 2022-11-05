@@ -37,7 +37,7 @@ function initSelectNftAdbk(network) {
     .done(function (data) {
         if(data.success) {
             $.each(data.addressbook, function(k, v) {
-                $('#select-adbk-data').append(`
+                $('#select-nft-adbk-data').append(`
                     <div class="select-nft-adbk-item row p-1 hoverable" data-address="${v.address}">
                         <div class="col-12">
                             <h5 class="secondary">${v.name}</h5>
