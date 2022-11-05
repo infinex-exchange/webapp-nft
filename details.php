@@ -49,6 +49,14 @@
                             </div>
                         </div>
                         
+                        <div class="row pt-2 pb-4">
+                            <div class="col-4">
+                                <h5 class="secondary">Network:</h5>
+                            </div>
+                            <div class="col-12" id="nft-icon-net-wrapper">
+                            </div>
+                        </div>
+                        
                         <div class="row py-2">
                             <div class="col-12">
                                 <h5 class="secondary">Name:</h5>
