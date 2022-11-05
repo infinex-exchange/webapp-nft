@@ -49,9 +49,7 @@ $(document).ready(function() {
         if(tfa != '')
             data['code_2fa'] = tfa;
         
-        if(!window.validAddress ||
-           (memo != '' && !window.validMemo))
-        {
+        if(!window.validAddress) {
 	        msgBox('Fill the form correctly');
 	        return;
         }
