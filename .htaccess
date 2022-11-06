@@ -13,3 +13,6 @@ RewriteRule ^wallet/transactions/?$ wallet/transactions.php [L]
 RewriteRule ^wallet/addressbook/?$ wallet/addressbook.php [L]
 
 RewriteRule ^details/([^/]+)/?$ details.php [L]
+
+RewriteRule ^sell/([^/]+)/?$ sell.php [L]
+RewriteRule ^sell/?$ sell.php [L]
