@@ -38,29 +38,10 @@
                 <div class="col-12 col-lg-6 mt-4">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h5 class="secondary">Select NFT:</h5>
+                            <h5 class="secondary">NFT:</h5>
                         </div>
                         <div class="col-12">
                             <?php include(__DIR__.'/templates/select_nft.php'); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="row">
-                <div class="col-12 col-lg-6 mt-4">
-                    <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">Price:</h6>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="input-ps-group">
-                                <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                <span class="suffix fiatid"></span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,6 +53,39 @@
                         </div>
                         <div class="col-12">
                             <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            <div class="row">
+                <div class="col-12 col-lg-4 mt-4">
+                    <div class="row">
+                        <div class="col-12 pb-1">
+                            <h5 class="secondary">:</h6>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="input-ps-group">
+                                <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                                <span class="suffix fiatid"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-4 mt-4">
+                    <div class="row">
+                        <div class="col-12 pb-1">
+                            <h5 class="secondary">Price:</h6>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="input-ps-group">
+                                <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                                <span class="suffix fiatid"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,59 +112,6 @@
                     Available:
                     <span id="sell-balance"></span>
                     <span class="assetid"></span>
-                </div>
-            </div>
-            
-            <div class="row mt-4 mt-lg-5">
-                <div class="col-12 pb-1">
-                    <h5 class="secondary">Single transaction limits:</h6>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="row">
-                        <div class="col-5 pe-0">
-                            <div class="input-ps-group">
-                                <input id="fiat-min" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                <span class="suffix fiatid"></span>
-                            </div>
-                        </div>
-                        <div class="col-1 my-auto text-center p-0">
-                            <strong>-</strong>
-                        </div>
-                        <div class="col-6 ps-0">
-                            <div class="input-ps-group">
-                                <input id="fiat-max" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                <span class="suffix fiatid"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mt-4 mt-lg-5">
-                <div class="col-12 pb-1">
-                    <h5 class="secondary">Payment methods:</h5>
-                </div>
-                
-                <div class="col-12 ui-card-light mx-2 p-2">
-                    <div class="row" id="payment-methods-empty">
-                        <div class="col-12 text-center">
-                            <strong class="secondary">No payment methods</strong>
-                        </div>
-                    </div>
-                    <div class="row px-2" id="payment-methods-data">
-                    </div>
-                </div>
-                
-                <div class="col-2 col-lg-1 pt-1 my-auto">
-                    <h6 class="secondary">Add:</h6>
-                </div>
-                
-                <div id="select-fpm-wrapper" class="col-10 col-lg-5 pt-1">
-                    <?php include(__DIR__.'/templates/select_fpm.php'); ?>
-                </div>
-                
-                <div id="select-fpminsta-wrapper" class="col-10 col-lg-5 pt-1 d-none">
-                    <?php include(__DIR__.'/templates/select_fpminsta.php'); ?>
                 </div>
             </div>
             
