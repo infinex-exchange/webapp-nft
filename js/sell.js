@@ -112,64 +112,47 @@ $(document).ready(function() {
             $(this).addClass('text-red');
     });
     
-    // done here
-    
     // Submit
+    
     $('#submit').click(function() {
-        var price = $('#price').data('rval');
-        var amountField = $('#amount-crypto');
-        var amount = amountField.data('rval');
-        var fiatMinField = $('#fiat-min');
-        var fiatMin = fiatMinField.data('rval');
-        var fiatMaxField = $('#fiat-max');
-        var fiatMax = fiatMaxField.data('rval');
+        var nftid = $('#select-nft').data('nftid');
+        var asset = $('#select-coin').val();
+        var buynowField = $('#price-buynow');
+        var buynow = buynowField.data('rval');
+        var initialField = $('#price-initial');
+        var initial = initialField.data('rval');
         
-        if(amountField.hasClass('text-red') ||
-           fiatMinField.hasClass('text-red') ||
-           fiatMaxField.hasClass('text-red') ||
-           price == '' ||
-           amount == '' ||
-           fiatMin == '' ||
-           fiatMax == '' ||
-           window.assetid == '' ||
-           window.fiatid == ''
+        if(buynowField.hasClass('text-red') ||
+           initialField.hasClass('text-red')
         ) {
+            msgBox('Auction initial price cannot be greater than buy now price');
+            return;
+        }
+        
+        if(buynow == '' && initial == '') {
+            msgBox('Please specify auction initial price, buy now price or both');
+            return;
+        }
+        
+        if(nftid == '' || asset == '') {
             msgBox('Please fill in the form correctly')
             return;
         }
         
         var data = new Object();
         data['api_key'] = window.apiKey;
-        data['side'] = window.side;
-        data['price'] = price;
-        data['amount_crypto'] = amount;
-        data['fiat_min'] = fiatMin;
-        data['fiat_max'] = fiatMax;
-        data['asset'] = window.assetid;
-        data['fiat'] = window.fiatid;
-        data['time_window'] = window.timeWindow;
+        data['nftid'] = nftid;
+        data['asset'] = asset;
+        data['duration'] = PREDEF_DURATION[ $('#duration-raw').val() ];
         
-        if((window.side == 'BUY' && window.fpms.length == 0) ||
-           (window.side == 'SELL' && window.fpm_instances.length == 0)
-        ) {
-            msgBox('Add at least one payment method');
-            return;
-        }
+        if(buynow != '')
+            data['price_buynow'] = buynow;
         
-        data['fpms'] = window.fpms;
-        data['fpm_instances'] = window.fpm_instances;
-        
-        if($('#sec-min-rating-cbx').prop('checked')) {
-            var ratingRaw = $('.rateit_').rateit('value');
-            if(ratingRaw == 0) {
-                msgBox('Please set minimal user rating or disable this filter');
-                return;
-            }
-            data['sec_min_rating'] = ratingRaw * 20;
-        }
+        if(initial != '')
+            data['price_initial'] = initial;
 
         $.ajax({
-            url: config.apiUrl + '/p2p/my_offers/add',
+            url: config.apiUrl + '/nft/create_offer',
             type: 'POST',
             data: JSON.stringify(data),
             contentType: "application/json",
@@ -178,7 +161,7 @@ $(document).ready(function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                msgBoxRedirect('The offer has been successfully created', '/p2p');
+                msgBoxRedirect('The offer has been successfully created', '/nft');
             } else {
                 msgBox(data.error);
             }
