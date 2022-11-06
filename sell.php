@@ -67,7 +67,7 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="input-ps-group">
-                        <input id="amount-crypto" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                        <input id="price-buynow" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                         <span class="suffix assetid"></span>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="input-ps-group">
-                        <input id="amount-crypto" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                        <input id="price-initial" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                         <span class="suffix assetid"></span>
                     </div>
                 </div>
@@ -103,15 +103,18 @@
                 </div>
                 
                 <div class="col-12 col-lg-6">
-                    <input id="time-window-raw" type="range" class="form-range" min="0" max="11" step="1" value="5">
+                    <input id="duration-raw" type="range" class="form-range" min="0" max="6" step="1" value="5">
                 </div>
                 
                 <div class="col-6 d-none d-lg-block"></div>
                 
                 <div class="col-12 col-lg-6 text-center">
-                    <span class="small secondary" id="time-window-desc"></span>
+                    <span class="small secondary" id="duration-desc"></span>
                 </div>
             </div>
+            
+            
+            
             
             <div id="fees-wrapper" class="row d-none mt-4 mt-lg-5">
                 <div class="col-12 pb-2">

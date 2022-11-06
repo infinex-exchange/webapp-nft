@@ -1,3 +1,5 @@
+var PREDEF_DURATION = [1, 3, 5, 7, 10, 14, 30];
+
 $(document).ready(function() {
     // Initial
     
@@ -44,84 +46,14 @@ $(document).ready(function() {
         $('.step2-ro').prop('readonly', false).data('rval', '').data('tsval', '').val('');
     });
     
-    // -- good here
+    // Duration
     
-    $('input[name="side"]').change(function() {
-        window.side = this.value;
-        refreshPmSelectors();
-        refreshSellBalance();
-    });
-    
-    $('#select-fpm').on('change', function() {
-        var fpmid = $(this).data('fpmid');
-        
-        if(!window.fpms.includes(fpmid)) {
-            window.fpms.push(fpmid);
-            
-            var innerHtml = $('.select-fpm-item[data-fpmid="' + fpmid + '"]').html();
-            $('#payment-methods-data').append(`
-                <div class="payment-methods-item col-12 col-md-3 col-lg-3 p-2 hoverable" onClick="removeFpm(this, '${fpmid}')">
-                    <div class="row">
-                        ${innerHtml}
-                        <div class="col-auto ms-auto my-auto">
-                            <i class="fa-solid fa-xmark remove-pm"></i>
-                        </div>
-                    </div>
-                </div>
-            `);
-            
-            $('#payment-methods-empty').addClass('d-none');
-        }
-        
-        $('#select-fpm').val('').data('fpmid', '');
-    });
-    
-    $('#select-fpm-insta').on('change', function() {
-        var fpminstaid = $(this).data('fpminstaid');
-        
-        if(!window.fpm_instances.includes(fpminstaid)) {
-            window.fpm_instances.push(fpminstaid);
-            
-            var innerHtml = $('.select-fpm-insta-item[data-fpminstaid="' + fpminstaid + '"]').html();
-            $('#payment-methods-data').append(`
-                <div class="payment-methods-item col-12 col-md-3 col-lg-3 p-2 hoverable" onClick="removeFpmInsta(this, ${fpminstaid})">
-                    <div class="row">
-                        ${innerHtml}
-                        <div class="col-auto ms-auto my-auto">
-                            <i class="fa-solid fa-xmark remove-pm"></i>
-                        </div>
-                    </div>
-                </div>
-            `);
-            
-            $('#payment-methods-empty').addClass('d-none');
-        }
-        
-        $('#select-fpm-insta').val('').data('fpminstaid', '');
-    });
-    
-    // Toggle rateit on checkbox click
-    
-    $('#sec-min-rating-cbx').on('change', function() {
-        if(this.checked) {
-            $('#sec-min-rating-expand').removeClass('d-none');
-        
-            $('.rateit_').rateit({
-                mode: 'font'
-            });
-        }
-        
-        else
-            $('#sec-min-rating-expand').addClass('d-none');
-    });
-    
-    // Time window
-    
-    $('#time-window-raw').on('input', function() {
+    $('#duration-raw').on('input', function() {
         var raw = $(this).val();
-        window.timeWindow = PREDEF_TIME_WINDOW[raw].val;
-        $('#time-window-desc').html(PREDEF_TIME_WINDOW[raw].desc);
+        $('#duration-desc').html(PREDEF_DURATION[raw] + ' days');
     }).trigger('input');
+    
+    // done here
     
     // Lock format and precision of inputs
     
