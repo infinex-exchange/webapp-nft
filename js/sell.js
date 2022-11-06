@@ -94,7 +94,7 @@ $(document).ready(function() {
     });
     
     // Move data-val to real visible value
-    $('#price, #amount-crypto, #fiat-min, #fiat-max').onFirst('focusout setVal', function() {
+    $('#price-buynow, #price-initial').onFirst('focusout setVal', function() {
         if($(this).is(':focus')) return;
         
         $(this).data('tsval', $(this).data('rval') )
