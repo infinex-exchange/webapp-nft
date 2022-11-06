@@ -57,56 +57,13 @@
                     </div>
                 </div>
             </div>
+
             
             
-            
-            
-            <div class="row">
-                <div class="col-12 col-lg-6 mt-4">
-                    <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">Buy now price:</h6>
-                        </div>
-                        <div class="col-12 col-lg-12">
-                            <div class="input-ps-group">
-                                <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                <span class="suffix fiatid"></span>
-                            </div>
-                            <small class="secondary">
-                                Leave blank if you want auction only
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-lg-6 mt-4">
-                    <div class="row">
-                        <div class="col-12 pb-1">
-                            <h5 class="secondary">Auction initial price:</h6>
-                        </div>
-                        <div class="col-12 col-lg-12">
-                            <div class="input-ps-group">
-                                <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                                <span class="suffix fiatid"></span>
-                            </div>
-                            <small class="secondary">
-                                Leave blank if you want sell at fixed price only
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            <div class="row mt-4 mt-lg-5">
-                
-            </div>
             
             <div class="row mt-4 mt-lg-5">
                 <div class="col-12 pb-1">
-                    <h5 class="secondary">Crypto amount:</h6>
+                    <h5 class="secondary">Buy now price:</h6>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="input-ps-group">
@@ -114,16 +71,35 @@
                         <span class="suffix assetid"></span>
                     </div>
                 </div>
-                <div id="sell-balance-wrapper" class="col-12 col-lg-6 d-none my-auto small secondary">
-                    Available:
-                    <span id="sell-balance"></span>
-                    <span class="assetid"></span>
+                <div class="col-12 col-lg-6 my-auto small secondary">
+                    Leave blank if you want auction only
                 </div>
             </div>
             
+            
+            
+            
             <div class="row mt-4 mt-lg-5">
                 <div class="col-12 pb-1">
-                    <h5 class="secondary">Payment time window:</h5>
+                    <h5 class="secondary">Auction initial price:</h6>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="input-ps-group">
+                        <input id="amount-crypto" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
+                        <span class="suffix assetid"></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 my-auto small secondary">
+                    Leave blank if you want sell at fixed price only
+                </div>
+            </div>
+            
+            
+            
+            
+            <div class="row mt-4 mt-lg-5">
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Duration:</h5>
                 </div>
                 
                 <div class="col-12 col-lg-6">
