@@ -196,6 +196,7 @@
         </div>
         
         <?php include('../../templates/modals.php'); ?>
+                <script src="/nft/js/nft_details.js?<?php echo filemtime(__DIR__.'/js/nft_details.js'); ?>"></script>
         <script src="/nft/js/details.js?<?php echo filemtime(__DIR__.'/js/details.js'); ?>"></script>
         
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
