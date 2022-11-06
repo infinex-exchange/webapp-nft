@@ -53,15 +53,10 @@ $(document).ready(function() {
         $('#duration-desc').html(PREDEF_DURATION[raw] + ' days');
     }).trigger('input');
     
-    // done here
-    
     // Lock format and precision of inputs
     
-    $('#price, #amount-crypto, #fiat-min, #fiat-max').on('input', function () {
-        prec = 0;
-        if($(this).is('#price')) prec = window.p2pPrec.price_prec;
-        else if($(this).is('#amount-crypto')) prec = window.p2pPrec.crypto_prec;
-        else prec = window.p2pPrec.fiat_prec;
+    $('#price-buynow, #price-initial').on('input', function () {
+        prec = $('#select-coin').data('prec');
         
         var regex = new RegExp("^[0-9]*(\\.[0-9]{0," + prec + "})?$");
         var newVal = $(this).val();
@@ -106,38 +101,18 @@ $(document).ready(function() {
                .val( $(this).data('rval') );
     });
     
-    // Red text if amount > available balance
-    $('#amount-crypto').on('updateCalc setVal', function() {
-        amount = new BigNumber($(this).data('rval'));
+    // Red text if initial > buy now
+    $('#price-buynow, #price-initial').on('updateCalc setVal', function() {
+        buynow = new BigNumber($('#price-buynow').data('rval'));
+        initial = new BigNumber($('#price-initial').data('rval'));
         
-        $('#amount-crypto, #sell-balance').removeClass('text-red');
+        $('#price-buynow, #price-initial').removeClass('text-red');
         
-        if(window.side == 'SELL' && amount.gt(window.sellBalance))
-            $('#amount-crypto, #sell-balance').addClass('text-red');
+        if(initial.gte(buynow))
+            $(this).addClass('text-red');
     });
     
-    // Red text if fiat_min > fiat_max
-    $('#fiat-min, #fiat-max').on('updateCalc setVal', function() {
-        min = new BigNumber($('#fiat-min').data('rval'));
-        max = new BigNumber($('#fiat-max').data('rval'));
-        
-        $('#fiat-max').removeClass('text-red');
-        
-        if(min.gte(max))
-            $('#fiat-max').addClass('text-red');
-    });
-    
-    // Red text if fiat_min > amount * price (untakeable offer)
-    $('#fiat-min, #amount-crypto, #price').on('updateCalc setVal', function() {
-        min = new BigNumber($('#fiat-min').data('rval'));
-        amount = new BigNumber($('#amount-crypto').data('rval'));
-        price = new BigNumber($('#price').data('rval'));        
-        
-        $('#fiat-min').removeClass('text-red');
-        
-        if(min.gt(amount.times(price)))
-            $('#fiat-min').addClass('text-red');
-    });
+    // done here
     
     // Submit
     $('#submit').click(function() {
