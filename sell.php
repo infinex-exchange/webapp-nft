@@ -115,24 +115,18 @@
             
             <div class="row mt-4 mt-lg-5">
                 <div class="col-12 pb-1">
-                    <h5 class="secondary">Additional safety options:</h5>
+                    <h5 class="secondary">Fees:</h5>
+                </div>
+                <div class="col-12">
+                    <h6 class="secondary">Royalty fee:</h6>
+                    0.00%
+                    <h6 class="secondary">Platform fee:</h6>
+                    0.00%
                 </div>
             </div>
             
-            <div class="row mt-2">            
-                <div class="col-12 col-lg-auto my-auto">
-                    <div class="pretty p-switch">
-                        <input type="checkbox" id="sec-min-rating-cbx">
-                        <div class="state p-primary">
-                            <label for="withdraw-save">Minimal user rating</label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="d-none col-12 col-lg-auto my-auto" id="sec-min-rating-expand">
-                    <div class="rateit_" data-rateit-resetable="false" style="font-size: 40px"></div>
-                </div>
-            </div>
+    
+            
             
             <div class="row mt-4 mt-lg-5">
                 <div class="col-12 col-lg-6">
