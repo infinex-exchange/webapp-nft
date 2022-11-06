@@ -117,11 +117,13 @@
                 <div class="col-12 pb-2">
                     <h5 class="secondary">Fees:</h5>
                 </div>
-                <div class="col-12">
+                <div class="col-12 pb-2">
                     <h6 class="secondary">Royalty fee:</h6>
-                    <span id="royalty-fee"></span>
+                    <span id="royalty-fee"></span>%
+                </div>
+                <div class="col-12">
                     <h6 class="secondary">Platform fee:</h6>
-                    <span id="platform-fee"></span>
+                    <span id="platform-fee"></span>%
                 </div>
             </div>
             
