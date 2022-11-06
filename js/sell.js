@@ -39,21 +39,12 @@ $(document).ready(function() {
         });
     });
     
-    $('#select-nft, #select-fiat').on('change', function() {
-        window.assetid = $('#select-coin').val();
-        window.fiatid = $('#select-fiat').val();
-        
-        if(window.assetid == '' || window.fiatid == '') return;
-        
-        refreshPrec();
-        refreshPmSelectors();
-        refreshSellBalance();
-        
-        $('.assetid').html(window.assetid);
-        $('.fiatid').html(window.fiatid);
+    $('#select-coin').on('change', function() {
+        $('.assetid').html($('#select-coin').val());
         $('.step2-ro').prop('readonly', false).data('rval', '').data('tsval', '').val('');
-        $('#select-fpm, #select-fpm-insta').prop('disabled', false);
     });
+    
+    // -- good here
     
     $('input[name="side"]').change(function() {
         window.side = this.value;
