@@ -113,7 +113,7 @@
                 </div>
             </div>
             
-            <div id="fees-wrapper" class="row mt-4 mt-lg-5">
+            <div id="fees-wrapper" class="row d-none mt-4 mt-lg-5">
                 <div class="col-12 pb-2">
                     <h5 class="secondary">Fees:</h5>
                 </div>

@@ -11,7 +11,35 @@ $(document).ready(function() {
     
     // On change selectors
     
-    $('#select-coin, #select-fiat').on('change', function() {
+    $('#select-nft').on('change', function() {
+        $('#fees-wrapper').addClass('d-none');
+        
+        $.ajax({
+            url: config.apiUrl + '/nft/create_offer/info',
+            type: 'POST',
+            data: JSON.stringify({
+                api_key: window.apiKey,
+                nftid: $('#select-nft').data('nftid')
+            }),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                $('#royalty-fee').html(data.royalty_fee);
+                $('#platform-fee').html(data.platform_fee);
+                $('#fees-wrapper').removeClass('d-none');
+            } else {
+                msgBox(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(false);
+        });
+    });
+    
+    $('#select-nft, #select-fiat').on('change', function() {
         window.assetid = $('#select-coin').val();
         window.fiatid = $('#select-fiat').val();
         
