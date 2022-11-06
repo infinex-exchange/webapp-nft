@@ -113,15 +113,15 @@
                 </div>
             </div>
             
-            <div class="row mt-4 mt-lg-5">
-                <div class="col-12 pb-1">
+            <div id="fees-wrapper" class="row mt-4 mt-lg-5">
+                <div class="col-12 pb-2">
                     <h5 class="secondary">Fees:</h5>
                 </div>
                 <div class="col-12">
                     <h6 class="secondary">Royalty fee:</h6>
-                    0.00%
+                    <span id="royalty-fee"></span>
                     <h6 class="secondary">Platform fee:</h6>
-                    0.00%
+                    <span id="platform-fee"></span>
                 </div>
             </div>
             
