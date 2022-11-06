@@ -62,12 +62,12 @@
             
             
             <div class="row">
-                <div class="col-12 col-lg-4 mt-4">
+                <div class="col-12 col-lg-6 mt-4">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h5 class="secondary">:</h6>
+                            <h5 class="secondary">Buy now price:</h6>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-12">
                             <div class="input-ps-group">
                                 <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                 <span class="suffix fiatid"></span>
@@ -76,12 +76,12 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-4 mt-4">
+                <div class="col-12 col-lg-6 mt-4">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h5 class="secondary">Price:</h6>
+                            <h5 class="secondary">Auction initial price:</h6>
                         </div>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-12">
                             <div class="input-ps-group">
                                 <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                 <span class="suffix fiatid"></span>
