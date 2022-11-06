@@ -177,4 +177,10 @@ $(document).on('authChecked', function() {
     
     initSelectNft();
     initSelectCoin('/nft/assets');
+    
+    var pathArray = window.location.pathname.split('/');
+    var pathLast = pathArray[pathArray.length - 1];
+    if(pathLast != 'sell' && pathLast != '') {
+        $('#select-nft').val(pathLast).data('nftid', pathLast).trigger('change');
+    }
 });
