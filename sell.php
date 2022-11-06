@@ -72,6 +72,9 @@
                                 <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                 <span class="suffix fiatid"></span>
                             </div>
+                            <small class="secondary">
+                                Leave blank if you want auction only
+                            </small>
                         </div>
                     </div>
                 </div>
@@ -86,6 +89,9 @@
                                 <input id="price" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
                                 <span class="suffix fiatid"></span>
                             </div>
+                            <small class="secondary">
+                                Leave blank if you want sell at fixed price only
+                            </small>
                         </div>
                     </div>
                 </div>
