@@ -38,7 +38,7 @@
                 <div class="col-12 col-lg-6 mt-4">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h5 class="secondary">NFT:</h5>
+                            <h5 class="secondary">Sell NFT:</h5>
                         </div>
                         <div class="col-12">
                             <?php include(__DIR__.'/templates/select_nft.php'); ?>
@@ -49,7 +49,7 @@
                 <div class="col-12 col-lg-6 mt-4">
                     <div class="row">
                         <div class="col-12 pb-1">
-                            <h5 class="secondary">Coin:</h5>
+                            <h5 class="secondary">For coin:</h5>
                         </div>
                         <div class="col-12">
                             <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
