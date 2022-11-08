@@ -51,7 +51,7 @@ function renderOffer(offer) {
                 </div>
             </div>
         </div>
-    `);        
+    `;        
 }
 
 function getFeaturedOffers(div, req) {
