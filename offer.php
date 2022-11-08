@@ -38,10 +38,10 @@
                     <div class="ui-card-light p-3 h-100">     
                         <div class="row pt-2">
                             <div class="col-12">
-                                <h5>Biddings:</h5>
+                                <h5 class="secondary">Biddings:</h5>
                             </div>
                             <div class="col-12" id="bids-empty">
-                                <small class="secondary">No bids</small>
+                                <small>No bids</small>
                             </div>
                             <div class="col-12" id="bids-data">
                             </div>
