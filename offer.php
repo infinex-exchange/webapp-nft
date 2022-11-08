@@ -190,6 +190,9 @@
                     </div>
                 </div>
                 
+                <div class="col-12 col-lg-6">
+                <div class="row">
+                
                 <div id="collection-wrapper" class="col-12 col-lg-6 mt-4 mt-lg-0 pb-4">
                     <div class="ui-card-light p-3 mt-4 h-100">
                         <div class="row pb-4">
@@ -263,6 +266,9 @@
                             </div>
                         </div>                            
                     </div>
+                </div>
+                
+                </div>
                 </div>
             </div>
         
