@@ -65,7 +65,7 @@ function renderOffer(offer) {
     if(offer.preview != null)
         nftPreview = offer.preview;
     
-    var closedHtml = '';
+    var finishedHtml = '';
     if(!offer.active) {
         finishedHtml = `
             <span class="text-red">Finished</span>
