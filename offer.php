@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="col-5" id="price-auction-wrapper">
                                 <h5 class="secondary">Current bid:</h5>
-                                <h2 id="price-auction"></h2>
+                                <h3 id="price-auction"></h3>
                                 <button type="button" class="btn btn-primary">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
