@@ -68,7 +68,7 @@ function renderOffer(offer) {
             			    .
             			</div>
                         <div class="col-12 small secondary">
-                            <i class="fa-solid fa-timer"></i>
+                            <i class="fa-solid fa-clock"></i>
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                         </div>
                     </div>
