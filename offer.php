@@ -52,13 +52,13 @@
                         </div>
                             
                         <div class="row pb-4">
-                            <div class="col-6 col-lg-4 auction-wrapper">
+                            <div class="col-6 col-lg-3 auction-wrapper">
                                 <button type="button" class="btn btn-primary w-100">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
                                 </button>
                             </div>
-                            <div class="col-6 col-lg-4 buynow-wrapper">
+                            <div class="col-6 col-lg-3 buynow-wrapper">
                                 <button type="button" class="btn btn-primary w-100">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Buy now
