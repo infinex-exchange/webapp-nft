@@ -80,15 +80,15 @@ function renderOffer(offer) {
         if(offer.price_auction) {
             mainPriceHtml = `
                 <div class="col-6 my-auto">
-      			    <h4>${offer.price_auction}</h4>
+      			    <h4>${offer.price_auction} ${offer.assetid}</h4>
       			</div>
             `;
         }
         if(offer.price_buynow) {
             buynowPriceHtml = `
                 <div class="col-6 my-auto">
-      			    <h5>${offer.price_buynow}</h5>
-                    <span class="small secondary">Buy Now</span>
+      			      <span class="small secondary">Buy Now</span>
+                      <h5>${offer.price_buynow} ${offer.assetid}</h5>
       			</div>
             `;
         }
@@ -97,14 +97,16 @@ function renderOffer(offer) {
         if(offer.price_final) {
             mainPriceHtml = `
                 <div class="col-6 my-auto">
-      			    <h4>${offer.price_final}</h4>
+      			    <h4>${offer.price_final} ${offer.assetid}</h4>
       			</div>
             `;
         }
         else {
             mainPriceHtml = `
-                <div class="col-6 my-auto small secondary">
-      			    There were no bids
+                <div class="col-6 my-auto">
+      			    <span class="small secondary">
+                        There were no bids
+                    </span>
       			</div>
             `;
         }
