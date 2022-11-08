@@ -27,7 +27,7 @@
             <div class="row gx-0 gx-lg-3 gy-3 m-0">
                 
                 <div class="col-12">
-        	        <div class="p-2 p-lg-4 ui-card-light rounded">
+        	        <div class="p-2 p-lg-4 background rounded">
         	            <div class="row">
         	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Last minute</h3>
@@ -41,7 +41,7 @@
         	    </div>
                 
                 <div class="col-12">
-        	        <div class="p-2 p-lg-4 ui-card-light rounded">
+        	        <div class="p-2 p-lg-4 background rounded">
         	            <div class="row">
         	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Featured collections</h3>
@@ -55,7 +55,7 @@
         	    </div>
                 
                 <div class="col-12">
-        	        <div class="p-2 p-lg-4 ui-card-light rounded">
+        	        <div class="p-2 p-lg-4 background rounded">
         	            <div class="row">
         	                <div class="col-12 pt-2 pb-4 text-center">
                                 <h3>Featured NFTs</h3>
