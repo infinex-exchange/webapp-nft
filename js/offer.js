@@ -54,26 +54,25 @@ $(document).ready(function() {
                 $('#bids-empty').show();
             }
             
-            /*if(data.offer.active) {
-                if(offer.price_auction) {
-                    mainPriceHtml = `
-                        <div class="col-6 my-auto">
-              			    <h4><i class="fa-solid fa-gavel"></i>
-                            ${offer.price_auction} ${offer.asset}</h4>
-              			</div>
-                    `;
+            if(data.offer.active) {
+                if(data.offer.price_auction) {
+                    $('#price-auction').html(data.offer.price_auction + ' ' + data.offer.asset);
+                    $('#price-auction-wrapper').show();
                 }
+                else {
+                    $('#price-auction-wrapper').hide();
+                }
+                
                 if(offer.price_buynow) {
-                    buynowPriceHtml = `
-                        <div class="col-6 my-auto">
-              			      <span class="small secondary">Buy Now</span>
-                              <h5>${offer.price_buynow} ${offer.asset}</h5>
-              			</div>
-                    `;
+                    $('#price-auction').html(data.offer.price_auction + ' ' + data.offer.asset);
+                    $('#price-buynow-wrapper').show();
+                }
+                else {
+                    $('#price-buynow-wrapper').hide();
                 }
             }
             else {
-                if(offer.price_final) {
+                /*if(offer.price_final) {
                     mainPriceHtml = `
                         <div class="col-6 my-auto">
               			    <h4>${offer.price_final} ${offer.asset}</h4>
@@ -88,8 +87,10 @@ $(document).ready(function() {
                             </span>
               			</div>
                     `;
-                }
-            }*/
+                }*/
+                $('#price-auction-wrapper').hide();
+                $('#price-buynow-wrapper').hide();
+            }
             
             $(document).trigger('renderingStage');
         }
