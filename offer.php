@@ -41,7 +41,7 @@
                                 <h5 class="secondary">Biddings:</h5>
                             </div>
                             <div class="col-12" id="bids-empty">
-                                <small>No bids</small>
+                                No bids
                             </div>
                             <div class="col-12" id="bids-data">
                             </div>
