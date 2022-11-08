@@ -62,7 +62,7 @@ function refreshOffer(init) {
                     }
                     
                     $('#bids-data').append(`
-                        <div class="row hoverable">
+                        <div class="row hoverable p-1">
                             <div class="col-4">
                                 ${time}
                             </div>
