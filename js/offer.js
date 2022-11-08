@@ -92,6 +92,9 @@ $(document).ready(function() {
                 $('.buynow-wrapper').hide();
             }
             
+            $('#countdown').data('timestamp', data.offer.end_time);
+            initCountdowns();
+            
             $(document).trigger('renderingStage');
         }
         

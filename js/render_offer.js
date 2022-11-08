@@ -60,6 +60,10 @@ function updateCountdowns() {
     });
 }
 
+function initCountdowns() {
+    setInterval(updateCountdowns, 1000);
+}
+
 function renderOffer(offer) {
     var nftPreview = '/nft/img/no_preview.png';
     if(offer.preview != null)
@@ -136,7 +140,3 @@ function renderOffer(offer) {
         </div>
     `;        
 }
-
-$(document).ready(function() {
-    setInterval(updateCountdowns, 1000);
-});

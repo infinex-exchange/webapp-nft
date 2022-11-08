@@ -28,6 +28,8 @@ function getFeaturedOffers(div, req) {
 $(document).ready(function() {
     window.renderingStagesTarget = 3;
     
+    initCountdowns();
+    
     getFeaturedOffers($('#last-minute-data'), {
         auction: true,
         buynow: true,

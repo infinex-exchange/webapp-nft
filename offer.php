@@ -36,8 +36,12 @@
                 
                 <div class="col-12 col-lg-8 mt-4 mt-lg-0">
                     <div class="ui-card-light p-3 h-100">     
-                        <div class="col-12 pb-4 d-none d-lg-block">
+                        <div class="row d-none d-lg-block">
                             <h3 class="nft-name"></h3>
+                        </div>
+                        
+                        <div class="row pb-4">
+                            <span class="countdown" id="countdown"></span>
                         </div>
                         
                         <div class="row pb-4">
@@ -248,6 +252,7 @@
         
         <?php include('../../templates/modals.php'); ?>
         <script src="/nft/js/nft_details.js?<?php echo filemtime(__DIR__.'/js/nft_details.js'); ?>"></script>
+        <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/offer.js?<?php echo filemtime(__DIR__.'/js/offer.js'); ?>"></script>
         
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
