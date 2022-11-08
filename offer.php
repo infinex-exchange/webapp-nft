@@ -59,7 +59,7 @@
                                 </button>
                             </div>
                             <div class="col-6 col-lg-3 buynow-wrapper">
-                                <button type="button" class="btn btn-primary w-100">
+                                <button type="button" class="btn btn-primary w-100" onClick="confirmBuyNow()">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Buy now
                                 </button>
