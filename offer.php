@@ -21,7 +21,7 @@
         <!-- Main column -->
         <div class="col-12 p-0 ui-card ui-column">
             
-            <div class="row p-2">
+            <div class="row p-2 d-lg-none">
                 <h3 class="nft-name"></h3>
             </div>
             
@@ -36,6 +36,10 @@
                 
                 <div class="col-12 col-lg-8 mt-4 mt-lg-0">
                     <div class="ui-card-light p-3 h-100">     
+                        <div class="col-12 pb-4 d-none d-lg-block">
+                            <h3 class="nft-name"></h3>
+                        </div>
+                        
                         <div class="row pt-2">
                             <div class="col-12">
                                 <h5 class="secondary">Biddings:</h5>
