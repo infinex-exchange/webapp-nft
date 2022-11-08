@@ -41,6 +41,6 @@ function renderOffer(offer) {
     `;        
 }
 
-$(document).ready(function()) {
+$(document).ready(function() {
     setInterval(updateCountdowns, 1000);
 });
