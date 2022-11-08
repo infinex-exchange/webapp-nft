@@ -41,7 +41,7 @@
                         </div>
                         
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-5">
                                 <h5 class="secondary">Current bid:</h5>
                                 <h2 id="price-auction"></h2>
                                 <button type="button" class="btn btn-primary">
@@ -50,7 +50,7 @@
                                 </button>
                             </div>
                             
-                            <div class="col-6">
+                            <div class="col-5">
                                 <h5 class="secondary">Buy now price:</h5>
                                 <h2 id="price-auction"></h2>
                                 <button type="button" class="btn btn-primary">
