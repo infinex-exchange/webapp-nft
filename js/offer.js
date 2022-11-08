@@ -16,7 +16,7 @@ $(document).ready(function() {
     .retry(config.retry)
     .done(function (data) {
         if(data.success) {
-            getNftDetails(data.nftid);
+            getNftDetails(data.offer.nftid);
             $(document).trigger('renderingStage');
         }
         
