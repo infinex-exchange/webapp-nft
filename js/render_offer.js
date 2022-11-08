@@ -51,10 +51,10 @@ function updateCountdowns() {
         
         if(ago)
             str += ' ago';
-        else
+        else {
             str += ' to end';
-        
-        str = '<i class="fa-solid fa-clock"></i> ' + str;   
+            str = '<i class="fa-solid fa-clock"></i> ' + str;
+        }
         
         $(this).html(str);
     });
@@ -64,6 +64,13 @@ function renderOffer(offer) {
     var nftPreview = '/nft/img/no_preview.png';
     if(offer.preview != null)
         nftPreview = offer.preview;
+    
+    var closedHtml = '';
+    if(!offer.active) {
+        finishedHtml = `
+            <span class="text-red">Finished</span>
+        `;
+    }
                                 
     return `
         <div class="offer-item col-12 col-md-3 col-lg-3 py-2">
@@ -80,6 +87,7 @@ function renderOffer(offer) {
             			    .
             			</div>
                         <div class="col-12 small secondary">
+                            ${finishedHtml}
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                         </div>
                     </div>
