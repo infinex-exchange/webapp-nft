@@ -2,7 +2,7 @@ $(document).ready(function() {
     window.renderingStagesTarget = 2;
     
     var pathArray = window.location.pathname.split('/');
-    var noid = pathArray[pathArray.length - 1];
+    var noid = parseInt(pathArray[pathArray.length - 1]);
     
     $.ajax({
         url: config.apiUrl + '/nft/offer',
