@@ -33,8 +33,7 @@
                                 <h3>Last minute</h3>
         		            </div>
         		            <div class="col-12 col-lg-6">
-                                <div class="row">
-                                    Content
+                                <div id="last-minute-data" class="row">
                                 </div>
         		            </div>
         	            </div>
@@ -48,8 +47,7 @@
                                 <h3>Featured collections</h3>
         		            </div>
         		            <div class="col-12 col-lg-6">
-                                <div class="row">
-                                    Content
+                                <div id="featured-col-data" class="row">
                                 </div>
         		            </div>
         	            </div>
@@ -63,8 +61,7 @@
                                 <h3>Featured NFTs</h3>
         		            </div>
         		            <div class="col-12 col-lg-6">
-                                <div class="row">
-                                    Content
+                                <div id="featured-nft-data" class="row">
                                 </div>
         		            </div>
         	            </div>
