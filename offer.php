@@ -41,25 +41,25 @@
                         </div>
                         
                         <div class="row pb-4">
-                            <div class="col-auto auction-wrapper">
+                            <div class="col-6 col-lg-auto auction-wrapper">
                                 <h5 class="secondary">Current bid:</h5>
                                 <h3 id="price-auction"></h3>
                             </div>
-                            <div class="col-auto buynow-wrapper">
+                            <div class="col-6 col-lg-auto buynow-wrapper">
                                 <h5 class="secondary">Buy now price:</h5>
                                 <h3 id="price-buynow"></h3>
                             </div>
                         </div>
                             
                         <div class="row pb-4">
-                            <div class="col-auto auction-wrapper">
-                                <button type="button" class="btn btn-primary">
+                            <div class="col-6 col-lg-4 auction-wrapper">
+                                <button type="button" class="btn btn-primary w-100">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
                                 </button>
                             </div>
-                            <div class="col-auto buynow-wrapper">
-                                <button type="button" class="btn btn-primary">
+                            <div class="col-6 col-lg-4 buynow-wrapper">
+                                <button type="button" class="btn btn-primary w-100">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Buy now
                                 </button>
