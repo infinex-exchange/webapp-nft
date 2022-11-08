@@ -18,7 +18,9 @@ $(document).ready(function() {
         if(data.success) {
             getNftDetails(data.offer.nftid);
             
-            if(data.offer.active) {
+            $('.asset').html(data.offer.asset);
+            
+            /*if(data.offer.active) {
                 if(offer.price_auction) {
                     mainPriceHtml = `
                         <div class="col-6 my-auto">
@@ -53,7 +55,7 @@ $(document).ready(function() {
               			</div>
                     `;
                 }
-            }
+            }*/
             
             $(document).trigger('renderingStage');
         }
