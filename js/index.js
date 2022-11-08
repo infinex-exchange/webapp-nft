@@ -87,13 +87,15 @@ $(document).ready(function() {
         auctions: true,
         buynow: true,
         sort: 'end_time',
-        sort_dir: 'ASC'
+        sort_dir: 'ASC',
+        offset: 0
     });
     
     getFeaturedOffers($('featured-nft-data'), {
         auctions: true,
         buynow: true,
         sort: 'popularity',
-        sort_dir: 'DESC'
+        sort_dir: 'DESC',
+        offset: 0
     });
 });
