@@ -20,6 +20,40 @@ $(document).ready(function() {
             
             $('.asset').html(data.offer.asset);
             
+            $('#bids-data').empty();
+            
+            if(data.bids.count > 0) {
+                $.each(data.bids, function(k, bid) {
+                    var time = new Date(bid.time * 1000).toLocaleString();
+                    
+                    var buynow = '';
+                    if(bid.is_buynow) {
+                        buynow = `
+                            <strong class="small secondary">Buy Now</strong>
+                        `;
+                    }
+                    
+                    $('#bids-data').append(`
+                        <div class="row hoverable">
+                            <div class="col-4">
+                                ${time}
+                            </div>
+                            <div class="col-2">
+                                ${buynow}
+                            </div>
+                            <div class="col-4">
+                                ${bid.price} ${data.offer.asset}
+                            </div>
+                        </div>
+                    `);
+                });
+                
+                $('#bids-empty').hide();
+            }
+            else {
+                $('#bids-empty').show();
+            }
+            
             /*if(data.offer.active) {
                 if(offer.price_auction) {
                     mainPriceHtml = `
