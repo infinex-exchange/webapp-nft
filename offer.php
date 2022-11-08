@@ -45,7 +45,7 @@
                                 <h5 class="secondary">NFT ID:</h5>
                             </div>
                             <div class="col-12">
-                                <span class="wrap" id="nftid"></span>
+                                <span class="wrap" id="nfd"></span>
                             </div>
                         </div>
                         
@@ -53,7 +53,7 @@
                             <div class="col-4">
                                 <h5 class="secondary">Network:</h5>
                             </div>
-                            <div class="col-12" id="nft-icon-net-wrapper">
+                            <div class="col-12" id="nft-icet-wrapper">
                             </div>
                         </div>
                         
@@ -62,7 +62,7 @@
                                 <h5 class="secondary">Name:</h5>
                             </div>
                             <div class="col-12">
-                                <span class="wrap nft-name"></span>
+                                <span class="wrap nft-me"></span>
                             </div>
                         </div>
                         
@@ -71,7 +71,7 @@
                                 <h5 class="secondary">Description:</h5>
                             </div>
                             <div class="col-12">
-                                <span class="wrap" id="nft-description"></span>
+                                <span class="wrap" id="nft-diption"></span>
                             </div>
                         </div>
                         
@@ -80,7 +80,7 @@
                                 <h5 class="secondary">Data hash:</h5>
                             </div>
                             <div class="col-12">
-                                <span class="wrap" id="nft-data-hash"></span>
+                                <span class="wrap" id="nftta-hash"></span>
                             </div>
                         </div>
                         
@@ -89,7 +89,7 @@
                                 <h5 class="secondary">Data URLs:</h5>
                             </div>
                             <div class="col-12 wrap">
-                                <ul class="m-0" id="nft-data-uris">
+                                <ul class="m-0" id="nft--uris">
                                 </ul>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                             <div class="col-12">
                                 <h5 class="secondary">License URLs:</h5>
                             </div>
-                            <div class="col-12 wrap" id="nft-license-uris">
+                            <div class="col-12 wrap" id="nft-lic-uris">
                             </div>
                         </div>
                         
@@ -106,7 +106,7 @@
                             <div class="col-12">
                                 <h5 class="secondary">Attributes:</h5>
                             </div>
-                            <div class="col-12 wrap" id="nft-attributes">
+                            <div class="col-12 wrap" id="nft-attes">
                             </div>
                         </div>                                
                     </div>
