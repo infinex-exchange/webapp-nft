@@ -19,23 +19,29 @@ function updateCountdowns() {
         if(days > 0) {
             str += days + ' days ';
         }
-        
-        if(hours > 0) {
-            if(hours < 10)
-                hours = '0' + hours;
-            str += hours + ':';
-        }
-        
-        if(minutes > 0) {
-            if(minutes < 10)
-                minutes = '0' + minutes;
-            str += minutes + ':';
-        }
-        
-        if(seconds > 0) {
-            if(seconds < 10)
-                seconds = '0' + seconds;
-            str += seconds;
+        else {
+            if(hours > 0) {
+                if(hours < 10)
+                    hours = '0' + hours;
+                str += hours + ':';
+            }
+            
+            if(minutes > 0) {
+                if(minutes < 10)
+                    minutes = '0' + minutes;
+                str += minutes + ':';
+            }
+            
+            if(seconds > 0) {
+                if(str == '') {
+                    str += seconds + ' seconds';
+                }
+                else {
+                    if(seconds < 10)
+                        seconds = '0' + seconds;
+                    str += seconds;
+                }
+            }
         }   
         
         $(this).html(str);
