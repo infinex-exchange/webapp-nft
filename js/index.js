@@ -83,7 +83,7 @@ function getFeaturedOffers(div, req) {
 $(document).ready(function() {
     window.renderingStagesTarget = 2;
     
-    getFeaturedOffers($('last-minute-data'), {
+    getFeaturedOffers($('#last-minute-data'), {
         auction: true,
         buynow: true,
         sort: 'end_time',
@@ -91,7 +91,7 @@ $(document).ready(function() {
         offset: 0
     });
     
-    getFeaturedOffers($('featured-nft-data'), {
+    getFeaturedOffers($('#featured-nft-data'), {
         auction: true,
         buynow: true,
         sort: 'popularity',
