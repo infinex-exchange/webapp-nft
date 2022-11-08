@@ -64,7 +64,7 @@ $(document).ready(function() {
                 }
                 
                 if(data.offer.price_buynow) {
-                    $('#price-auction').html(data.offer.price_auction + ' ' + data.offer.asset);
+                    $('#price-buynow').html(data.offer.price_buynow + ' ' + data.offer.asset);
                     $('#price-buynow-wrapper').show();
                 }
                 else {
