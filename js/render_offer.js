@@ -54,7 +54,7 @@ function updateCountdowns() {
         else
             str += ' to end';
         
-        str = '<i class="fa-solid fa-clock"></i>' + str;   
+        str = '<i class="fa-solid fa-clock"></i> ' + str;   
         
         $(this).html(str);
     });
