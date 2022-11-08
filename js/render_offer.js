@@ -17,7 +17,7 @@ function updateCountdowns() {
         var str = '';
         
         if(days > 0) {
-            str += days + 'D ';
+            str += days + ' days ';
         }
         
         if(hours > 0) {
@@ -35,7 +35,7 @@ function updateCountdowns() {
         if(seconds > 0) {
             if(seconds < 10)
                 seconds = '0' + seconds;
-            str += seconds + ':';
+            str += seconds;
         }   
         
         $(this).html(str);
