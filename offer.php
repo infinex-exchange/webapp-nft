@@ -73,7 +73,9 @@
                             <div class="col-12" id="bids-empty">
                                 No bids
                             </div>
-                            <div class="col-12" id="bids-data">
+                            <div class="col-12 col-lg-8" id="bids-data-wrapper">
+                                <div id="bids-data" class="scrollable" style="height: 200px">
+                                </div>
                             </div>
                         </div>                                    
                     </div>
