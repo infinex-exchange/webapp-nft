@@ -13,6 +13,7 @@ function getFeaturedOffers(div, req) {
             $.each(data.offers, function(k, v) {   
                 div.append(renderOffer(v));
             });
+            updateCountdowns();
 	        $(document).trigger('renderingStage');
         }
         else {
