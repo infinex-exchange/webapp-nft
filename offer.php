@@ -44,10 +44,10 @@
                             <div class="col-12">
                                 <h5 class="secondary">Current bid:</h5>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-12 py-1">
                                 <h2 id="price-auction"></h2>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-12">
                                 <button type="button" class="btn btn-primary">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
