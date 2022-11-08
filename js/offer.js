@@ -22,7 +22,7 @@ $(document).ready(function() {
             
             $('#bids-data').empty();
             
-            if(data.bids.count > 0) {
+            if(data.bids.length > 0) {
                 $.each(data.bids, function(k, bid) {
                     var time = new Date(bid.time * 1000).toLocaleString();
                     
