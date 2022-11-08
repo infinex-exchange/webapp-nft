@@ -66,10 +66,48 @@ function renderOffer(offer) {
         nftPreview = offer.preview;
     
     var finishedHtml = '';
+    
     if(!offer.active) {
         finishedHtml = `
             <span class="text-red">Finished</span>
         `;
+    }
+    
+    var mainPriceHtml = '';
+    var buynowPriceHtml = '';
+    
+    if(offer.active) {
+        if(offer.price_auction) {
+            mainPriceHtml = `
+                <div class="col-6 my-auto">
+      			    <h4>${offer.price_auction}</h4>
+      			</div>
+            `;
+        }
+        if(offer.price_buynow) {
+            buynowPriceHtml = `
+                <div class="col-6 my-auto">
+      			    <h5>${offer.price_buynow}</h5>
+                    <span class="small secondary">Buy Now</span>
+      			</div>
+            `;
+        }
+    }
+    else {
+        if(offer.price_final) {
+            mainPriceHtml = `
+                <div class="col-6 my-auto">
+      			    <h4>${offer.price_final}</h4>
+      			</div>
+            `;
+        }
+        else {
+            mainPriceHtml = `
+                <div class="col-6 my-auto small secondary">
+      			    There were no bids
+      			</div>
+            `;
+        }
     }
                                 
     return `
@@ -83,9 +121,8 @@ function renderOffer(offer) {
                         <div class="col-12">
                             <h5 class="card-title">${offer.name}</h5>
                         </div>
-                        <div class="col-4 my-auto">
-            			    .
-            			</div>
+                        ${mainPriceHtml}
+                        ${buynowPriceHtml}
                         <div class="col-12 small secondary">
                             ${finishedHtml}
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
