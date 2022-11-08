@@ -94,6 +94,7 @@
         </div>
         
         <?php include('../../templates/modals.php'); ?>
+        <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
         <!-- Footer -->
