@@ -26,7 +26,7 @@
             </div>
             
             <div class="row">
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-4">
                     <div class="ui-card-light p-3 h-100 d-flex">
                         <div class="my-auto w-100">
                             <img src="/nft/img/no_preview.png" class="img-fluid w-100" id="nft-preview">
@@ -34,7 +34,85 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-7 mt-4 mt-lg-0">
+                <div class="col-12 col-lg-8 mt-4 mt-lg-0">
+                    <div class="ui-card-light p-3 h-100">
+                        <div class="row pb-4">
+                            <h4>Offer</h4>
+                        </div>
+                            
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <h5 class="secondary">NFT ID:</h5>
+                            </div>
+                            <div class="col-12">
+                                <span class="wrap" id="nftid"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row pt-2 pb-4">
+                            <div class="col-4">
+                                <h5 class="secondary">Network:</h5>
+                            </div>
+                            <div class="col-12" id="nft-icon-net-wrapper">
+                            </div>
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Name:</h5>
+                            </div>
+                            <div class="col-12">
+                                <span class="wrap nft-name"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row pt-2 pb-4">
+                            <div class="col-12">
+                                <h5 class="secondary">Description:</h5>
+                            </div>
+                            <div class="col-12">
+                                <span class="wrap" id="nft-description"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Data hash:</h5>
+                            </div>
+                            <div class="col-12">
+                                <span class="wrap" id="nft-data-hash"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row py-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Data URLs:</h5>
+                            </div>
+                            <div class="col-12 wrap">
+                                <ul class="m-0" id="nft-data-uris">
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="row pt-2 pb-4">
+                            <div class="col-12">
+                                <h5 class="secondary">License URLs:</h5>
+                            </div>
+                            <div class="col-12 wrap" id="nft-license-uris">
+                            </div>
+                        </div>
+                        
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <h5 class="secondary">Attributes:</h5>
+                            </div>
+                            <div class="col-12 wrap" id="nft-attributes">
+                            </div>
+                        </div>                                
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                     <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
                             <h4>NFT</h4>
