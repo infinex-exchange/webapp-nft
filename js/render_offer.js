@@ -125,7 +125,7 @@ function renderOffer(offer) {
                         </div>
                         ${mainPriceHtml}
                         ${buynowPriceHtml}
-                        <div class="col-12 small secondary">
+                        <div class="col-12 pt-2 small secondary">
                             ${finishedHtml}
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                         </div>
