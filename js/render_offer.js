@@ -2,12 +2,43 @@ function updateCountdowns() {
     $('.countdown').each(function() {
         var timestamp = $(this).data('timestamp') * 1000;
         var total = Date.parse(new Date(timestamp)) - Date.parse(new Date());
-        alert(total);
+        var ago = false;
+        
+        if(total < 0) {
+            total = -total;
+            ago = true;
+        }
         
         var seconds = Math.floor( (total/1000) % 60 );
         var minutes = Math.floor( (total/1000/60) % 60 );
         var hours = Math.floor( (total/(1000*60*60)) % 24 );
         var days = Math.floor( total/(1000*60*60*24) );
+        
+        var str = '';
+        
+        if(days > 0) {
+            str += days + 'D ';
+        }
+        
+        if(hours > 0) {
+            if(hours < 10)
+                hours = '0' + hours;
+            str += hours + ':';
+        }
+        
+        if(minutes > 0) {
+            if(minutes < 10)
+                minutes = '0' + minutes;
+            str += minutes + ':';
+        }
+        
+        if(seconds > 0) {
+            if(seconds < 10)
+                seconds = '0' + seconds;
+            str += seconds + ':';
+        }   
+        
+        $(this).html(str);
     });
 }
 
