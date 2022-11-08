@@ -1,3 +1,16 @@
+function updateCountdowns() {
+    $('.countdown').each(function() {
+        var timestamp = $(this).data('timestamp') * 1000;
+        var total = Date.parse(new Date(timestamp)) - Date.parse(new Date());
+        alert(total);
+        
+        var seconds = Math.floor( (total/1000) % 60 );
+        var minutes = Math.floor( (total/1000/60) % 60 );
+        var hours = Math.floor( (total/(1000*60*60)) % 24 );
+        var days = Math.floor( total/(1000*60*60*24) );
+    });
+}
+
 function renderOffer(offer) {
     var nftPreview = '/nft/img/no_preview.png';
     if(offer.preview != null)
@@ -11,45 +24,23 @@ function renderOffer(offer) {
                 </a>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-11">
+                        <div class="col-12">
                             <h5 class="card-title">${offer.name}</h5>
-                            <span class="small secondary">
-                                test
-                            </span>
                         </div>
-                        <div class="col-1 ps-0 my-auto text-center secondary dropdown">
-            			    <a class="nav-link" href="#_" data-bs-toggle="dropdown">
-                                <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                    <a class="dropdown-item" href="/nft/details/">
-                                        <i class="fa-solid fa-eye"></i>
-                                        Details
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/nft/sell/">
-                                        <i class="fa-solid fa-store"></i>
-                                        Sell
-                                    </a>
-                                <li>
-                                    <a class="dropdown-item" href="/nft/wallet/withdraw/">
-                                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                        Withdraw
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/nft/wallet/transfer/">
-                                        <i class="fa-solid fa-people-arrows"></i>
-                                        Transfer
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="col-4 my-auto">
+            			    .
             			</div>
+                        <div class="col-12 small secondary">
+                            <i class="fa-solid fa-timer"></i>
+                            <span class="countdown" data-timestamp="${offer.end_time}"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     `;        
+}
+
+$(document).ready(function()) {
+    setInterval(updateCountdowns, 1000);
 }
