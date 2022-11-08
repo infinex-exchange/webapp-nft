@@ -22,8 +22,8 @@ $(document).ready(function() {
             
             $('#bids-data').empty();
             
-            if(data.bids.length > 0) {
-                $.each(data.bids, function(k, bid) {
+            if(data.offer.bids.length > 0) {
+                $.each(data.offer.bids, function(k, bid) {
                     var time = new Date(bid.time * 1000).toLocaleString();
                     
                     var buynow = '';
