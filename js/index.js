@@ -84,7 +84,7 @@ $(document).ready(function() {
     window.renderingStagesTarget = 2;
     
     getFeaturedOffers($('last-minute-data'), {
-        auctions: true,
+        auction: true,
         buynow: true,
         sort: 'end_time',
         sort_dir: 'ASC',
@@ -92,7 +92,7 @@ $(document).ready(function() {
     });
     
     getFeaturedOffers($('featured-nft-data'), {
-        auctions: true,
+        auction: true,
         buynow: true,
         sort: 'popularity',
         sort_dir: 'DESC',
