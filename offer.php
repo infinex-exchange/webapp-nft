@@ -35,78 +35,15 @@
                 </div>
                 
                 <div class="col-12 col-lg-8 mt-4 mt-lg-0">
-                    <div class="ui-card-light p-3 h-100">
-                        <div class="row pb-4">
-                            <h4>Offer</h4>
-                        </div>
-                            
-                        <div class="row py-2">
-                            <div class="col-12">
-                                <h5 class="secondary">NFT ID:</h5>
-                            </div>
-                            <div class="col-12">
-                                <span class="wrap" id="nfd"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="row pt-2 pb-4">
-                            <div class="col-4">
-                                <h5 class="secondary">Network:</h5>
-                            </div>
-                            <div class="col-12" id="nft-icet-wrapper">
-                            </div>
-                        </div>
-                        
-                        <div class="row py-2">
-                            <div class="col-12">
-                                <h5 class="secondary">Name:</h5>
-                            </div>
-                            <div class="col-12">
-                                <span class="wrap nft-me"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="row pt-2 pb-4">
-                            <div class="col-12">
-                                <h5 class="secondary">Description:</h5>
-                            </div>
-                            <div class="col-12">
-                                <span class="wrap" id="nft-diption"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="row py-2">
-                            <div class="col-12">
-                                <h5 class="secondary">Data hash:</h5>
-                            </div>
-                            <div class="col-12">
-                                <span class="wrap" id="nftta-hash"></span>
-                            </div>
-                        </div>
-                        
-                        <div class="row py-2">
-                            <div class="col-12">
-                                <h5 class="secondary">Data URLs:</h5>
-                            </div>
-                            <div class="col-12 wrap">
-                                <ul class="m-0" id="nft--uris">
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="row pt-2 pb-4">
-                            <div class="col-12">
-                                <h5 class="secondary">License URLs:</h5>
-                            </div>
-                            <div class="col-12 wrap" id="nft-lic-uris">
-                            </div>
-                        </div>
-                        
+                    <div class="ui-card-light p-3 h-100">     
                         <div class="row pt-2">
                             <div class="col-12">
-                                <h5 class="secondary">Attributes:</h5>
+                                <h5>Biddings:</h5>
                             </div>
-                            <div class="col-12 wrap" id="nft-attes">
+                            <div class="col-12" id="bids-empty">
+                                <small class="secondary">No bids</small>
+                            </div>
+                            <div class="col-12" id="bids-data">
                             </div>
                         </div>                                
                     </div>
