@@ -36,7 +36,7 @@
                 
                 <div class="col-12 col-lg-8 mt-4 mt-lg-0">
                     <div class="ui-card-light p-3 h-100">     
-                        <div class="row mt-auto">
+                        <div class="row pt-2">
                             <div class="col-12">
                                 <h5 class="secondary">Biddings:</h5>
                             </div>
