@@ -94,6 +94,7 @@ $(document).ready(function() {
             
             $('#countdown').data('timestamp', data.offer.end_time);
             initCountdowns();
+            updateCountdowns();
             
             $(document).trigger('renderingStage');
         }
