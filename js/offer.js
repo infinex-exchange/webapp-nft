@@ -1,14 +1,40 @@
-$(document).ready(function() {
-    window.renderingStagesTarget = 2;
-    
-    var pathArray = window.location.pathname.split('/');
-    var noid = parseInt(pathArray[pathArray.length - 1]);
-    
+function buyNow() {
+    $.ajax({
+        url: config.apiUrl + '/nft/offer/buynow',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            noid: window.noid
+        }),
+        contentType: "application/json",
+        dataType: "json"
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            refreshOffer(false)
+        }
+        
+        else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
+function confirmBuyNow() {
+    $('#mcbn-price').html($('#price-buynow').html());
+    $('#modal-confirm-buynow').modal('show');
+}
+
+function refreshOffer(init) {
     $.ajax({
         url: config.apiUrl + '/nft/offer',
         type: 'POST',
         data: JSON.stringify({
-            noid: noid
+            noid: window.noid
         }),
         contentType: "application/json",
         dataType: "json",
@@ -16,9 +42,11 @@ $(document).ready(function() {
     .retry(config.retry)
     .done(function (data) {
         if(data.success) {
-            getNftDetails(data.offer.nftid);
+            if(init) {
+                getNftDetails(data.offer.nftid);
             
-            $('.asset').html(data.offer.asset);
+                $('.asset').html(data.offer.asset);
+            }
             
             $('#bids-data').empty();
             
@@ -93,10 +121,10 @@ $(document).ready(function() {
             }
             
             $('#countdown').data('timestamp', data.offer.end_time);
-            initCountdowns();
+            if(init) initCountdowns();
             updateCountdowns();
             
-            $(document).trigger('renderingStage');
+            if(init) $(document).trigger('renderingStage');
         }
         
         else {
@@ -106,4 +134,13 @@ $(document).ready(function() {
     .fail(function (jqXHR, textStatus, errorThrown) {
         msgBoxNoConn(true);
     });
+}
+
+$(document).ready(function() {
+    window.renderingStagesTarget = 2;
+    
+    var pathArray = window.location.pathname.split('/');
+    window.noid = parseInt(pathArray[pathArray.length - 1]);
+    
+    refreshOffer(true);
 });
