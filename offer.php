@@ -260,7 +260,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button id="mcb-buy" type="button" class="btn btn-primary">Buy</button>
+                        <button type="button" class="modal-close btn btn-primary" data-bs-dismiss="modal" onClick="buyNow()">Buy</button>
                     </div>
                 </div>
             </div>
