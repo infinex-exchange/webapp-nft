@@ -4,6 +4,11 @@ function updateCountdowns() {
         var total = Date.parse(new Date(timestamp)) - Date.parse(new Date());
         var ago = false;
         
+        if(total < 600)
+            $(this).addClass('text-red');
+        else
+            $(this).removeClass('text-red');
+        
         if(total < 0) {
             total = -total;
             ago = true;
@@ -42,7 +47,14 @@ function updateCountdowns() {
                     str += seconds;
                 }
             }
-        }   
+        }
+        
+        if(ago)
+            str += ' ago';
+        else
+            str += ' to end';
+        
+        str = '<i class="fa-solid fa-clock"></i>' + str;   
         
         $(this).html(str);
     });
@@ -68,7 +80,6 @@ function renderOffer(offer) {
             			    .
             			</div>
                         <div class="col-12 small secondary">
-                            <i class="fa-solid fa-clock"></i>
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                         </div>
                     </div>
