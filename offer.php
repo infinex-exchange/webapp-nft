@@ -41,11 +41,11 @@
                         </div>
                         
                         <div class="row pb-4">
-                            <div class="col-6 col-lg-auto auction-wrapper">
+                            <div class="col-6 col-lg-3 auction-wrapper">
                                 <h5 class="secondary">Current bid:</h5>
                                 <h3 id="price-auction"></h3>
                             </div>
-                            <div class="col-6 col-lg-auto buynow-wrapper">
+                            <div class="col-6 col-lg-3 buynow-wrapper">
                                 <h5 class="secondary">Buy now price:</h5>
                                 <h3 id="price-buynow"></h3>
                             </div>
