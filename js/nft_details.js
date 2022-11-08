@@ -86,4 +86,4 @@ function getNftDetails(nftid) {
     .fail(function (jqXHR, textStatus, errorThrown) {
         msgBoxNoConn(true);
     });
-});
+}
