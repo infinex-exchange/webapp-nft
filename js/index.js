@@ -26,7 +26,7 @@ function getFeaturedOffers(div, req) {
 }
 
 $(document).ready(function() {
-    window.renderingStagesTarget = 2;
+    window.renderingStagesTarget = 3;
     
     getFeaturedOffers($('#last-minute-data'), {
         auction: true,
@@ -41,6 +41,14 @@ $(document).ready(function() {
         buynow: true,
         sort: 'popularity',
         sort_dir: 'DESC',
+        offset: 0
+    });
+    
+    getFeaturedOffers($('#low-price-data'), {
+        auction: true,
+        buynow: true,
+        sort: 'price',
+        sort_dir: 'ASC',
         offset: 0
     });
 });
