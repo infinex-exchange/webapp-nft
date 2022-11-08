@@ -57,18 +57,18 @@ $(document).ready(function() {
             if(data.offer.active) {
                 if(data.offer.price_auction) {
                     $('#price-auction').html(data.offer.price_auction + ' ' + data.offer.asset);
-                    $('#price-auction-wrapper').show();
+                    $('.auction-wrapper').show();
                 }
                 else {
-                    $('#price-auction-wrapper').hide();
+                    $('.auction-wrapper').hide();
                 }
                 
                 if(data.offer.price_buynow) {
                     $('#price-buynow').html(data.offer.price_buynow + ' ' + data.offer.asset);
-                    $('#price-buynow-wrapper').show();
+                    $('.buynow-wrapper').show();
                 }
                 else {
-                    $('#price-buynow-wrapper').hide();
+                    $('.buynow-wrapper').hide();
                 }
             }
             else {
@@ -88,8 +88,8 @@ $(document).ready(function() {
               			</div>
                     `;
                 }*/
-                $('#price-auction-wrapper').hide();
-                $('#price-buynow-wrapper').hide();
+                $('.auction-wrapper').hide();
+                $('.buynow-wrapper').hide();
             }
             
             $(document).trigger('renderingStage');

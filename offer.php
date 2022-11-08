@@ -40,25 +40,25 @@
                             <h3 class="nft-name"></h3>
                         </div>
                         
-                        <div class="row pb-4" id="price-auction-wrapper">
-                            <div class="col-auto my-auto">
+                        <div class="row pb-4">
+                            <div class="col-auto auction-wrapper">
                                 <h5 class="secondary">Current bid:</h5>
                                 <h3 id="price-auction"></h3>
                             </div>
-                            <div class="col-auto my-auto">
+                            <div class="col-auto buynow-wrapper">
+                                <h5 class="secondary">Buy now price:</h5>
+                                <h3 id="price-buynow"></h3>
+                            </div>
+                        </div>
+                            
+                        <div class="row pb-4">
+                            <div class="col-auto auction-wrapper">
                                 <button type="button" class="btn btn-primary">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
                                 </button>
                             </div>
-                        </div>
-                            
-                        <div class="row pb-4" id="price-buynow-wrapper">
-                            <div class="col-auto my-auto">
-                                <h5 class="secondary">Buy now price:</h5>
-                                <h3 id="price-buynow"></h3>
-                            </div>
-                            <div class="col-auto my-auto">
+                            <div class="col-auto buynow-wrapper">
                                 <button type="button" class="btn btn-primary">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Buy now
