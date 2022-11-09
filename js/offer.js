@@ -92,10 +92,10 @@ function refreshOffer(init) {
         if(data.success) {
             if(init) {
                 getNftDetails(data.offer.nftid, function(nft) {
-                    getFeaturedOffers($('#col-others-data'), {
+                    getFeaturedOffers($('#others-data'), {
                         auction: true,
                         buynow: true,
-                        col: nft.col,
+                        author: nft.author.authorid,
                         offset: 0
                     });
                 });

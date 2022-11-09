@@ -240,15 +240,15 @@
                 </div>
                 </div>
                 
-                <div id="col-others-wrapper" class="col-12 px-0 py-1 px-lg-1">
+                <div id="others-wrapper" class="col-12 px-0 py-1 px-lg-1">
                     <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
-                            <h4>Other NFTs from this collection:</h4>
+                            <h4>Other NFTs from this author:</h4>
                         </div>
                             
                         <div class="row py-2">
                             <div class="col-12">
-                                <div id="col-others-data" class="row">
+                                <div id="others-data" class="row">
                                 </div>
                             </div>
                         </div>
