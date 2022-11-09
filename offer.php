@@ -66,8 +66,8 @@
                             </div>
                         </div>
                         
-                        <div class="row ms-2">
-                            <div class="col-12">
+                        <div class="row ms-1">
+                            <div class="col-12 ps-0 pb-1">
                                 <h5 class="secondary">Biddings:</h5>
                             </div>
                             <div class="col-12 background" id="bids-empty">
