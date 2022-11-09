@@ -20,7 +20,7 @@
         <div class="row m-0 h-rest">
         
         <!-- Left column -->
-        <div class="col-12 col-lg-3 p-0 ui-card ui-column">
+        <div class="col-12 col-lg-3 p-0 ui-card ui-column" data-ui-card="filter">
         <div class="row">
         
             <div class="col pb-4">
@@ -75,7 +75,7 @@
         </div>
         
         <!-- Main column -->
-        <div class="col-12 col-lg-9 p-0 ui-card ui-column">
+        <div class="col-12 col-lg-9 p-0 ui-card ui-column" data-ui-card="offers">
             
             <div class="row pb-2">
                 <h3>Offers list</h3>

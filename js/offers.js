@@ -3,6 +3,8 @@ $(document).ready(function() {
     
     initCountdowns();
     
+    gotoUiCard('offers');
+    
     getFeaturedOffers($('#offers-data'), {
         auction: true,
         buynow: true,
