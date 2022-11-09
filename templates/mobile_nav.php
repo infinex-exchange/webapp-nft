@@ -1,4 +1,4 @@
-<nav class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
+<nav id="mobile-navbar" class="navbar fixed-bottom navbar-expand navbar-mobile d-flex d-lg-none py-0 small">
     <ul class="navbar-nav mx-auto text-center">
         <li class="nav-item">
             <a class="nav-link auto-active" href="/">
