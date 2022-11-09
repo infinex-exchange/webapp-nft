@@ -23,14 +23,14 @@
         <div class="col-12 col-lg-3 p-0 ui-card ui-column">
         <div class="row">
         
-            <div class="col pb-3">
+            <div class="col pb-4">
                 <h3>Filters</h3>
             </div>
             
             <div class="col-12 pb-1">
                 <h5 class="secondary">Search:</h5>
             </div>
-            <div class="col-12 pb-3">
+            <div class="col-12 pb-4">
                 <input id="filter-search" type="text" placeholder="Search..." class="input-search form-control">
             </div>
             
@@ -46,7 +46,7 @@
                       </div>
                   </div>
             </div>
-            <div class="col-12 pb-3">
+            <div class="col-12 pb-4">
                 <div class="pretty p-icon p-smooth">
                       <input id="filter-auctions" type="checkbox" checked>
                       <div class="state p-primary">
@@ -59,7 +59,7 @@
             <div class="col-12 pb-1">
                 <h5 class="secondary">Network:</h5>
             </div>
-            <div class="col-12 pb-3">
+            <div class="col-12 pb-4">
                 <?php include(__DIR__.'/../../templates/select_net.php'); ?>
             </div>
             
