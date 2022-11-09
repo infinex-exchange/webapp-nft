@@ -58,11 +58,21 @@ function submitBid() {
 }
 
 function confirmBuyNow() {
+	if(!window.loggedIn) {
+		gotoLogin();
+		return;
+	}
+	
     $('#mcbn-price').html($('#price-buynow').html());
     $('#modal-confirm-buynow').modal('show');
 }
 
 function showBidPrompt() {
+	if(!window.loggedIn) {
+		gotoLogin();
+		return;
+	}
+	
     $('#mb-bid').data('rval', '').data('tsval', '').val('');
     $('#modal-bid').modal('show');
 }
