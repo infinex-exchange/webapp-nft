@@ -105,6 +105,7 @@ function refreshOffer(init) {
                                 $('.offer-item[data-noid="' + window.noid + '"]').remove();
                         }
                     );
+                });
             
                 $('.asset').html(data.offer.asset);
                 
