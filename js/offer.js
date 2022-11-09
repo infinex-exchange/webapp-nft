@@ -93,18 +93,18 @@ function refreshOffer(init) {
             if(init) {
                 getNftDetails(data.offer.nftid, function(nft) {
                     getFeaturedOffers($('#others-data'), {
-                        auction: true,
-                        buynow: true,
-                        collection: nft.collection.colid,
-                        offset: 0
-                    },
-                    function(count) {
-                        if(count < 2)
-                            $('#others-data-wrapper').hide();
-                        else
-                            $('.offer-item[data-noid="' + window.noid + '"]').remove();
-                    }
-                });
+                          auction: true,
+                          buynow: true,
+                          collection: nft.collection.colid,
+                          offset: 0
+                        },
+                        function(count) {
+                            if(count < 2)
+                                $('#others-data-wrapper').hide();
+                            else
+                                $('.offer-item[data-noid="' + window.noid + '"]').remove();
+                        }
+                    );
             
                 $('.asset').html(data.offer.asset);
                 
