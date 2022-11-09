@@ -49,6 +49,13 @@
                                 <h5 class="secondary">Buy now price:</h5>
                                 <h3 id="price-buynow"></h3>
                             </div>
+                            <div class="col-6 col-lg-3 final-wrapper">
+                                <h5 class="secondary">Final price:</h5>
+                                <h3 id="price-final"></h3>
+                            </div>
+                            <div class="col-6 col-lg-3 final-nobids">
+                                <h5 class="secondary">Item has not been sold</h5>
+                            </div>
                         </div>
                             
                         <div class="row pb-4">

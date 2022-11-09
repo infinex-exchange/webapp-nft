@@ -163,23 +163,19 @@ function refreshOffer(init) {
                 else {
                     $('.buynow-wrapper').hide();
                 }
+                
+                $('.final-wrapper').hide();
+                $('.final-nobids').hide();
             }
             else {
-                if(offer.price_final) {
-                    mainPriceHtml = `
-                        <div class="col-6 my-auto">
-              			    <h4>${offer.price_final} ${offer.asset}</h4>
-              			</div>
-                    `;
+                if(data.offer.price_final) {
+                    $('#price-final').html(data.offer.price_final + ' ' + data.offer.asset);
+                    $('.final-nobids').hide();
+                    $('.final-wrapper').show();
                 }
                 else {
-                    mainPriceHtml = `
-                        <div class="col-6 my-auto">
-              			    <span class="small secondary">
-                                There were no bids
-                            </span>
-              			</div>
-                    `;
+                    $('.final-nobids').show();
+                    $('.final-wrapper').hide();
                 }
                 $('.auction-wrapper').hide();
                 $('.buynow-wrapper').hide();
