@@ -119,7 +119,7 @@ function refreshOffer(init) {
                             <div class="col-1 col-lg-2">
                                 ${buynow}
                             </div>
-                            <div class="col-5 col-lg-4">
+                            <div class="col-5 col-lg-4 text-end">
                                 ${bid.price} ${data.offer.asset}
                             </div>
                         </div>
