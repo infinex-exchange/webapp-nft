@@ -3,7 +3,7 @@ function updateCountdowns() {
         var timestamp = $(this).data('timestamp') * 1000;
         var total = Date.parse(new Date(timestamp)) - Date.parse(new Date());
         
-        if(total < 600)
+        if(total < 600*1000)
             $(this).addClass('text-red');
         else
             $(this).removeClass('text-red');
