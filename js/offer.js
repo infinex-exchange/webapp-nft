@@ -29,7 +29,7 @@ function submitBid() {
     
     if(bid == '') return;
     
-    $('#modal-bid').modal('close');
+    $('#modal-bid').modal('hide');
     
     $.ajax({
         url: config.apiUrl + '/nft/offer/bid',
