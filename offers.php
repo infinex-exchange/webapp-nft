@@ -22,8 +22,8 @@
         <!-- Left column -->
         <div class="col-12 col-lg-3 p-0 ui-card ui-column">
         
-            <div class="row p-2">
-                <h3>Last deposits</h3>
+            <div class="row pb-2">
+                <h3>Filters</h3>
             </div>
         
         <!-- / Left column -->
