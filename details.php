@@ -26,7 +26,7 @@
             </div>
             
             <div class="row">
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-5 px-0 py-1 px-lg-1">
                     <div class="ui-card-light p-3 h-100 d-flex">
                         <div class="my-auto w-100">
                             <img src="/nft/img/no_preview.png" class="img-fluid w-100" id="nft-preview">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-7 mt-4 mt-lg-0">
+                <div class="col-12 col-lg-7 px-0 py-1 px-lg-1">
                     <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
                             <h4>NFT</h4>
@@ -112,8 +112,8 @@
                     </div>
                 </div>
                 
-                <div id="collection-wrapper" class="col-12 col-lg-6 mt-4 mt-lg-0 pb-4">
-                    <div class="ui-card-light p-3 mt-4 h-100">
+                <div id="collection-wrapper" class="col-12 col-lg-6 px-0 py-1 px-lg-1">
+                    <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
                             <h4>Collection</h4>
                         </div>
@@ -155,8 +155,8 @@
                     </div>
                 </div>
                 
-                <div class="col-12 col-lg-6 mt-4 mt-lg-0 pb-4">
-                    <div class="ui-card-light p-3 mt-4 h-100">
+                <div class="col-12 col-lg-6 px-0 py-1 px-lg-1">
+                    <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
                             <h4>Author</h4>
                         </div>
