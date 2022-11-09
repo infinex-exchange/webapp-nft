@@ -68,7 +68,7 @@
                 <div class="col-12 col-lg-6">
                     <div class="input-ps-group">
                         <input id="price-buynow" type="text" class="form-control step2-ro" data-tsval="" data-rval="" readonly>
-                        <span class="suffix assetid"></span>
+                        <span class="suffix asset"></span>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 my-auto small secondary">
