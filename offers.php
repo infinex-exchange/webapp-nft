@@ -31,6 +31,10 @@
         
         <!-- Main column -->
         <div class="col-12 col-lg-9 p-0 ui-card ui-column">
+            
+            <div class="row pb-2">
+                <h3>Offers list</h3>
+            </div>
         
             <div class="row" id="offers-data">
             </div>
