@@ -78,9 +78,16 @@
         
         <!-- Main column -->
         <div id="offers" class="col-12 col-lg-9 p-0 ui-card ui-column rest-of-height" data-ui-card="offers">
-            <div id="offers-header">
-	            <div class="row pb-2">
+            <div id="offers-header" class="row pb-2">
+                <div class="col-12 d-none d-lg-block">
 	                <h3>Offers list</h3>
+	            </div>
+	            
+	            <div class="col-13 d-block d-lg-none">
+		            <button id="btn-filter" type="button" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-filter"></i>
+                        Filter
+                    </button>
 	            </div>
             </div>
         
