@@ -81,7 +81,7 @@
                 <h3>Offers list</h3>
             </div>
         
-            <div class="row" id="offers-data" class="scrollable">
+            <div class="row scrollable" id="offers-data">
             </div>
         
         <!-- / Main column -->
