@@ -84,7 +84,7 @@
 	            </div>
             </div>
         
-            <div class="row scrollable" id="offers-data">
+            <div class="scrollable" id="offers-data">
             </div>
         
         <!-- / Main column -->
