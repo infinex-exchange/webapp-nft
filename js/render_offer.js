@@ -12,6 +12,7 @@ function updateCountdowns() {
         
         if(total < 0) {
             str = 'Finished';
+            $(this).removeClass('countdown');
         }
         else {
         
