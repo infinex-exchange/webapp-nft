@@ -107,7 +107,8 @@ function refreshOffer(init) {
                     var buynow = '';
                     if(bid.is_buynow) {
                         buynow = `
-                            <strong class="small secondary">Buy Now</strong>
+                            <strong class="small secondary d-none d-lg-block">Buy Now</strong>
+                            <strong class="small secondary d-block d-lg-none">BN</strong>
                         `;
                     }
                     
