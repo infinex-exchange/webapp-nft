@@ -97,7 +97,13 @@ function refreshOffer(init) {
                         buynow: true,
                         collection: nft.collection.colid,
                         offset: 0
-                    });
+                    },
+                    function(count) {
+                        if(count < 2)
+                            $('#others-data-wrapper').hide();
+                        else
+                            $('.offer-item[data-noid="' + window.noid + '"]').remove();
+                    };
                 });
             
                 $('.asset').html(data.offer.asset);

@@ -107,7 +107,7 @@ function renderOffer(offer) {
     }
                                 
     return `
-        <div class="offer-item col-12 col-md-3 col-lg-3 py-2">
+        <div class="offer-item col-12 col-md-3 col-lg-3 py-2" data-noid="${offer.noid}">
             <div class="card h-100 hoverable">
                 <a href="/nft/offer/${offer.noid}" class="d-flex h-100">
                     <img src="${nftPreview}" class="card-img-top my-auto">
