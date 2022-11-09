@@ -279,7 +279,7 @@
                     Your bid:
                     <div class="input-ps-group">
                         <input id="mb-bid" type="text" data-tsval="" data-rval="">
-                        <span class="suffix assetid"></span>
+                        <span class="suffix asset"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
