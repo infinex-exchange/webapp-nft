@@ -1,4 +1,4 @@
-function getNftDetails(nftid) {
+function getNftDetails(nftid, callback = null) {
     $.ajax({
         url: config.apiUrl + '/nft/details',
         type: 'POST',
@@ -77,6 +77,9 @@ function getNftDetails(nftid) {
             `);
             
             $(document).trigger('renderingStage');
+            
+            if(callback != null)
+                callback(data.nft);
         }
         
         else {

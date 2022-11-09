@@ -91,7 +91,14 @@ function refreshOffer(init) {
     .done(function (data) {
         if(data.success) {
             if(init) {
-                getNftDetails(data.offer.nftid);
+                getNftDetails(data.offer.nftid, function(nft) {
+                    getFeaturedOffers($('#col-others-data'), {
+                        auction: true,
+                        buynow: true,
+                        col: nft.col
+                        offset: 0
+                    });
+                });
             
                 $('.asset').html(data.offer.asset);
                 

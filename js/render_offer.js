@@ -129,7 +129,7 @@ function renderOffer(offer) {
     `;        
 }
 
-function getFeaturedOffers(div, req) {
+function getFeaturedOffers(div, req, callback = null) {
     $.ajax({
         url: config.apiUrl + '/nft/offers',
         type: 'POST',
@@ -146,6 +146,9 @@ function getFeaturedOffers(div, req) {
             });
             updateCountdowns();
 	        $(document).trigger('renderingStage');
+            
+            if(callback != null)
+                callback(data.offers.length);
         }
         else {
             msgBoxRedirect(data.error);
