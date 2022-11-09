@@ -95,8 +95,6 @@
         <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/offers.js?<?php echo filemtime(__DIR__.'/js/offers.js'); ?>"></script>
         
-        <!-- Footer -->
-        <?php include('../../templates/footer.html'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
     
     </body>
