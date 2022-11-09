@@ -38,20 +38,22 @@
                 <h5 class="secondary">Offer type:</h5>
             </div>
             <div class="col-12">
-                <div class="pretty p-default">
-                    <input type="checkbox">
-                    <div class="state p-primary">
-                        <label>Buy now</label>
-                    </div>
-                </div>
+                 <div class="pretty p-icon p-smooth">
+                      <input type="checkbox" />
+                      <div class="state p-primary">
+                          <i class="icon fa fa-check"></i>
+                          <label>Buy now</label>
+                      </div>
+                  </div>
             </div>
             <div class="col-12 pb-3">
-                <div class="pretty p-default">
-                    <input type="checkbox">
-                    <div class="state p-primary">
-                        <label>Auctions</label>
-                    </div>
-                </div>
+                <div class="pretty p-icon p-smooth">
+                      <input type="checkbox" />
+                      <div class="state p-primary">
+                          <i class="icon fa fa-check"></i>
+                          <label>Auctions</label>
+                      </div>
+                  </div>
             </div>
             
             <div class="col-12 pb-1">
