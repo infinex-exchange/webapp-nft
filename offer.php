@@ -42,7 +42,7 @@
                             </div>
                             <div class="col-12">
                                 <i class="fa-solid fa-user"></i>
-                                Seller:
+                                <span class="secondary">Seller:</span>
                                 <span id="seller-nickname"></span>
                             </div>
                         </div>
