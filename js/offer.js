@@ -165,7 +165,7 @@ function refreshOffer(init) {
                 }
             }
             else {
-                /*if(offer.price_final) {
+                if(offer.price_final) {
                     mainPriceHtml = `
                         <div class="col-6 my-auto">
               			    <h4>${offer.price_final} ${offer.asset}</h4>
@@ -180,7 +180,7 @@ function refreshOffer(init) {
                             </span>
               			</div>
                     `;
-                }*/
+                }
                 $('.auction-wrapper').hide();
                 $('.buynow-wrapper').hide();
             }
