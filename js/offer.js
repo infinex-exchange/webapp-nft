@@ -103,7 +103,7 @@ function refreshOffer(init) {
                             $('#others-data-wrapper').hide();
                         else
                             $('.offer-item[data-noid="' + window.noid + '"]').remove();
-                    };
+                    }
                 });
             
                 $('.asset').html(data.offer.asset);
