@@ -82,7 +82,7 @@
                 </div>
                 
                 <div class="col-12 col-lg-6 px-0 py-1 px-lg-1">
-                    <div class="ui-card-light p-3 mt-4 h-100">
+                    <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
                             <h4>NFT</h4>
                         </div>
@@ -163,7 +163,7 @@
                 <div class="row h-100">
                 
                 <div id="collection-wrapper" class="col-12 px-0 py-1 px-lg-1">
-                    <div class="ui-card-light p-3 mt-4 h-100">
+                    <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
                             <h4>Collection</h4>
                         </div>
@@ -206,7 +206,7 @@
                 </div>
                 
                 <div class="col-12 px-0 py-1 px-lg-1">
-                    <div class="ui-card-light p-3 mt-4 h-100">
+                    <div class="ui-card-light p-3 h-100">
                         <div class="row pb-4">
                             <h4>Author</h4>
                         </div>
