@@ -22,7 +22,7 @@
         <div class="col-12 p-0 ui-card ui-column">
             
             <div class="row">
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4 p-0 p-lg-1">
                     <div class="ui-card-light p-3 h-100 d-flex">
                         <div class="my-auto w-100">
                             <img src="/nft/img/no_preview.png" class="img-fluid w-100" id="nft-preview">
