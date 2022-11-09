@@ -12,7 +12,9 @@
         <?php include('../../templates/preloader.html'); ?>
         
         <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
+        <div id="main-navbar">
+	        <?php include('../../templates/navbar.php'); ?>
+	    </div>
         <?php include(__DIR__.'/templates/navbar.php'); ?>
         
         <!-- Root container -->
