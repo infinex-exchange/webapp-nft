@@ -128,3 +128,30 @@ function renderOffer(offer) {
         </div>
     `;        
 }
+
+function getFeaturedOffers(div, req) {
+    $.ajax({
+        url: config.apiUrl + '/nft/offers',
+        type: 'POST',
+        data: JSON.stringify(req),
+        contentType: "application/json",
+        dataType: "json",
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            data.offers = data.offers.slice(0, 8);
+            $.each(data.offers, function(k, v) {   
+                div.append(renderOffer(v));
+            });
+            updateCountdowns();
+	        $(document).trigger('renderingStage');
+        }
+        else {
+            msgBoxRedirect(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(true); 
+    });    
+}
