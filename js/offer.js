@@ -130,13 +130,16 @@ function refreshOffer(init) {
                     
                     $('#bids-data').append(`
                         <div class="row hoverable p-1">
-                            <div class="col-6 col-lg-6">
+                            <div class="col-6 col-lg-3">
+                                ${bid.nickname}
+                            </div>
+                            <div class="col-6 col-lg-4">
                                 ${time}
                             </div>
-                            <div class="col-1 col-lg-2">
+                            <div class="col-6 col-lg-2">
                                 ${buynow}
                             </div>
-                            <div class="col-5 col-lg-4 text-end">
+                            <div class="col-6 col-lg-3 text-end">
                                 ${bid.price} ${data.offer.asset}
                             </div>
                         </div>
