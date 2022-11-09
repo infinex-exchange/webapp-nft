@@ -41,8 +41,10 @@
                                 <span class="countdown" id="countdown"></span>
                             </div>
                             <div class="col-12">
-                                <i class="fa-solid fa-user"></i>
-                                <span class="secondary">Seller:</span>
+                                <span class="secondary">
+                                    <i class="fa-solid fa-user"></i>
+                                    Seller:
+                                </span>
                                 <span id="seller-nickname"></span>
                             </div>
                         </div>
