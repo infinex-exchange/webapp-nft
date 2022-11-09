@@ -2,60 +2,56 @@ function updateCountdowns() {
     $('.countdown').each(function() {
         var timestamp = $(this).data('timestamp') * 1000;
         var total = Date.parse(new Date(timestamp)) - Date.parse(new Date());
-        var ago = false;
         
         if(total < 600)
             $(this).addClass('text-red');
         else
             $(this).removeClass('text-red');
         
+        var str = ''
+        
         if(total < 0) {
-            total = -total;
-            ago = true;
-        }
-        
-        var seconds = Math.floor( (total/1000) % 60 );
-        var minutes = Math.floor( (total/1000/60) % 60 );
-        var hours = Math.floor( (total/(1000*60*60)) % 24 );
-        var days = Math.floor( total/(1000*60*60*24) );
-        
-        var str = '';
-        
-        if(days > 0) {
-            str += days + ' days ';
+            str = 'Finished';
         }
         else {
-            if(hours > 0) {
-                if(hours < 10)
-                    hours = '0' + hours;
-                str += hours + ':';
-            }
-            
-            if(minutes > 0) {
-                if(minutes < 10)
-                    minutes = '0' + minutes;
-                str += minutes + ':';
-            }
-            
-            if(seconds > 0) {
-                if(str == '') {
-                    str += seconds + ' seconds';
-                }
-                else {
-                    if(seconds < 10)
-                        seconds = '0' + seconds;
-                    str += seconds;
-                }
-            }
-        }
         
-        if(ago)
-            str += ' ago';
-        else {
+            var seconds = Math.floor( (total/1000) % 60 );
+            var minutes = Math.floor( (total/1000/60) % 60 );
+            var hours = Math.floor( (total/(1000*60*60)) % 24 );
+            var days = Math.floor( total/(1000*60*60*24) );
+            
+            if(days > 0) {
+                str += days + ' days ';
+            }
+            else {
+                if(hours > 0) {
+                    if(hours < 10)
+                        hours = '0' + hours;
+                    str += hours + ':';
+                }
+                
+                if(minutes > 0) {
+                    if(minutes < 10)
+                        minutes = '0' + minutes;
+                    str += minutes + ':';
+                }
+                
+                if(seconds > 0) {
+                    if(str == '') {
+                        str += seconds + ' seconds';
+                    }
+                    else {
+                        if(seconds < 10)
+                            seconds = '0' + seconds;
+                        str += seconds;
+                    }
+                }
+            }
+            
             str += ' to end';
-            str = '<i class="fa-solid fa-clock"></i> ' + str;
         }
         
+        str = '<i class="fa-solid fa-clock"></i> ' + str;
         $(this).html(str);
     });
 }
@@ -68,14 +64,6 @@ function renderOffer(offer) {
     var nftPreview = '/nft/img/no_preview.png';
     if(offer.preview != null)
         nftPreview = offer.preview;
-    
-    var finishedHtml = '';
-    
-    if(!offer.active) {
-        finishedHtml = `
-            <span class="text-red">Finished</span>
-        `;
-    }
     
     var mainPriceHtml = '';
     var buynowPriceHtml = '';
@@ -131,7 +119,6 @@ function renderOffer(offer) {
                         ${mainPriceHtml}
                         ${buynowPriceHtml}
                         <div class="col-12 pt-2 small secondary">
-                            ${finishedHtml}
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                         </div>
                     </div>
