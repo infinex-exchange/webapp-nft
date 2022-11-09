@@ -132,8 +132,11 @@ function refreshOffer(init) {
                             <div class="col-6 col-lg-3 order-1">
                                 ${bid.nickname}
                             </div>
-                            <div class="col-6 col-lg-4 order-3 order-lg-2 text-start text-lg-end">
+                            <div class="col-6 col-lg-4 d-none d-lg-block order-lg-2 text-start text-lg-end">
                                 ${time}
+                            </div>
+                            <div class="col-6 col-lg-4 d-block d-lg-none order-3 text-start text-lg-end">
+                                <small class="secondary">${time}</small>
                             </div>
                             <div class="col-6 col-lg-2 order-2 order-lg-3 text-end text-lg-start">
                                 ${buynow}
