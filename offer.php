@@ -70,10 +70,10 @@
                             <div class="col-12">
                                 <h5 class="secondary">Biddings:</h5>
                             </div>
-                            <div class="col-12" id="bids-empty">
+                            <div class="col-12 background" id="bids-empty">
                                 No bids
                             </div>
-                            <div class="col-12 col-lg-8" id="bids-data-wrapper">
+                            <div class="col-12 col-lg-8 background" id="bids-data-wrapper">
                                 <div id="bids-data" class="scrollable" style="height: 200px">
                                 </div>
                             </div>
