@@ -99,6 +99,7 @@ function refreshOffer(init) {
                           offset: 0
                         },
                         function(count) {
+                            alert(count);
                             if(count < 2)
                                 $('#others-data-wrapper').hide();
                             else
