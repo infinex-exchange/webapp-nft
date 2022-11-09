@@ -146,9 +146,11 @@ function refreshOffer(init) {
                 });
                 
                 $('#bids-empty').hide();
+                $('#bids-data-wrapper').show();
             }
             else {
                 $('#bids-empty').show();
+                $('#bids-data-wrapper').hide();
             }
             
             if(data.offer.active) {

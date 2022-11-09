@@ -86,7 +86,7 @@
                             <div class="col-12 ps-0 pb-1">
                                 <h5 class="secondary">Biddings:</h5>
                             </div>
-                            <div class="col-12 background" id="bids-empty">
+                            <div class="col-12 col-lg-8 background p-1" id="bids-empty">
                                 No bids
                             </div>
                             <div class="col-12 col-lg-8 background p-1" id="bids-data-wrapper">
