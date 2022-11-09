@@ -108,6 +108,7 @@ function refreshOffer(init) {
                 });
             
                 $('.asset').html(data.offer.asset);
+                $('#seller-nickname').html(data.offer.seller);
                 
                 window.prec = data.offer.prec;
             }

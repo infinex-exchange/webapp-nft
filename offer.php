@@ -39,6 +39,11 @@
                         <div class="row pb-4">
                             <span class="countdown" id="countdown"></span>
                         </div>
+                        <div class="row">
+                            <i class="fa-solid fa-user"></i>
+                            Seller:
+                            <span id="seller-nickname"></span>
+                        </div>
                         
                         <div class="row pb-4">
                             <div class="col-6 col-lg-3 auction-wrapper">
