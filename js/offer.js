@@ -123,8 +123,7 @@ function refreshOffer(init) {
                     var buynow = '';
                     if(bid.is_buynow) {
                         buynow = `
-                            <strong class="small secondary d-none d-lg-inline">Buy Now</strong>
-                            <strong class="small secondary d-inline d-lg-none">BN</strong>
+                            <strong class="small secondary">Buy Now</strong>
                         `;
                     }
                     
