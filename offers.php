@@ -21,12 +21,28 @@
         
         <!-- Left column -->
         <div class="col-12 col-lg-3 p-0 ui-card ui-column">
+        <div class="row">
         
-            <div class="row pb-2">
+            <div class="col pb-2">
                 <h3>Filters</h3>
+            </div>
+            
+            <div class="col-12 pb-1">
+                <h5 class="secondary">Network:</h5>
+            </div>
+            <div class="col-12 pb-2">
+                <?php include(__DIR__.'/../../templates/select_net.php'); ?>
+            </div>
+            
+            <div class="col-12 pb-1">
+                <h5 class="secondary">Collection:</h5>
+            </div>
+            <div class="col-12">
+                <?php include(__DIR__.'/templates/select_col.php'); ?>
             </div>
         
         <!-- / Left column -->
+        </div>
         </div>
         
         <!-- Main column -->
