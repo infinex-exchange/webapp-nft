@@ -53,7 +53,7 @@
                             
                         <div class="row pb-4">
                             <div class="col-6 col-lg-3 auction-wrapper">
-                                <button type="button" class="btn btn-primary w-100">
+                                <button type="button" class="btn btn-primary w-100" onClick="showBidPrompt()">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
                                 </button>
@@ -267,6 +267,28 @@
                 </div>
             </div>
         </div>
+        
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-bid">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Place bid</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <div class="modal-body">
+                    Your bid:
+                    <div class="input-ps-group">
+                        <input id="mb-bid" type="text" data-tsval="" data-rval="">
+                        <span class="suffix assetid"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onClick="submitBid()">Submit</button>
+                </div>
+        </div>
+    </div>
+</div>
         
         <?php include('../../templates/modals.php'); ?>
         <script src="/nft/js/nft_details.js?<?php echo filemtime(__DIR__.'/js/nft_details.js'); ?>"></script>

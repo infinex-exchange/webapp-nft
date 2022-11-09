@@ -24,9 +24,47 @@ function buyNow() {
     });
 }
 
+function submitBid() {
+    var bid = $('#mb-bid').data('rval');
+    
+    if(bid == '') return;
+    
+    $('#modal-bid').modal('close');
+    
+    $.ajax({
+        url: config.apiUrl + '/nft/offer/bid',
+        type: 'POST',
+        data: JSON.stringify({
+            api_key: window.apiKey,
+            noid: window.noid,
+            bid: bid
+        }),
+        contentType: "application/json",
+        dataType: "json"
+    })
+    .retry(config.retry)
+    .done(function (data) {
+        if(data.success) {
+            refreshOffer(false)
+        }
+        
+        else {
+            msgBox(data.error);
+        }
+    })
+    .fail(function (jqXHR, textStatus, errorThrown) {
+        msgBoxNoConn(false);
+    });
+}
+
 function confirmBuyNow() {
     $('#mcbn-price').html($('#price-buynow').html());
     $('#modal-confirm-buynow').modal('show');
+}
+
+function showBidPrompt() {
+    $('#mb-bid').data('rval', '').data('tsval', '').val('');
+    $('#modal-bid').modal('show');
 }
 
 function refreshOffer(init) {
@@ -46,6 +84,8 @@ function refreshOffer(init) {
                 getNftDetails(data.offer.nftid);
             
                 $('.asset').html(data.offer.asset);
+                
+                window.prec = data.offer.prec;
             }
             
             $('#bids-data').empty();
@@ -143,4 +183,52 @@ $(document).ready(function() {
     window.noid = parseInt(pathArray[pathArray.length - 1]);
     
     refreshOffer(true);
+    
+    // Lock format and precision of inputs
+    
+    $('#mb-bid').on('input', function () {
+        prec = window.prec;
+        
+        var regex = new RegExp("^[0-9]*(\\.[0-9]{0," + prec + "})?$");
+        var newVal = $(this).val();
+        
+        // Revert bad format (visible value to typing safe value)
+        if (!regex.test(newVal)) {
+            $(this).val( $(this).data('tsval') );
+        }
+        
+        else {
+            // Check is real value change by calculations pending
+            var haveRVal = $(this).data('rval') != $(this).data('tsval');
+            
+            // Drop . on last position (typing safe value only)
+            if(newVal.slice(-1) == '.') {
+                $(this).data('tsval', newVal.substring(0, newVal.length - 1));
+            }
+        
+            // Change . to 0. on first position (typing safe value only)
+            else if(newVal.startsWith('.')) {
+                $(this).data('tsval', '0' + newVal);
+            }
+        
+            // Save typing safe value as is when everythink ok
+            else {
+                $(this).data('tsval', newVal);
+            }
+            
+            // If there is no pending change by calculations set rval also
+            $(this).data('rval', newVal);
+        }
+        
+        // Do calculations
+        $(this).trigger('updateCalc');
+    });
+    
+    // Move data-val to real visible value
+    $('#mb-bid').onFirst('focusout setVal', function() {
+        if($(this).is(':focus')) return;
+        
+        $(this).data('tsval', $(this).data('rval') )
+               .val( $(this).data('rval') );
+    });
 });
