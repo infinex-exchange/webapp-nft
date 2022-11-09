@@ -95,7 +95,7 @@ function refreshOffer(init) {
                     getFeaturedOffers($('#others-data'), {
                         auction: true,
                         buynow: true,
-                        author: nft.author.authorid,
+                        collection: nft.collection.colid,
                         offset: 0
                     });
                 });
