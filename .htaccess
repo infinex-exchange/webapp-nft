@@ -18,3 +18,5 @@ RewriteRule ^sell/([^/]+)/?$ sell.php [L]
 RewriteRule ^sell/?$ sell.php [L]
 
 RewriteRule ^offer/([^/]+)/?$ offer.php [L]
+
+RewriteRule ^offers/?$ offers.php [L]
