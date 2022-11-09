@@ -77,7 +77,7 @@
         </div>
         
         <!-- Main column -->
-        <div class="col-12 col-lg-9 p-0 ui-card ui-column rest-of-height" data-ui-card="offers">
+        <div id="offers" class="col-12 col-lg-9 p-0 ui-card ui-column rest-of-height" data-ui-card="offers">
             <div class="offers-header">
 	            <div class="row pb-2">
 	                <h3>Offers list</h3>

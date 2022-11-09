@@ -5,7 +5,7 @@ function doJsSizing() {
 	document.body.style.setProperty('--height-main-nav', $('#main-navbar').outerHeight() + 'px');
     
     ['offers'].forEach(function(i) {
-        if($('#' + i + '-data').length == 0) return;
+        if($('#' + i).length == 0) return;
         
         var footerH = 0;
         if($('#' + i + '-footer').length) footerH = $('#' + i + '-footer').outerHeight();
