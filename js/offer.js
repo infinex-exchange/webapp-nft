@@ -99,9 +99,8 @@ function refreshOffer(init) {
                           offset: 0
                         },
                         function(count) {
-                            alert(count);
                             if(count < 2)
-                                $('#others-data-wrapper').hide();
+                                $('#others-wrapper').hide();
                             else
                                 $('.offer-item[data-noid="' + window.noid + '"]').remove();
                         }
