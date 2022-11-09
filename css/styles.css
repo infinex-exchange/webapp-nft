@@ -1,3 +1,13 @@
+/* Init variables */
+
+:root {
+    --emulated-100vh: 100vh;
+    --height-main-nav: 0px;
+    --height-module-nav: 0px;
+    --height-mobile-nav: 0px;
+    --target-height-offers-data: 0px;
+}
+
 /* Jumbotron background */
 
 @media (min-width: 992px) {
@@ -34,4 +44,26 @@
 
 .nft-content-link, .nft-content-link:hover {
     color: var(--color-primary);
+}
+
+/* Js sizing */
+
+.rest-of-height {
+    height: calc(var(--emulated-100vh)
+                 - var(--height-main-nav)
+                 - var(--height-module-nav)
+                );
+}
+
+@media (max-width: 991px) {
+    .rest-of-height {
+        height: calc(var(--emulated-100vh)
+                     - var(--height-main-nav)
+                     - var(--height-mobile-nav)
+                    ) !important;
+    }
+}
+
+#offers-data {
+    height: var(--target-height-offers-data);
 }

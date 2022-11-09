@@ -20,7 +20,7 @@
         <div class="row m-0 h-rest">
         
         <!-- Left column -->
-        <div class="col-12 col-lg-3 p-0 ui-card ui-column" data-ui-card="filter">
+        <div class="col-12 col-lg-3 p-0 ui-card ui-column rest-of-height" data-ui-card="filter">
         <div class="row">
         
             <div class="col pb-4">
@@ -75,13 +75,13 @@
         </div>
         
         <!-- Main column -->
-        <div class="col-12 col-lg-9 p-0 ui-card ui-column" data-ui-card="offers">
+        <div class="col-12 col-lg-9 p-0 ui-card ui-column rest-of-height" data-ui-card="offers">
             
             <div class="row pb-2">
                 <h3>Offers list</h3>
             </div>
         
-            <div class="row" id="offers-data">
+            <div class="row" id="offers-data" class="scrollable">
             </div>
         
         <!-- / Main column -->
@@ -92,6 +92,7 @@
         </div>
         
         <?php include('../../templates/modals.php'); ?>
+        <script src="/nft/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
         <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/offers.js?<?php echo filemtime(__DIR__.'/js/offers.js'); ?>"></script>
         
