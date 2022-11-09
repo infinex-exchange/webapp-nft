@@ -133,7 +133,7 @@ function refreshOffer(init) {
                             <div class="col-6 col-lg-3">
                                 ${bid.nickname}
                             </div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-6 col-lg-4 text-end">
                                 ${time}
                             </div>
                             <div class="col-6 col-lg-2">
