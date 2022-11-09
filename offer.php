@@ -39,6 +39,7 @@
                         <div class="row pb-4">
                             <div class="col-12">
                                 <span class="countdown" id="countdown"></span>
+                                (<i id="end-time"></i>)
                             </div>
                             <div class="col-12">
                                 <span class="secondary">

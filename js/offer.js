@@ -109,6 +109,7 @@ function refreshOffer(init) {
             
                 $('.asset').html(data.offer.asset);
                 $('#seller-nickname').html(data.offer.seller);
+                $('#end-time').htmll(new Date(data.offer.end_time * 1000).toLocaleString());
                 
                 window.prec = data.offer.prec;
             }
