@@ -28,6 +28,13 @@
             </div>
             
             <div class="col-12 pb-1">
+                <h5 class="secondary">Search:</h5>
+            </div>
+            <div class="col-12 pb-3">
+                <input id="filter-search" type="text" placeholder="Search..." class="input-search form-control">
+            </div>
+            
+            <div class="col-12 pb-1">
                 <h5 class="secondary">Offer type:</h5>
             </div>
             <div class="col-12">
