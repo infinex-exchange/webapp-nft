@@ -50,7 +50,7 @@
             </div>
             <div class="col-12 pb-4">
                 <div class="pretty p-icon p-smooth">
-                      <input id="filter-auctions" type="checkbox" checked>
+                      <input id="filter-auction" type="checkbox" checked>
                       <div class="state p-primary">
                           <i class="icon fa fa-check"></i>
                           <label>Auctions</label>
