@@ -78,6 +78,8 @@ $(document).ready(function() {
                         thisAS.append(renderOffer(v));
                     });
                     
+                    updateCountdowns();
+                    
                     thisAS.done();
             
                     if(thisAS.offset == 0)
