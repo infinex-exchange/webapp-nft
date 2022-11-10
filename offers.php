@@ -92,7 +92,7 @@
 	            
 	            <div class="col-auto my-auto ms-auto dropdown">
 		            <a href="#_" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-				        <i class="fa-solid fa-wallet"></i><br>
+				        <i class="fa-solid fa-wallet"></i>
 				        <strong>Sort by:</strong>
 				        <span id="sort-current"></span>
 				    </a>
