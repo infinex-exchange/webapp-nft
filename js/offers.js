@@ -114,6 +114,7 @@ $(document).ready(function() {
     $('#select-net').on('change', function() {        
         var netid = $(this).data('netid');
         var name = $(this).val();
+        alert(netid);
         
         $(this).data('netid', '').val('');
         
