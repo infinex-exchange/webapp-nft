@@ -10,7 +10,7 @@ $(document).ready(function() {
         $('#offers-data-preloader'),
         {
             api_key: window.apiKey,
-            auctions: true,
+            auction: true,
             buynow: true
         },
         function() {
