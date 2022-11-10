@@ -64,6 +64,10 @@ $(document).ready(function() {
 	    gotoUiCard('filter');
     });
     
+    $('#btn-filer-apply').click(function() {
+        gotoUiCard('offers');
+    });
+    
     $('.sort-item').click(function() {
         window.offersAS.data.sort = $(this).data('sort');
         window.offersAS.data.sort_dir = $(this).data('sort-dir');

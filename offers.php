@@ -94,7 +94,12 @@
             </div>
             
             <div id="filter-footer" class="row">
-                test
+                <div class="col-12">
+                    <button id="btn-filter-apply" type="button" class="btn btn-primary w-100">
+                        <i class="fa-solid fa-check"></i>
+                        Apply
+                    </button>
+                </div>
             </div>
         
         <!-- / Left column -->
