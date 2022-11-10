@@ -113,33 +113,33 @@
 				        <ul class="nav flex-column">
 					        <li>
 							    <a class="dropdown-item sort-item active" href="#_" data-sort="popularity" data-sort-dir="DESC">
-							        Popularity (highest to lowest)
+							        Popularity (highest<span class="d-none d-lg-inline"> to lowest</span>)
 							    </a>
 							</li>
 							<li>
 							    <a class="dropdown-item sort-item" href="#_" data-sort="popularity" data-sort-dir="ASC">
-							        Popularity (lowest to highest)
+							        Popularity (lowest<span class="d-none d-lg-inline"> to highest</span>)
 							    </a>
 							</li>
                             <li>
 							    <a class="dropdown-item sort-item" href="#_" data-sort="end_time" data-sort-dir="ASC">
-							        Time to end (shortest to longest)
+							        Time to end (shortest<span class="d-none d-lg-inline"> to longest</span>)
 							    </a>
 							</li>
 							<li>
 							    <a class="dropdown-item sort-item" href="#_" data-sort="end_time" data-sort-dir="DESC">
-							        Time to end (longest to shortest)
+							        Time to end (longest<span class="d-none d-lg-inline"> to shortest</span>)
 							    </a>
 							</li>
                             
                             <li>
 							    <a class="dropdown-item sort-item" href="#_" data-sort="price" data-sort-dir="ASC">
-							        Price (lowest to highest)
+							        Price (lowest<span class="d-none d-lg-inline"> to highest</span>)
 							    </a>
 							</li>
 							<li>
 							    <a class="dropdown-item sort-item" href="#_" data-sort="price" data-sort-dir="DESC">
-							        Price (highest to lowest)
+							        Price (highest<span class="d-none d-lg-inline"> to lowest</span>)
 							    </a>
 							</li>
 				        </ul>
