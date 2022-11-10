@@ -85,8 +85,10 @@
                 <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
             </div>
             
-            <div class="col-12 mt-auto">
-                btn
+            <div class="col-12 h-100">
+                <div class="ms-auto">
+                    test
+                </div>
             </div>
         
         <!-- / Left column -->
