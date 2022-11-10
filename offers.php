@@ -61,6 +61,8 @@
             <div class="col-12 pb-1">
                 <h5 class="secondary">Collection:</h5>
             </div>
+            <div class="col-12 pb-1" id="multiselect-col">
+            </div>
             <div class="col-12 pb-4">
                 <?php include(__DIR__.'/templates/select_col.php'); ?>
             </div>
@@ -68,12 +70,16 @@
             <div class="col-12 pb-1">
                 <h5 class="secondary">Network:</h5>
             </div>
+            <div class="col-12 pb-1" id="multiselect-net">
+            </div>
             <div class="col-12 pb-4">
                 <?php include(__DIR__.'/../../templates/select_net.php'); ?>
             </div>
             
             <div class="col-12 pb-1">
                 <h5 class="secondary">Coin:</h5>
+            </div>
+            <div class="col-12 pb-1" id="multiselect-coin">
             </div>
             <div class="col-12">
                 <?php include(__DIR__.'/../../templates/select_coin.php'); ?>

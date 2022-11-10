@@ -108,17 +108,64 @@ $(document).ready(function() {
     });
     
     $('#select-net').on('change', function() {
-        window.offersAS.data.network = $(this).data('netid');
+        var netid = $(this).data('netid');
+        var name = $(this).val();
+        
+        $('#multiselect-net').append(`
+            <div class="pretty p-icon p-smooth">
+                <input class="multiselect-net-item" type="checkbox" checked data-netid="${netid}">
+                <div class="state p-primary">
+                    <i class="icon fa fa-check"></i>
+                    <label>${name}</label>
+                </div>
+            </div>
+        `);
+        
+        if(typeof(window.offersAS.data.network) == 'undefined')
+            window.offersAS.data.network = new Array();
+            
+        window.offersAS.data.network.push(netid);
         window.offersAS.reset();
     });
     
     $('#select-col').on('change', function() {
-        window.offersAS.data.collection = $(this).data('colid');
+        var colid = $(this).data('colid');
+        var name = $(this).val();
+        
+        $('#multiselect-col').append(`
+            <div class="pretty p-icon p-smooth">
+                <input class="multiselect-col-item" type="checkbox" checked data-colid="${colid}">
+                <div class="state p-primary">
+                    <i class="icon fa fa-check"></i>
+                    <label>${name}</label>
+                </div>
+            </div>
+        `);
+        
+        if(typeof(window.offersAS.data.collection) == 'undefined')
+            window.offersAS.data.collection = new Array();
+            
+        window.offersAS.data.collection.push(netid);
         window.offersAS.reset();
     });
     
     $('#select-coin').on('change', function() {
-        window.offersAS.data.asset = $(this).val();
+        var assetid = $(this).val();
+        
+        $('#multiselect-coin').append(`
+            <div class="pretty p-icon p-smooth">
+                <input class="multiselect-coin-item" type="checkbox" checked data-assetid="${assetid}">
+                <div class="state p-primary">
+                    <i class="icon fa fa-check"></i>
+                    <label>${assetid}</label>
+                </div>
+            </div>
+        `);
+        
+        if(typeof(window.offersAS.data.asset) == 'undefined')
+            window.offersAS.data.asset = new Array();
+            
+        window.offersAS.data.networks.push(asset);
         window.offersAS.reset();
     });
 });
