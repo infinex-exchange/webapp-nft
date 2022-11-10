@@ -164,6 +164,7 @@ function refreshOffer(init) {
                 $('#price-buynow-wrapper').hide();
                 $('#controls-auction').hide();
                 $('#controls-buynow').hide();
+                $('#not-sold').hide();
             }
             
             else {
