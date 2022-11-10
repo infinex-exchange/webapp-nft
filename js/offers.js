@@ -111,6 +111,9 @@ $(document).ready(function() {
         var netid = $(this).data('netid');
         var name = $(this).val();
         
+        if($('.multiselect-net-item[data-netid="' + netid + '"]').length)
+            return;
+        
         $('#multiselect-net').append(`
             <div class="pretty p-icon p-smooth">
                 <input class="multiselect-net-item" type="checkbox" checked data-netid="${netid}">
@@ -132,6 +135,9 @@ $(document).ready(function() {
         var colid = $(this).data('colid');
         var name = $(this).val();
         
+        if($('.multiselect-col-item[data-colid="' + colid + '"]').length)
+            return;
+        
         $('#multiselect-col').append(`
             <div class="pretty p-icon p-smooth">
                 <input class="multiselect-col-item" type="checkbox" checked data-colid="${colid}">
@@ -151,6 +157,9 @@ $(document).ready(function() {
     
     $('#select-coin').on('change', function() {
         var assetid = $(this).val();
+        
+        if($('.multiselect-coin-item[data-assetid="' + assetid + '"]').length)
+            return;
         
         $('#multiselect-coin').append(`
             <div class="pretty p-icon p-smooth">
