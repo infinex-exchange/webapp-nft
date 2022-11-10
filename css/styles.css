@@ -6,6 +6,7 @@
     --height-module-nav: 0px;
     --height-mobile-nav: 0px;
     --target-height-offers-data: 0px;
+    --target-height-filter-data: 0px;
 }
 
 /* Jumbotron background */
@@ -66,4 +67,8 @@
 
 #offers-content {
     height: var(--target-height-offers-data);
+}
+
+#filter-content {
+    height: var(--target-height-filter-data);
 }

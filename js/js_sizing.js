@@ -4,7 +4,7 @@ function doJsSizing() {
     document.body.style.setProperty('--height-module-nav', $('.navbar-nft').first().outerHeight() + 'px');
 	document.body.style.setProperty('--height-main-nav', $('#main-navbar').outerHeight() + 'px');
     
-    ['offers'].forEach(function(i) {
+    ['offers', 'filter'].forEach(function(i) {
         if($('#' + i).length == 0) return;
         
         var footerH = 0;

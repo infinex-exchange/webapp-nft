@@ -22,74 +22,82 @@
         <div class="row m-0">
         
         <!-- Left column -->
-        <div class="col-12 col-lg-3 p-0 ui-card ui-column rest-of-height d-lg-block" data-ui-card="filter">
-        <div class="row">
-        
-            <div class="col pb-4">
-                <h3>Filters</h3>
+        <div id="filter" class="col-12 col-lg-3 p-0 ui-card ui-column rest-of-height d-lg-block" data-ui-card="filter">
+            <div id="filter-header" class="row">
+            
+                <div class="col pb-4">
+                    <h3>Filters</h3>
+                </div>
+                
             </div>
             
-            <div class="col-12 pb-1">
-                <h5 class="secondary">Search:</h5>
-            </div>
-            <div class="col-12 pb-4">
-                <input id="filter-search" type="text" placeholder="Search..." class="input-search form-control">
-            </div>
-            
-            <div class="col-12 pb-1">
-                <h5 class="secondary">Offer type:</h5>
-            </div>
-            <div class="col-12">
-                 <div class="pretty p-icon p-smooth">
-                      <input id="filter-buynow" type="checkbox" checked>
-                      <div class="state p-primary">
-                          <i class="icon fa fa-check"></i>
-                          <label>Buy now</label>
+            <div id="filter-content">
+            <div class="row">
+                
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Search:</h5>
+                </div>
+                <div class="col-12 pb-4">
+                    <input id="filter-search" type="text" placeholder="Search..." class="input-search form-control">
+                </div>
+                
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Offer type:</h5>
+                </div>
+                <div class="col-12">
+                     <div class="pretty p-icon p-smooth">
+                          <input id="filter-buynow" type="checkbox" checked>
+                          <div class="state p-primary">
+                              <i class="icon fa fa-check"></i>
+                              <label>Buy now</label>
+                          </div>
                       </div>
-                  </div>
-            </div>
-            <div class="col-12 pb-4">
-                <div class="pretty p-icon p-smooth">
-                      <input id="filter-auction" type="checkbox" checked>
-                      <div class="state p-primary">
-                          <i class="icon fa fa-check"></i>
-                          <label>Auctions</label>
+                </div>
+                <div class="col-12 pb-4">
+                    <div class="pretty p-icon p-smooth">
+                          <input id="filter-auction" type="checkbox" checked>
+                          <div class="state p-primary">
+                              <i class="icon fa fa-check"></i>
+                              <label>Auctions</label>
+                          </div>
                       </div>
-                  </div>
+                </div>
+                
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Collection:</h5>
+                </div>
+                <div class="col-12 pb-1" id="multiselect-col">
+                </div>
+                <div class="col-12 pb-4">
+                    <?php include(__DIR__.'/templates/select_col.php'); ?>
+                </div>
+                
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Network:</h5>
+                </div>
+                <div class="col-12 pb-1" id="multiselect-net">
+                </div>
+                <div class="col-12 pb-4">
+                    <?php include(__DIR__.'/../../templates/select_net.php'); ?>
+                </div>
+                
+                <div class="col-12 pb-1">
+                    <h5 class="secondary">Coin:</h5>
+                </div>
+                <div class="col-12 pb-1" id="multiselect-coin">
+                </div>
+                <div class="col-12">
+                    <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+                </div>
+            
+            </div>
             </div>
             
-            <div class="col-12 pb-1">
-                <h5 class="secondary">Collection:</h5>
-            </div>
-            <div class="col-12 pb-1" id="multiselect-col">
-            </div>
-            <div class="col-12 pb-4">
-                <?php include(__DIR__.'/templates/select_col.php'); ?>
-            </div>
-            
-            <div class="col-12 pb-1">
-                <h5 class="secondary">Network:</h5>
-            </div>
-            <div class="col-12 pb-1" id="multiselect-net">
-            </div>
-            <div class="col-12 pb-4">
-                <?php include(__DIR__.'/../../templates/select_net.php'); ?>
-            </div>
-            
-            <div class="col-12 pb-1">
-                <h5 class="secondary">Coin:</h5>
-            </div>
-            <div class="col-12 pb-1" id="multiselect-coin">
-            </div>
-            <div class="col-12">
-                <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+            <div id="filter-footer" class="row">
+                test
             </div>
         
         <!-- / Left column -->
-        </div>
-        <div class="row ms-auto">
-        test
-        </div>
         </div>
         
         <!-- Main column -->
