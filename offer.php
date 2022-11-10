@@ -67,14 +67,14 @@
                             </div>
                         </div>
                             
-                        <div class="row pb-4">
-                            <div id="controls-auction" class="col-6 col-lg-3">
+                        <div class="row">
+                            <div id="controls-auction" class="col-6 col-lg-3 pb-4">
                                 <button type="button" class="btn btn-primary w-100" onClick="showBidPrompt()">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
                                 </button>
                             </div>
-                            <div id="controls-buynow" class="col-6 col-lg-3">
+                            <div id="controls-buynow" class="col-6 col-lg-3 pb-4">
                                 <button type="button" class="btn btn-primary w-100" onClick="confirmBuyNow()">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Buy now
