@@ -82,7 +82,7 @@ function renderOffer(offer) {
         if(offer.price_auction) {
             mainPriceHtml = `
                 <div class="col-6 my-auto">
-                    ${offer.price_auction} ${offer.asset}</h4>
+                    <h4>${offer.price_auction} ${offer.asset}</h4>
       			</div>
             `;
         }
