@@ -4,6 +4,7 @@ $(document).ready(function() {
     initCountdowns();
     initSelectNet(null, '/nft/wallet/networks', false);
     initSelectCol();
+    initSelectCoin('/nft/assets');
     
     gotoUiCard('offers');
     
@@ -113,6 +114,11 @@ $(document).ready(function() {
     
     $('#select-col').on('change', function() {
         window.offersAS.data.collection = $(this).data('colid');
+        window.offersAS.reset();
+    });
+    
+    $('#select-coin').on('change', function() {
+        window.offersAS.data.asset = $(this).val();
         window.offersAS.reset();
     });
 });
