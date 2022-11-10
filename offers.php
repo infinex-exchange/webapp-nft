@@ -61,7 +61,7 @@
             <div class="col-12 pb-1">
                 <h5 class="secondary">Collection:</h5>
             </div>
-            <div class="col-12">
+            <div class="col-12 pb-4">
                 <?php include(__DIR__.'/templates/select_col.php'); ?>
             </div>
             
