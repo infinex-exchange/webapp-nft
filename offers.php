@@ -84,10 +84,10 @@
 	            </div>
 	            
 	            <div class="col-auto my-auto d-block d-lg-none">
-		            <button id="btn-filter" type="button" class="btn btn-primary">
+		            <a href="#_" id="btn-filter" class="nav-link">
                         <i class="fa-solid fa-filter"></i>
                         Filter
-                    </button>
+                    </a>
 	            </div>
 	            
 	            <div class="col-auto my-auto ms-auto dropdown">
