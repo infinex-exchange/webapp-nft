@@ -94,7 +94,7 @@
             </div>
             
             <div id="filter-footer" class="row">
-                <div class="col-12">
+                <div class="col-12 d-block d-lg-none">
                     <button id="btn-filter-apply" type="button" class="btn btn-primary w-100">
                         <i class="fa-solid fa-check"></i>
                         Apply
