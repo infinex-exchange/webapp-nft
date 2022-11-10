@@ -69,41 +69,30 @@ function renderOffer(offer) {
     var mainPriceHtml = '';
     var buynowPriceHtml = '';
     
-    if(offer.active) {
-        if(offer.price_auction) {
-            mainPriceHtml = `
-                <div class="col-6 my-auto">
-      			    <h4><i class="fa-solid fa-gavel"></i>
-                    ${offer.price_auction} ${offer.asset}</h4>
-      			</div>
-            `;
-        }
-        if(offer.price_buynow) {
-            buynowPriceHtml = `
-                <div class="col-6 my-auto">
-      			      <span class="small secondary">Buy Now</span>
-                      <h5>${offer.price_buynow} ${offer.asset}</h5>
-      			</div>
-            `;
-        }
+    if(offer.price_final) {
+        mainPriceHtml = `
+            <div class="col-6 my-auto">
+  			    <h4>${offer.price_final} ${offer.asset}</h4>
+  			</div>
+        `;
     }
-    else {
-        if(offer.price_final) {
-            mainPriceHtml = `
-                <div class="col-6 my-auto">
-      			    <h4>${offer.price_final} ${offer.asset}</h4>
-      			</div>
-            `;
-        }
-        else {
-            mainPriceHtml = `
-                <div class="col-6 my-auto">
-      			    <span class="small secondary">
-                        There were no bids
-                    </span>
-      			</div>
-            `;
-        }
+    
+    else if(offer.price_auction) {
+        mainPriceHtml = `
+            <div class="col-6 my-auto">
+  			    <h4><i class="fa-solid fa-gavel"></i>
+                ${offer.price_auction} ${offer.asset}</h4>
+  			</div>
+        `;
+    }
+    
+    if(offer.price_buynow) {
+        buynowPriceHtml = `
+            <div class="col-6 my-auto">
+  			      <span class="small secondary">Buy Now</span>
+                  <h5>${offer.price_buynow} ${offer.asset}</h5>
+  			</div>
+        `;
     }
                                 
     return `
