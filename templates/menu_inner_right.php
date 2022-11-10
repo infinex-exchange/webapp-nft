@@ -1,4 +1,4 @@
-<li class="nav-item user-only dropdown">
+<li class="nav-item dropdown">
     <a href="#_" class="nav-link dropdown-toggle auto-active-group" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa-solid fa-wallet"></i><br>
         NFT Wallet

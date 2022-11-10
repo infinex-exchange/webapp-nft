@@ -27,7 +27,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto user-only">
                 <?php include(__DIR__.'/menu_inner_right.php'); ?>
             </ul>
         </div> 
