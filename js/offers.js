@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    window.renderingStagesTarget = 3;
+    window.renderingStagesTarget = 1;
     
     initCountdowns();
     initSelectNet(null, '/nft/wallet/networks');
