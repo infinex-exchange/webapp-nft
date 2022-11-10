@@ -162,6 +162,7 @@ function refreshOffer(init) {
             }
             
             else {
+                $('#price-final-wrapper').hide();
             
                 if(data.offer.price_auction) {
                     $('#price-auction').html(data.offer.price_auction + ' ' + data.offer.asset);
