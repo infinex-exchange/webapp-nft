@@ -18,7 +18,7 @@ $(document).ready(function() {
             var thisAS = this;
             
             $.ajax({
-                url: config.apiUrl + '/nft/wallet/nfts',
+                url: config.apiUrl + '/nft/offers',
                 type: 'POST',
                 data: JSON.stringify(thisAS.data),
                 contentType: "application/json",
