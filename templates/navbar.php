@@ -4,6 +4,29 @@
             <ul class="navbar-nav">
                 <?php include(__DIR__.'/menu_inner.html'); ?>
             </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item nav-separ px-2">
+                    <span class="nav-link">&bull;</span>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link auto-active" href="/nft/account/my-offers">
+                        <i class="fa-solid fa-address-card"></i>
+                        My offers
+                    </a>
+                </li>
+                
+                <li class="nav-item nav-separ px-2">
+                    <span class="nav-link">&bull;</span>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link auto-active" href="/nft/account/trades-history">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Trades history
+                    </a>
+                </li>
+            </ul>
             <ul class="navbar-nav ms-auto">
                 <?php include(__DIR__.'/menu_inner_right.php'); ?>
             </ul>
