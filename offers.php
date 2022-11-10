@@ -92,22 +92,41 @@
 	            
 	            <div class="col-auto my-auto ms-auto dropdown">
 		            <a href="#_" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-				        <i class="fa-solid fa-wallet"></i>
+				        <i class="fa-solid fa-arrow-up-z-a"></i>
 				        <strong>Sort by:</strong>
 				        <span id="sort-current"></span>
 				    </a>
 				    <div class="dropdown-menu dropdown-menu-end">
 				        <ul class="nav flex-column">
 					        <li>
-							    <a class="dropdown-item auto-active" href="/nft/wallet">
-							        <i class="fa-solid fa-image"></i>
-							        Overview
+							    <a class="dropdown-item active" href="#_" data-sort="popularity" data-sort-dir="DESC">
+							        Popularity (highest to lowest)
 							    </a>
 							</li>
 							<li>
-							    <a class="dropdown-item auto-active" href="/nft/wallet/deposit">
-							        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-							        Deposit
+							    <a class="dropdown-item" href="#_" data-sort="popularity" data-sort-dir="ASC">
+							        Popularity (lowest to highest)
+							    </a>
+							</li>
+                            <li>
+							    <a class="dropdown-item" href="#_" data-sort="end_time" data-sort-dir="ASC">
+							        Time to end (shortest to longest)
+							    </a>
+							</li>
+							<li>
+							    <a class="dropdown-item" href="#_" data-sort="end_time" data-sort-dir="DESC">
+							        Time to end (longest to shortest)
+							    </a>
+							</li>
+                            
+                            <li>
+							    <a class="dropdown-item" href="#_" data-sort="price" data-sort-dir="ASC">
+							        Price (lowest to highest)
+							    </a>
+							</li>
+							<li>
+							    <a class="dropdown-item" href="#_" data-sort="price" data-sort-dir="DESC">
+							        Price (highest to lowest)
 							    </a>
 							</li>
 				        </ul>
