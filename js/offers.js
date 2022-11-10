@@ -2,6 +2,8 @@ $(document).ready(function() {
     window.renderingStagesTarget = 1;
     
     initCountdowns();
+    initNetSelector();
+    initColSelector();
     
     gotoUiCard('offers');
     
