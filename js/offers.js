@@ -6,6 +6,7 @@ function msColChange(item) {
         window.offersAS.data.collection.splice(index, 1);
         if(window.offersAS.data.collection.length == 0)
             delete window.offersAS.data.collection;
+        window.offersAS.reset();
     }
     
     $(item).parent('.pretty').remove();
@@ -19,6 +20,7 @@ function msNetChange(item) {
         window.offersAS.data.network.splice(index, 1);
         if(window.offersAS.data.network.length == 0)
             delete window.offersAS.data.network;
+        window.offersAS.reset();
     }
     
     $(item).parent('.pretty').remove();
@@ -32,6 +34,7 @@ function msCoinChange(item) {
         window.offersAS.data.asset.splice(index, 1);
         if(window.offersAS.data.asset.length == 0)
             delete window.offersAS.data.asset;
+        window.offersAS.reset();
     }
     
     $(item).parent('.pretty').remove();
