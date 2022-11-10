@@ -107,9 +107,11 @@ $(document).ready(function() {
         window.offersAS.reset();
     });
     
-    $('#select-net').on('change', function() {
+    $('#select-net').on('change', function() {        
         var netid = $(this).data('netid');
         var name = $(this).val();
+        
+        $(this).data('netid', '').val('');
         
         if($('.multiselect-net-item[data-netid="' + netid + '"]').length)
             return;
@@ -135,6 +137,8 @@ $(document).ready(function() {
         var colid = $(this).data('colid');
         var name = $(this).val();
         
+        $(this).data('colid', '').val('');
+        
         if($('.multiselect-col-item[data-colid="' + colid + '"]').length)
             return;
         
@@ -157,6 +161,8 @@ $(document).ready(function() {
     
     $('#select-coin').on('change', function() {
         var assetid = $(this).val();
+        
+        $(this).val('');
         
         if($('.multiselect-coin-item[data-assetid="' + assetid + '"]').length)
             return;
