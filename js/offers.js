@@ -105,4 +105,9 @@ $(document).ready(function() {
         window.offersAS.data.auction = $(this).prop('checked');
         window.offersAS.reset();
     });
+    
+    $('#select-col').on('change', function() {
+        window.offersAS.data.collection = $(this).data('colid');
+        window.offersAS.reset();
+    });
 });
