@@ -159,6 +159,11 @@ function refreshOffer(init) {
             if(data.offer.price_final) {
                 $('#price-final').html(data.offer.price_final + ' ' + data.offer.asset);
                 $('#price-final-wrapper').show();
+                
+                $('#price-auction-wrapper').hide();
+                $('#price-buynow-wrapper').hide();
+                $('#controls-auction').hide();
+                $('#controls-buynow').hide();
             }
             
             else {
