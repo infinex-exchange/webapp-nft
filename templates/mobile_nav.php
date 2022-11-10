@@ -12,8 +12,8 @@
         <?php include(__DIR__.'/menu_inner.html'); ?>
     </ul>
     
-    <ul class="navbar-nav mx-auto text-center dropup">
-        <li class="nav-item user-only dropdown">
+    <ul class="navbar-nav mx-auto text-center dropup user-only">
+        <li class="nav-item dropdown">
             <a href="#_" class="nav-link dropdown-toggle auto-active-group" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-user"></i><br>
                 Account
