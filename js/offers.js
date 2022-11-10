@@ -60,8 +60,8 @@ $(document).ready(function() {
     });
     
     $('.sort-item').click(function() {
-        window.offersAs.data.sort = $(this).data('sort');
-        window.offersAs.data.sort_dir = $(this).data('sort-dir');
+        window.offersAS.data.sort = $(this).data('sort');
+        window.offersAS.data.sort_dir = $(this).data('sort-dir');
         
         $('#sort-current').html($(this).html());
         
