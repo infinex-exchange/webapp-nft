@@ -156,38 +156,29 @@ function refreshOffer(init) {
                 $('#bids-data-wrapper').hide();
             }
             
-            if(data.offer.active) {
+            if(data.offer.price_final) {
+                $('#price-final').html(data.offer.price_final + ' ' + data.offer.asset);
+                $('#price-final-wrapper').show();
+            }
+            
+            else {
+            
                 if(data.offer.price_auction) {
                     $('#price-auction').html(data.offer.price_auction + ' ' + data.offer.asset);
-                    $('.auction-wrapper').show();
+                    $('#price-auction-wrapper').show();
                 }
                 else {
-                    $('.auction-wrapper').hide();
+                    $('#price-auction-wrapper').hide();
                 }
-                
+                    
                 if(data.offer.price_buynow) {
                     $('#price-buynow').html(data.offer.price_buynow + ' ' + data.offer.asset);
-                    $('.buynow-wrapper').show();
+                    $('#price-buynow-wrapper').show();
                 }
                 else {
-                    $('.buynow-wrapper').hide();
+                    $('#price-buynow-wrapper').hide();
                 }
                 
-                $('.final-wrapper').hide();
-                $('.final-nobids').hide();
-            }
-            else {
-                if(data.offer.price_final) {
-                    $('#price-final').html(data.offer.price_final + ' ' + data.offer.asset);
-                    $('.final-nobids').hide();
-                    $('.final-wrapper').show();
-                }
-                else {
-                    $('.final-nobids').show();
-                    $('.final-wrapper').hide();
-                }
-                $('.auction-wrapper').hide();
-                $('.buynow-wrapper').hide();
             }
             
             $('#countdown').data('timestamp', data.offer.end_time);

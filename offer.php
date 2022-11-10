@@ -50,31 +50,31 @@
                         </div>
                         
                         <div class="row pb-4">
-                            <div class="col-6 col-lg-3 auction-wrapper">
+                            <div id="price-auction-wrapper" class="col-6 col-lg-3">
                                 <h5 class="secondary">Current bid:</h5>
                                 <h3 id="price-auction"></h3>
                             </div>
-                            <div class="col-6 col-lg-3 buynow-wrapper">
+                            <div id="price-buynow-wrapper" class="col-6 col-lg-3">
                                 <h5 class="secondary">Buy now price:</h5>
                                 <h3 id="price-buynow"></h3>
                             </div>
-                            <div class="col-6 col-lg-3 final-wrapper">
+                            <div id="price-final-wrapper" class="col-6 col-lg-3">
                                 <h5 class="secondary">Final price:</h5>
                                 <h3 id="price-final"></h3>
                             </div>
-                            <div class="col-6 col-lg-3 final-nobids">
+                            <div id="final-nobids" class="col-6 col-lg-3">
                                 <h5 class="secondary">Item has not been sold</h5>
                             </div>
                         </div>
                             
                         <div class="row pb-4">
-                            <div class="col-6 col-lg-3 auction-wrapper">
+                            <div id="controls-auction" class="col-6 col-lg-3">
                                 <button type="button" class="btn btn-primary w-100" onClick="showBidPrompt()">
                                     <i class="fa-solid fa-gavel"></i>
                                     Place bid
                                 </button>
                             </div>
-                            <div class="col-6 col-lg-3 buynow-wrapper">
+                            <div id="controls-buynow" class="col-6 col-lg-3">
                                 <button type="button" class="btn btn-primary w-100" onClick="confirmBuyNow()">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                     Buy now
@@ -86,7 +86,7 @@
                             <div class="col-12 ps-0 pb-1">
                                 <h5 class="secondary">Biddings:</h5>
                             </div>
-                            <div class="col-12 col-lg-8 background p-1" id="bids-empty">
+                            <div class="col-12 col-lg-8 background p-2 text-center" id="bids-empty">
                                 No bids
                             </div>
                             <div class="col-12 col-lg-8 background p-1" id="bids-data-wrapper">
