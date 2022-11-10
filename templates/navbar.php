@@ -4,7 +4,7 @@
             <ul class="navbar-nav">
                 <?php include(__DIR__.'/menu_inner.html'); ?>
             </ul>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav user-only">
                 <li class="nav-item nav-separ px-2">
                     <span class="nav-link">&bull;</span>
                 </li>
