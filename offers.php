@@ -31,7 +31,7 @@
                 
             </div>
             
-            <div id="filter-content">
+            <div id="filter-content" class="scrollable">
             <div class="row">
                 
                 <div class="col-12 pb-1">
