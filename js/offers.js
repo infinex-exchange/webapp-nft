@@ -62,10 +62,12 @@ $(document).ready(function() {
     
     $('#btn-filter').click(function() {
 	    gotoUiCard('filter');
+        doJsSizing();
     });
     
     $('#btn-filer-apply').click(function() {
         gotoUiCard('offers');
+        doJsSizing();
     });
     
     $('.sort-item').click(function() {
