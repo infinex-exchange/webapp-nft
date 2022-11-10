@@ -83,4 +83,12 @@ $(document).ready(function() {
             window.offersAS.reset();
         }, 750);
     });
+    
+    $('#filter-buynow').change(function() {
+        window.offersAS.data.buynow = $(this).prop('checked');
+    });
+    
+    $('#filter-auction').change(function() {
+        window.offersAS.data.auction = $(this).prop('checked');
+    });
 });
