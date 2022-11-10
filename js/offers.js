@@ -145,7 +145,7 @@ $(document).ready(function() {
         if(typeof(window.offersAS.data.collection) == 'undefined')
             window.offersAS.data.collection = new Array();
             
-        window.offersAS.data.collection.push(netid);
+        window.offersAS.data.collection.push(colid);
         window.offersAS.reset();
     });
     
@@ -165,7 +165,7 @@ $(document).ready(function() {
         if(typeof(window.offersAS.data.asset) == 'undefined')
             window.offersAS.data.asset = new Array();
             
-        window.offersAS.data.networks.push(asset);
+        window.offersAS.data.asset.push(assetid);
         window.offersAS.reset();
     });
 });
