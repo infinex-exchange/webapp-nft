@@ -36,7 +36,8 @@
             </div>
           </li>
     </ul>
-    <ul class="navbar-nav mx-auto text-center dropup">
+    
+    <ul class="navbar-nav mx-auto text-center dropup user-only">
         <?php include(__DIR__.'/menu_inner_right.php'); ?>
     </ul>
 </nav>
