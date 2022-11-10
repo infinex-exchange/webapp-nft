@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         
-                        <div class="row pb-4">
+                        <div class="row pb-3">
                             <div id="price-auction-wrapper" class="col-6 col-lg-3">
                                 <h5 class="secondary">Current bid:</h5>
                                 <h3 id="price-auction"></h3>
