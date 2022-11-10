@@ -86,8 +86,10 @@
                             <div class="col-12 pb-1">
                                 <h5 class="secondary">Biddings:</h5>
                             </div>
-                            <div class="col-12 col-lg-8 background p-2 text-center" id="bids-empty">
-                                No bids
+                            <div class="col-12 col-lg-8" id="bids-empty">
+                                <div class="background p-2 text-center">
+                                    No bids
+                                </div>
                             </div>
                             <div class="col-12 col-lg-8 background p-1" id="bids-data-wrapper">
                                 <div id="bids-data" class="scrollable" style="max-height: 200px">
