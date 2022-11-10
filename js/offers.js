@@ -86,9 +86,11 @@ $(document).ready(function() {
     
     $('#filter-buynow').change(function() {
         window.offersAS.data.buynow = $(this).prop('checked');
+        window.offersAS.reset();
     });
     
     $('#filter-auction').change(function() {
         window.offersAS.data.auction = $(this).prop('checked');
+        window.offersAS.reset();
     });
 });
