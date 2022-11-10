@@ -106,6 +106,11 @@ $(document).ready(function() {
         window.offersAS.reset();
     });
     
+    $('#select-net').on('change', function() {
+        window.offersAS.data.network = $(this).data('netid');
+        window.offersAS.reset();
+    });
+    
     $('#select-col').on('change', function() {
         window.offersAS.data.collection = $(this).data('colid');
         window.offersAS.reset();
