@@ -85,11 +85,21 @@ $(document).ready(function() {
     });
     
     $('#filter-buynow').change(function() {
+        if(! $(this).prop('checked') && ! $('#filter-auction').prop('checked')) {
+            $(this).prop('checked', true);
+            return;
+        }
+        
         window.offersAS.data.buynow = $(this).prop('checked');
         window.offersAS.reset();
     });
     
     $('#filter-auction').change(function() {
+        if(! $(this).prop('checked') && ! $('#filter-buynow').prop('checked')) {
+            $(this).prop('checked', true);
+            return;
+        }
+        
         window.offersAS.data.auction = $(this).prop('checked');
         window.offersAS.reset();
     });
