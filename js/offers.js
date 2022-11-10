@@ -68,4 +68,6 @@ $(document).ready(function() {
         $('.sort-item').removeClass('active');
         $(this).addClass('active');
     });
+    
+    $('.sort-item.active').trigger('click');
 });
