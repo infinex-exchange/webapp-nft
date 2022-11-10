@@ -99,33 +99,33 @@
 				    <div class="dropdown-menu dropdown-menu-end">
 				        <ul class="nav flex-column">
 					        <li>
-							    <a class="dropdown-item active" href="#_" data-sort="popularity" data-sort-dir="DESC">
+							    <a class="dropdown-item sort-item active" href="#_" data-sort="popularity" data-sort-dir="DESC">
 							        Popularity (highest to lowest)
 							    </a>
 							</li>
 							<li>
-							    <a class="dropdown-item" href="#_" data-sort="popularity" data-sort-dir="ASC">
+							    <a class="dropdown-item sort-item" href="#_" data-sort="popularity" data-sort-dir="ASC">
 							        Popularity (lowest to highest)
 							    </a>
 							</li>
                             <li>
-							    <a class="dropdown-item" href="#_" data-sort="end_time" data-sort-dir="ASC">
+							    <a class="dropdown-item sort-item" href="#_" data-sort="end_time" data-sort-dir="ASC">
 							        Time to end (shortest to longest)
 							    </a>
 							</li>
 							<li>
-							    <a class="dropdown-item" href="#_" data-sort="end_time" data-sort-dir="DESC">
+							    <a class="dropdown-item sort-item" href="#_" data-sort="end_time" data-sort-dir="DESC">
 							        Time to end (longest to shortest)
 							    </a>
 							</li>
                             
                             <li>
-							    <a class="dropdown-item" href="#_" data-sort="price" data-sort-dir="ASC">
+							    <a class="dropdown-item sort-item" href="#_" data-sort="price" data-sort-dir="ASC">
 							        Price (lowest to highest)
 							    </a>
 							</li>
 							<li>
-							    <a class="dropdown-item" href="#_" data-sort="price" data-sort-dir="DESC">
+							    <a class="dropdown-item sort-item" href="#_" data-sort="price" data-sort-dir="DESC">
 							        Price (highest to lowest)
 							    </a>
 							</li>
