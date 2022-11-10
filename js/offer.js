@@ -167,17 +167,29 @@ function refreshOffer(init) {
                 if(data.offer.price_auction) {
                     $('#price-auction').html(data.offer.price_auction + ' ' + data.offer.asset);
                     $('#price-auction-wrapper').show();
+                    
+                    if(data.offer.active)
+                        $('#controls-auction').show();
+                    else
+                        $('#controls-auction').hide();
                 }
                 else {
                     $('#price-auction-wrapper').hide();
+                    $('#controls-auction').hide();
                 }
                     
                 if(data.offer.price_buynow) {
                     $('#price-buynow').html(data.offer.price_buynow + ' ' + data.offer.asset);
                     $('#price-buynow-wrapper').show();
+                    
+                    if(data.offer.active)
+                        $('#controls-buynow').show();
+                    else
+                        $('#controls-buynow').hide();
                 }
                 else {
                     $('#price-buynow-wrapper').hide();
+                    $('#controls-buynow').hide();
                 }
                 
             }

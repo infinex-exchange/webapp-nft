@@ -62,7 +62,7 @@
                                 <h5 class="secondary">Final price:</h5>
                                 <h3 id="price-final"></h3>
                             </div>
-                            <div id="final-nobids" class="col-12 pt-4">
+                            <div id="final-nobids" class="col-12 pt-3">
                                 <h5 class="secondary">Item has not been sold</h5>
                             </div>
                         </div>
