@@ -2,7 +2,7 @@ $(document).ready(function() {
     window.renderingStagesTarget = 3;
     
     initCountdowns();
-    initSelectNet('/nft/wallet/networks');
+    initSelectNet(null, '/nft/wallet/networks');
     initSelectCol();
     
     gotoUiCard('offers');
