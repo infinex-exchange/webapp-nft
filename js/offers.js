@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    window.renderingStagesTarget = 1;
+    window.renderingStagesTarget = 3;
     
     initCountdowns();
-    initNetSelector();
-    initColSelector();
+    initSelectNet();
+    initSelectCol();
     
     gotoUiCard('offers');
     
