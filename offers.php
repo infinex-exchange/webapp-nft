@@ -86,7 +86,7 @@
 	            <div class="col-auto my-auto d-block d-lg-none">
 		            <a href="#_" id="btn-filter" class="nav-link">
                         <i class="fa-solid fa-filter"></i>
-                        Filter
+                        <strong>Filter</strong>
                     </a>
 	            </div>
 	            
