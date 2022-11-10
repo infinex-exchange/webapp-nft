@@ -1,3 +1,42 @@
+function msColChange(item) {
+    var colid = $(item).data('colid');
+    
+    var index = window.offersAS.data.collection.indexOf(colid);
+    if (index !== -1) {
+        window.offersAS.data.collection.splice(index, 1);
+        if(window.offersAS.data.collection.length == 0)
+            delete window.offersAS.data.collection;
+    }
+    
+    $(item).parent('.pretty').remove();
+}
+
+function msNetChange(item) {
+    var netid = $(item).data('netid');
+    
+    var index = window.offersAS.data.network.indexOf(netid);
+    if (index !== -1) {
+        window.offersAS.data.network.splice(index, 1);
+        if(window.offersAS.data.network.length == 0)
+            delete window.offersAS.data.network;
+    }
+    
+    $(item).parent('.pretty').remove();
+}
+
+function msCoinChange(item) {
+    var assetid = $(item).data('assetid');
+    
+    var index = window.offersAS.data.asset.indexOf(assetid);
+    if (index !== -1) {
+        window.offersAS.data.asset.splice(index, 1);
+        if(window.offersAS.data.asset.length == 0)
+            delete window.offersAS.data.asset;
+    }
+    
+    $(item).parent('.pretty').remove();
+}
+
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
     
@@ -124,7 +163,7 @@ $(document).ready(function() {
         
         $('#multiselect-net').append(`
             <div class="pretty p-icon p-smooth">
-                <input class="multiselect-net-item" type="checkbox" checked data-netid="${netid}">
+                <input class="multiselect-net-item" type="checkbox" checked data-netid="${netid}" onChange="msNetChange(this)">
                 <div class="state p-primary">
                     <i class="icon fa fa-check"></i>
                     <label>${name}</label>
@@ -139,19 +178,6 @@ $(document).ready(function() {
         window.offersAS.reset();
     });
     
-    $('.multiselect-net-item').on('change', function() {
-        var netid = $(this).data('netid');
-        
-        var index = window.offersAS.data.network.indexOf(netid);
-        if (index !== -1) {
-            window.offersAS.data.network.splice(index, 1);
-            if(window.offersAS.data.network.length == 0)
-                delete window.offersAS.data.network;
-        }
-        
-        $(this).parent('.pretty').remove();
-    });
-    
     $('#select-col').on('change', function() {
         var colid = $(this).data('colid');
         var name = $(this).val();
@@ -163,7 +189,7 @@ $(document).ready(function() {
         
         $('#multiselect-col').append(`
             <div class="pretty p-icon p-smooth">
-                <input class="multiselect-col-item" type="checkbox" checked data-colid="${colid}">
+                <input class="multiselect-col-item" type="checkbox" checked data-colid="${colid}" onChange="msColChange(this)">
                 <div class="state p-primary">
                     <i class="icon fa fa-check"></i>
                     <label>${name}</label>
@@ -178,19 +204,6 @@ $(document).ready(function() {
         window.offersAS.reset();
     });
     
-    $('.multiselect-col-item').on('change', function() {
-        var colid = $(this).data('colid');
-        
-        var index = window.offersAS.data.collection.indexOf(colid);
-        if (index !== -1) {
-            window.offersAS.data.collection.splice(index, 1);
-            if(window.offersAS.data.collection.length == 0)
-                delete window.offersAS.data.collection;
-        }
-        
-        $(this).parent('.pretty').remove();
-    });
-    
     $('#select-coin').on('change', function() {
         var assetid = $(this).val();
         
@@ -201,7 +214,7 @@ $(document).ready(function() {
         
         $('#multiselect-coin').append(`
             <div class="pretty p-icon p-smooth">
-                <input class="multiselect-coin-item" type="checkbox" checked data-assetid="${assetid}">
+                <input class="multiselect-coin-item" type="checkbox" checked data-assetid="${assetid}" onChange="msCoinChange(this)">
                 <div class="state p-primary">
                     <i class="icon fa fa-check"></i>
                     <label>${assetid}</label>
@@ -214,18 +227,5 @@ $(document).ready(function() {
             
         window.offersAS.data.asset.push(assetid);
         window.offersAS.reset();
-    });
-    
-    $('.multiselect-coin-item').on('change', function() {
-        var assetid = $(this).data('assetid');
-        
-        var index = window.offersAS.data.asset.indexOf(assetid);
-        if (index !== -1) {
-            window.offersAS.data.asset.splice(index, 1);
-            if(window.offersAS.data.asset.length == 0)
-                delete window.offersAS.data.asset;
-        }
-        
-        $(this).parent('.pretty').remove();
     });
 });
