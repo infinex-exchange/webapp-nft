@@ -197,6 +197,11 @@ function refreshOffer(init) {
                     $('#controls-buynow').hide();
                 }
                 
+                if(!data.offer.active)
+                    $('#not-sold').show();
+                else
+                    $('#not-sold').hide();
+                
             }
             
             $('#countdown').data('timestamp', data.offer.end_time);
