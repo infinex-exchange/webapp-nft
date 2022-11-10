@@ -90,8 +90,28 @@
                     </button>
 	            </div>
 	            
-	            <div class="col-auto my-auto ms-auto">
-		            sort
+	            <div class="col-auto my-auto ms-auto dropdown">
+		            <a href="#_" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				        <i class="fa-solid fa-wallet"></i><br>
+				        <strong>Sort by:</strong>
+				        <span id="sort-current"></span>
+				    </a>
+				    <div class="dropdown-menu dropdown-menu-end">
+				        <ul class="nav flex-column">
+					        <li>
+							    <a class="dropdown-item auto-active" href="/nft/wallet">
+							        <i class="fa-solid fa-image"></i>
+							        Overview
+							    </a>
+							</li>
+							<li>
+							    <a class="dropdown-item auto-active" href="/nft/wallet/deposit">
+							        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+							        Deposit
+							    </a>
+							</li>
+				        </ul>
+				    </div>
 	            </div>
             </div>
         
