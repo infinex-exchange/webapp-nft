@@ -20,7 +20,18 @@
             </a>
             <div class="dropdown-menu dropdown-menu-end">
                 <ul class="nav flex-column">
-                    <?php include('menu_account.html'); ?>
+                    <li>
+                        <a class="dropdown-item auto-active" href="/nft/account/my-offers">
+                            <i class="fa-solid fa-address-card"></i>
+                            My offers
+                        </a>
+                    </li> 
+                    <li>
+                        <a class="dropdown-item auto-active" href="/nft/account/trades-history">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            Trades history
+                        </a>
+                    </li>
                 </ul>
             </div>
           </li>
