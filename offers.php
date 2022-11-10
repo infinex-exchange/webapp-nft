@@ -79,15 +79,19 @@
         <!-- Main column -->
         <div id="offers" class="col-12 col-lg-9 p-0 ui-card ui-column rest-of-height" data-ui-card="offers">
             <div id="offers-header" class="row pb-2">
-                <div class="col-12 d-none d-lg-block">
+                <div class="col-auto my-auto d-none d-lg-block">
 	                <h3>Offers list</h3>
 	            </div>
 	            
-	            <div class="col-13 d-block d-lg-none">
-		            <button id="btn-filter" type="button" class="btn btn-primary btn-sm">
+	            <div class="col-auto my-auto d-block d-lg-none">
+		            <button id="btn-filter" type="button" class="btn btn-primary">
                         <i class="fa-solid fa-filter"></i>
                         Filter
                     </button>
+	            </div>
+	            
+	            <div class="col-auto my-auto ms-auto">
+		            sort
 	            </div>
             </div>
         
