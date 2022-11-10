@@ -9,7 +9,9 @@ $(document).ready(function() {
         $('#offers-data'),
         $('#offers-data-preloader'),
         {
-            api_key: window.apiKey
+            api_key: window.apiKey,
+            auctions: true,
+            buynow: true
         },
         function() {
             
