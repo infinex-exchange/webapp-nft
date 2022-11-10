@@ -10,7 +10,7 @@ function doJsSizing() {
         var footerH = 0;
         if($('#' + i + '-footer').length) footerH = $('#' + i + '-footer').outerHeight();
         var remainH = $('#' + i).height() - $('#' + i + '-header').outerHeight() - footerH;
-        document.body.style.setProperty('--target-height-' + i + '-content', remainH + 'px');
+        document.body.style.setProperty('--target-height-' + i + '-data', remainH + 'px');
     });
 }
 
