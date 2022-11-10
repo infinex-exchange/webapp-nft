@@ -65,7 +65,7 @@ $(document).ready(function() {
         doJsSizing();
     });
     
-    $('#btn-filer-apply').click(function() {
+    $('#btn-filter-apply').click(function() {
         gotoUiCard('offers');
         doJsSizing();
     });
