@@ -139,6 +139,19 @@ $(document).ready(function() {
         window.offersAS.reset();
     });
     
+    $('.multiselect-net-item').on('change', function() {
+        var netid = $(this).data('netid');
+        
+        var index = window.offersAS.data.network.indexOf(netid);
+        if (index !== -1) {
+            window.offersAS.data.network.splice(index, 1);
+            if(window.offersAS.data.network.length == 0)
+                delete window.offersAS.data.network;
+        }
+        
+        $(this).parent('.pretty').remove();
+    });
+    
     $('#select-col').on('change', function() {
         var colid = $(this).data('colid');
         var name = $(this).val();
@@ -165,6 +178,19 @@ $(document).ready(function() {
         window.offersAS.reset();
     });
     
+    $('.multiselect-col-item').on('change', function() {
+        var colid = $(this).data('colid');
+        
+        var index = window.offersAS.data.collection.indexOf(colid);
+        if (index !== -1) {
+            window.offersAS.data.collection.splice(index, 1);
+            if(window.offersAS.data.collection.length == 0)
+                delete window.offersAS.data.collection;
+        }
+        
+        $(this).parent('.pretty').remove();
+    });
+    
     $('#select-coin').on('change', function() {
         var assetid = $(this).val();
         
@@ -188,5 +214,18 @@ $(document).ready(function() {
             
         window.offersAS.data.asset.push(assetid);
         window.offersAS.reset();
+    });
+    
+    $('.multiselect-coin-item').on('change', function() {
+        var assetid = $(this).data('assetid');
+        
+        var index = window.offersAS.data.asset.indexOf(assetid);
+        if (index !== -1) {
+            window.offersAS.data.asset.splice(index, 1);
+            if(window.offersAS.data.asset.length == 0)
+                delete window.offersAS.data.asset;
+        }
+        
+        $(this).parent('.pretty').remove();
     });
 });
