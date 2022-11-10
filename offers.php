@@ -19,7 +19,7 @@
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 p-0">
-        <div class="row m-0 h-rest">
+        <div class="row m-0">
         
         <!-- Left column -->
         <div class="col-12 col-lg-3 p-0 ui-card ui-column rest-of-height" data-ui-card="filter">
