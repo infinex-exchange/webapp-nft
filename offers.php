@@ -106,7 +106,7 @@
 	            <div class="col-auto my-auto ms-auto dropdown">
 		            <a href="#_" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				        <i class="fa-solid fa-arrow-up-z-a"></i>
-				        <strong>Sort by:</strong>
+				        <strong class="d-none d-lg-inline">Sort by:</strong>
 				        <span id="sort-current"></span>
 				    </a>
 				    <div class="dropdown-menu dropdown-menu-end">
