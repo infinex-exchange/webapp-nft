@@ -13,6 +13,19 @@
     </ul>
     
     <ul class="navbar-nav mx-auto text-center dropup">
+        <li class="nav-item user-only dropdown">
+            <a href="#_" class="nav-link dropdown-toggle auto-active-group" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i><br>
+                Account
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+                <ul class="nav flex-column">
+                    <?php include('menu_account.html'); ?>
+                </ul>
+            </div>
+          </li>
+    </ul>
+    <ul class="navbar-nav mx-auto text-center dropup">
         <?php include(__DIR__.'/menu_inner_right.php'); ?>
     </ul>
 </nav>
