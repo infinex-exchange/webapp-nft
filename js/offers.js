@@ -12,4 +12,8 @@ $(document).ready(function() {
         sort_dir: 'ASC',
         offset: 0
     });
+    
+    $('#btn-filter').click(function() {
+	    gotoUiCard('filter');
+    });
 });
