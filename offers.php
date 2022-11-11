@@ -119,7 +119,7 @@
                     </a>
 	            </div>
 	            
-	            <div class="col-auto my-auto ms-auto">
+	            <div class="col-auto my-auto ms-auto collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="#_" class="nav-link active" id="btn-vertical">
