@@ -119,19 +119,13 @@
                     </a>
 	            </div>
 	            
-	            <div class="col-auto my-auto ms-auto collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#_" class="nav-link active" id="btn-vertical">
-                                <i class="fa-solid fa-grip-vertical"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#_" class="nav-link" id="btn-horizontal">
-                                <i class="fa-solid fa-grip"></i>
-                            </a>
-                        </li>
-                    </ul>                                     
+	            <div class="nav col-auto my-auto ms-auto">
+                    <a href="#_" class="nav-link active" id="btn-vertical">
+                        <i class="fa-solid fa-grip-vertical"></i>
+                    </a>
+                    <a href="#_" class="nav-link" id="btn-horizontal">
+                        <i class="fa-solid fa-grip"></i>
+                    </a>                                        
                 </div>
                 
                 <div class="col-auto my-auto ms-3 dropdown">
