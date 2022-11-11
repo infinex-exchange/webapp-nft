@@ -120,15 +120,15 @@
 	            </div>
 	            
 	            <div class="nav col-auto my-auto ms-auto">
-                    <a href="#_" class="nav-link active px-1" id="btn-vertical">
+                    <a href="#_" class="nav-link active px-0" id="btn-vertical">
                         <i class="fa-solid fa-grip-vertical fa-xl"></i>
                     </a>
-                    <a href="#_" class="nav-link px-1" id="btn-horizontal">
+                    <a href="#_" class="nav-link px-2" id="btn-horizontal">
                         <i class="fa-solid fa-grip fa-xl"></i>
                     </a>                                        
                 </div>
                 
-                <div class="col-auto my-auto ms-3 dropdown">
+                <div class="col-auto my-auto dropdown">
 		            <a href="#_" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				        <i class="fa-solid fa-arrow-up-z-a"></i>
 				        <strong class="d-none d-lg-inline">Sort by:</strong>
