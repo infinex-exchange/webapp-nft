@@ -141,29 +141,31 @@ function renderOfferHor(offer, manage = false) {
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
     
     var manageHtml = '';
-    if(manage && offer.buyer !== null) {
-        manageHtml = `
-            <div class="col-12 pt-3">
-                <span class="secondary">Buyer:</span>
-                ${offer.buyer}
-            </div>
-        `;
-    }
-    else if(manage && offer.buyer == null) {
-        manageHtml = `
-            <div class="col-12 pt-3">
-                <strong class="secondary">Item has not been sold</strong>
-            </div>
-        `;
-        if(offer.can_renew) {
-            manageHtml += `
-                <div class="col-12 pt-1">
-                    <a href="/nft/sell/${offer.nftid}" class="btn btn-primary">
-                        <i class="fa-solid fa-arrow-rotate-right"></i>
-                        Renew listing
-                    </a>
+    if(manage && !offer.active) {
+        if(offer.buyer !== null) {
+            manageHtml = `
+                <div class="col-12 pt-3">
+                    <span class="secondary">Buyer:</span>
+                    ${offer.buyer}
                 </div>
             `;
+        }
+        else {
+            manageHtml = `
+                <div class="col-12 pt-3">
+                    <strong class="secondary">Item has not been sold</strong>
+                </div>
+            `;
+            if(offer.can_renew) {
+                manageHtml += `
+                    <div class="col-12 pt-1">
+                        <a href="/nft/sell/${offer.nftid}" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                            Renew listing
+                        </a>
+                    </div>
+                `;
+            }
         }
     }
                                 
