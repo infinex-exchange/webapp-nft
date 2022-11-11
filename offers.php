@@ -107,7 +107,7 @@
         
         <!-- Main column -->
         <div id="offers" class="col-12 col-lg-9 p-0 ui-card ui-column rest-of-height d-lg-block" data-ui-card="offers">
-            <div id="offers-header" class="row pb-2">
+            <div id="offers-header" class="row flex-nowrap pb-2">
                 <div class="col-auto my-auto d-none d-lg-block">
 	                <h3>Offers list</h3>
 	            </div>
