@@ -58,10 +58,18 @@ function initSelectCol(endpoint = '/nft/collections') {
             .done(function (data) {
                 if(data.success) {
                     $.each(data.collections, function(k, v) {
+                        var img = '';
+                        
+                        if(v.icon_url) {
+                            img = `
+	                            <img width="24px" height="24px" src="${v.icon_url}">
+	                        `;
+	                    }
+	                    
                         thisAS.append(`
                             <div class="select-col-item row p-1 hoverable" data-colid="${k}" data-name="${v.name}">
                                 <div class="col-auto my-auto text-center" style="width: 32px">
-                                    <img width="24px" height="24px" src="${v.icon_url}">
+                                    ${img}
                                 </div>
                                 <div class="col-auto wrap my-auto">
                                     <h5 class="secondary">${v.name}</h5>
