@@ -168,7 +168,10 @@ function renderOfferHor(offer, manage = false) {
     if(manage) {
         manageHtml = `
             <div class="col-12 pt-3">
-                <a href="/nft/sell/${offer.nftid}" class="btn btn-primary btn-sm">List again</a>
+                <a href="/nft/sell/${offer.nftid}" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                    List again
+                </a>
             </div>
         `;
     }
