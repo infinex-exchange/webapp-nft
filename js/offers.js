@@ -101,7 +101,9 @@ $(document).ready(function() {
             //---
             
         },
-        false
+        false,
+        false,
+        $('#offers-content')
     );
     
     $('#btn-filter').click(function() {
