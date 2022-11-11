@@ -49,7 +49,7 @@
         </div>
         
         <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
-        <script src="/nft/js/my_offers.js?<?php echo filemtime(__DIR__.'/js/my_sales.js'); ?>"></script>
+        <script src="/nft/js/my_sales.js?<?php echo filemtime(__DIR__.'/js/my_sales.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../templates/modals.php'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
