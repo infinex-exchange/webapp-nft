@@ -64,8 +64,8 @@ $(document).on('authChecked', function() {
             clearTimeout(window.searchTypingTimeout);
             
         window.searchTypingTimeout = setTimeout(function() {
-            window.offersAS.data.query = $('#filter-search').val();
-            window.offersAS.reset();
+            window.myOffersAS.data.query = $('#filter-search').val();
+            window.myOffersAS.reset();
         }, 750);
     });
 });
