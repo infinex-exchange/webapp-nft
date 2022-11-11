@@ -58,4 +58,14 @@ $(document).on('authChecked', function() {
             
         }
     );
+    
+    $('#filter-search').on('input', function() {
+        if(typeof(window.searchTypingTimeout) !== 'undefined')
+            clearTimeout(window.searchTypingTimeout);
+            
+        window.searchTypingTimeout = setTimeout(function() {
+            window.offersAS.data.query = $('#filter-search').val();
+            window.offersAS.reset();
+        }, 750);
+    });
 });

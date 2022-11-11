@@ -33,7 +33,7 @@
                 </div>
                 
                 <div class="col-12 col-lg-auto order-3 order-lg-2 my-auto p-1 p-lg-2">
-                    <input id="nft-search" type="text" size="7" placeholder="Search" class="form-control input-search">
+                    <input id="filter-search" type="text" placeholder="Search..." class="input-search form-control">
                 </div>
             </div>
             </form>
