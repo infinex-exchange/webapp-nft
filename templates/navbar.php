@@ -11,7 +11,7 @@
                 
                 <li class="nav-item">
                     <a class="nav-link auto-active" href="/nft/my-sales">
-                        <i class="fa-solid fa-shop"></i>
+                        <i class="fa-solid fa-sack-dollar"></i>
                         My sales
                     </a>
                 </li>
