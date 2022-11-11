@@ -163,7 +163,7 @@ function renderOfferHor(offer) {
     return `
         <div class="col-12 my-offer-item hoverable p-4" data-noid="${offer.noid}">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2 my-auto">
                 <a href="/nft/offer/${offer.noid}">
                     <img src="${nftPreview}" class="img-fluid">
                 </a>
