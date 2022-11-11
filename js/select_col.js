@@ -68,7 +68,7 @@ function initSelectCol(endpoint = '/nft/collections') {
 	                    
                         thisAS.append(`
                             <div class="select-col-item row p-1 hoverable" data-colid="${k}" data-name="${v.name}">
-                                <div class="col-auto my-auto text-center" style="width: 32px">
+                                <div class="col-auto my-auto text-center" style="width: 32px; height: 24px;">
                                     ${img}
                                 </div>
                                 <div class="col-auto wrap my-auto">
