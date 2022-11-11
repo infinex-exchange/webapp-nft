@@ -29,7 +29,7 @@
             <form>
             <div class="row">
                 <div class="col-auto order-1 my-auto p-1 p-lg-2">
-                    <a href="/nft/wallet/deposit" class="btn btn-primary btn-sm">Create offer</a>
+                    <a href="/nft/sell" class="btn btn-primary btn-sm">Create offer</a>
                 </div>
                 
                 <div class="col-12 col-lg-auto order-3 order-lg-2 my-auto p-1 p-lg-2">
@@ -38,7 +38,7 @@
             </div>
             </form>
             
-            <div class="row" id="offers-data">
+            <div id="my-offers-data">
             </div>
         
         <!-- / Main column -->
