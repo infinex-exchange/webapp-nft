@@ -113,7 +113,7 @@ function renderOffer(offer) {
     `;        
 }
 
-function renderOfferHor(offer, manage = false) {
+function renderOfferHor(offer, manage = false, purchase = false) {
     var nftPreview = '/nft/img/no_preview.png';
     if(offer.preview != null)
         nftPreview = offer.preview;
@@ -167,6 +167,37 @@ function renderOfferHor(offer, manage = false) {
                 `;
             }
         }
+    }
+    if(purchase) {
+        var innerHtml = '';
+        
+        if(offer.win && offer.active) {
+            innerHtml = `
+                <span class="badge bg-success">
+                    You are winning
+                </span>
+            `;
+        }
+        else if(offer.win && !offer.active) {
+            innerHtml = `
+                <span class="badge bg-success">
+                    Purchased
+                </span>
+            `;
+        }
+        else {
+            innerHtml = `
+                <span class="badge bg-danger">
+                    You've been outbid
+                </span>
+            `;
+        }
+        
+        manageHtml = `
+            <div class="col-12 pt-3">
+                ${innerHtml}
+            </div>
+        `;
     }
                                 
     return `
