@@ -4,7 +4,7 @@ function renderMyOffer(offer) {
         nftPreview = offer.preview;
                                 
     return `
-        <div class="row my-offer-item row hoverable p-2">
+        <div class="row my-offer-item row hoverable px-1 py-3">
             <div class="col-2">
                 <a href="/nft/offer/${offer.noid}">
                     <img src="${nftPreview}" class="img-fluid">
