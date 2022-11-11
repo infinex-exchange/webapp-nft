@@ -10,7 +10,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link auto-active" href="/nft/my-offers">
+                    <a class="nav-link auto-active" href="/nft/my-sales">
                         <i class="fa-solid fa-shop"></i>
                         My sales
                     </a>
@@ -21,7 +21,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link auto-active" href="/nft/trades-history">
+                    <a class="nav-link auto-active" href="/nft/my-purchases">
                         <i class="fa-solid fa-cart-shopping"></i>
                         My purchases
                     </a>
