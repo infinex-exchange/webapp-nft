@@ -6,13 +6,14 @@ function renderMyOffer(offer) {
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
                                 
     return `
-        <div class="row my-offer-item row hoverable px-1 py-3">
-            <div class="col-2">
+        <div class="col-12 my-offer-item hoverable p-4" data-noid="${offer.noid}" onClick="gotoOffer(${offer.noid})">
+        <div class="row">
+            <div class="col-3 col-lg-2 my-auto">
                 <a href="/nft/offer/${offer.noid}">
                     <img src="${nftPreview}" class="img-fluid">
                 </a>
             </div>
-            <div class="col-10">
+            <div class="col-9 col-lg-10">
                 <div class="row">
                 
                         <div class="col-12">
@@ -23,9 +24,39 @@ function renderMyOffer(offer) {
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                             (<i>${endTime}</i>)
                         </div>
-
+                        
+                        <div class="col-12 pt-3">
+                            <div class="row">
+                                <div class="col-auto my-auto">
+                    			    <span class="small secondary">Buy Now</span>
+                                    <h5>${offer.price_buynow} ${offer.asset}</h5>
+                    			</div>
+                                
+                                <div class="col-auto my-auto">
+                    			    <span class="small secondary">Buy Now</span>
+                                    <h5>${offer.price_buynow} ${offer.asset}</h5>
+                    			</div>
+                                
+                                <div class="col-auto my-auto">
+                    			    <span class="small secondary">Buy Now</span>
+                                    <h5>${offer.price_buynow} ${offer.asset}</h5>
+                    			</div>
+                                
+                                <div class="col-auto my-auto">
+                    			    <span class="small secondary">Buy Now</span>
+                                    <h5>${offer.price_buynow} ${offer.asset}</h5>
+                    			</div>
+                                
+                                <div class="col-auto my-auto">
+                    			    <span class="small secondary">Buy Now</span>
+                                    <h5>${offer.price_buynow} ${offer.asset}</h5>
+                    			</div>
+                            </div>
+                        </div>
+                
                 </div>
             </div>
+        </div>
         </div>
     `;        
 }
