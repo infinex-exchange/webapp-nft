@@ -167,7 +167,7 @@ function renderOfferHor(offer) {
                     <img src="${nftPreview}" class="img-fluid">
                 </a>
             </div>
-            <div class="col-10">
+            <div class="col-6">
                 <div class="row">
                 
                         <div class="col-12">
@@ -178,6 +178,11 @@ function renderOfferHor(offer) {
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                             (<i>${endTime}</i>)
                         </div>
+                
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
                         
                         ${mainPriceHtml}
                         ${buynowPriceHtml}
