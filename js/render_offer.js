@@ -170,7 +170,7 @@ function renderOfferHor(offer, manage = false) {
             <div class="col-12 pt-3">
                 <a href="/nft/sell/${offer.nftid}" class="btn btn-primary">
                     <i class="fa-solid fa-arrow-rotate-right"></i>
-                    List again
+                    Renew listing
                 </a>
             </div>
         `;
