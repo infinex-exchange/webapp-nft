@@ -21,13 +21,13 @@
             <div class="dropdown-menu dropdown-menu-end">
                 <ul class="nav flex-column">
                     <li>
-                        <a class="dropdown-item auto-active" href="/nft/account/my-offers">
+                        <a class="dropdown-item auto-active" href="/nft/my-offers">
                             <i class="fa-solid fa-address-card"></i>
                             My offers
                         </a>
                     </li> 
                     <li>
-                        <a class="dropdown-item auto-active" href="/nft/account/trades-history">
+                        <a class="dropdown-item auto-active" href="/nft/trades-history">
                             <i class="fa-solid fa-clock-rotate-left"></i>
                             Trades history
                         </a>

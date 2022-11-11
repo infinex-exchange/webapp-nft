@@ -20,3 +20,6 @@ RewriteRule ^sell/?$ sell.php [L]
 RewriteRule ^offer/([^/]+)/?$ offer.php [L]
 
 RewriteRule ^offers/?$ offers.php [L]
+
+RewriteRule ^my-offers/?$ my_offers.php [L]
+RewriteRule ^trades-history/?$ trades_history.php [L]
