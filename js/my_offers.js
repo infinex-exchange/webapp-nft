@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('authChecked', function() {
     if(!window.loggedIn)
         return;
     
