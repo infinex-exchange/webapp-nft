@@ -119,7 +119,16 @@
                     </a>
 	            </div>
 	            
-	            <div class="col-auto my-auto ms-auto dropdown">
+	            <div class="col-auto my-auto ms-auto">
+                    <a href="#_" class="nav-link active" id="btn-vertical">
+                        <i class="fa-solid fa-grip-vertical"></i>
+                    </a>
+                    <a href="#_" class="nav-link" id="btn-horizontal">
+                        <i class="fa-solid fa-grip"></i>
+                    </a>
+                </div>
+                
+                <div class="col-auto my-auto ms-3 dropdown">
 		            <a href="#_" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				        <i class="fa-solid fa-arrow-up-z-a"></i>
 				        <strong class="d-none d-lg-inline">Sort by:</strong>

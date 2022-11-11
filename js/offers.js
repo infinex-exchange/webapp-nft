@@ -50,6 +50,8 @@ $(document).ready(function() {
     
     gotoUiCard('offers');
     
+    window.renderFunction = renderOffer;
+    
     window.offersAS = new AjaxScroll(
         $('#offers-data'),
         $('#offers-data-preloader'),
@@ -75,7 +77,7 @@ $(document).ready(function() {
             .done(function (data) {
                 if(data.success) {
                     $.each(data.offers, function(k, v) {
-                        thisAS.append(renderOffer(v));
+                        thisAS.append(window.renderFunction(v));
                     });
                     
                     updateCountdowns();
@@ -233,6 +235,26 @@ $(document).ready(function() {
             window.offersAS.data.asset = new Array();
             
         window.offersAS.data.asset.push(assetid);
+        window.offersAS.reset();
+    });
+    
+    $('#btn-vertical').click(function() {
+        if(window.renderFunction == renderOffer)
+            return;
+        
+        window.renderFunction = renderOffer;
+        $(this).addClass('active');
+        $('#btn-horizontal').removeClass('active');
+        window.offersAS.reset();
+    });
+    
+    $('#btn-horizontal').click(function() {
+        if(window.renderFunction == renderOfferHor)
+            return;
+        
+        window.renderFunction = renderOfferHor;
+        $(this).addClass('active');
+        $('#btn-vertical').removeClass('active');
         window.offersAS.reset();
     });
 });

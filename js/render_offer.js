@@ -121,6 +121,73 @@ function renderOffer(offer) {
     `;        
 }
 
+function renderOfferHor(offer) {
+    var nftPreview = '/nft/img/no_preview.png';
+    if(offer.preview != null)
+        nftPreview = offer.preview;
+    
+    var mainPriceHtml = '';
+    var buynowPriceHtml = '';
+    
+    if(offer.price_final) {
+        mainPriceHtml = `
+            <div class="col-6 my-auto">
+  			    <h4>${offer.price_final} ${offer.asset}</h4>
+  			</div>
+        `;
+    }
+    
+    else {
+    
+        if(offer.price_auction) {
+            mainPriceHtml = `
+                <div class="col-6 my-auto">
+                    <h4>${offer.price_auction} ${offer.asset}</h4>
+      			</div>
+            `;
+        }
+        
+        if(offer.price_buynow) {
+            buynowPriceHtml = `
+                <div class="col-6 my-auto">
+      			      <span class="small secondary">Buy Now</span>
+                      <h5>${offer.price_buynow} ${offer.asset}</h5>
+      			</div>
+            `;
+        }
+    
+    }
+    
+    var endTime = new Date(offer.end_time * 1000).toLocaleString();
+                                
+    return `
+        <div class="col-12 my-offer-item row hoverable px-1 py-3" data-noid="${offer.noid}">
+            <div class="col-2">
+                <a href="/nft/offer/${offer.noid}">
+                    <img src="${nftPreview}" class="img-fluid">
+                </a>
+            </div>
+            <div class="col-10">
+                <div class="row">
+                
+                        <div class="col-12">
+                            <h5 class="card-title">${offer.name}</h5>
+                        </div>
+                        
+                        <div class="col-12 small secondary">
+                            <span class="countdown" data-timestamp="${offer.end_time}"></span>
+                            (<i>${endTime}</i>)
+                        </div>
+                        
+                        ${mainPriceHtml}
+                        ${buynowPriceHtml}
+
+                </div>
+            </div>
+        </div>
+    `;        
+}
+
 function getFeaturedOffers(div, req, callback = null) {
     $.ajax({
         url: config.apiUrl + '/nft/offers',
