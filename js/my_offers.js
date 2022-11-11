@@ -3,7 +3,7 @@ function renderMyOffer(offer) {
     if(offer.preview != null)
         nftPreview = offer.preview;
     
-    var time = new Date(offer.end_time * 1000).toLocaleString();
+    var endTime = new Date(offer.end_time * 1000).toLocaleString();
                                 
     return `
         <div class="row my-offer-item row hoverable px-1 py-3">
