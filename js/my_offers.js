@@ -6,8 +6,8 @@ function renderMyOffer(offer) {
     return `
         <div class="row my-offer-item row hoverable px-1 py-2">
             <div class="col-2">
-                <a href="/nft/offer/${offer.noid}" class="d-flex h-100">
-                    <img src="${nftPreview}" class="my-auto">
+                <a href="/nft/offer/${offer.noid}">
+                    <img src="${nftPreview}" class="img-fluid">
                 </a>
             </div>
             <div class="col-10">
