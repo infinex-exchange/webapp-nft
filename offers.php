@@ -121,10 +121,10 @@
 	            
 	            <div class="nav col-auto my-auto ms-auto">
                     <a href="#_" class="nav-link active px-1" id="btn-vertical">
-                        <i class="fa-solid fa-grip-vertical"></i>
+                        <i class="fa-solid fa-grip-vertical fa-xl"></i>
                     </a>
                     <a href="#_" class="nav-link px-1" id="btn-horizontal">
-                        <i class="fa-solid fa-grip"></i>
+                        <i class="fa-solid fa-grip fa-xl"></i>
                     </a>                                        
                 </div>
                 
