@@ -165,7 +165,15 @@ function renderOfferHor(offer, manage = false) {
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
     
     var manageHtml = '';
-    if(manage) {
+    if(manage && offer.price_final) {
+        manageHtml = `
+            <div class="col-12 pt-3">
+                <span class="secondary">Buyer:</span>
+                ${offer.buyer}
+            </div>
+        `;
+    }
+    else if(manage && !offer.price_final) {
         manageHtml = `
             <div class="col-12 pt-3">
                 <strong class="secondary">Item has not been sold</strong>
