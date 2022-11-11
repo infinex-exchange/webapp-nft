@@ -1,3 +1,7 @@
+function gotoOffer(noid) {
+    window.location.href = '/nft/offer/' + noid;
+}
+
 function updateCountdowns() {
     $('.countdown').each(function() {
         var timestamp = $(this).data('timestamp') * 1000;
@@ -99,7 +103,7 @@ function renderOffer(offer) {
     }
                                 
     return `
-        <div class="offer-item col-12 col-md-3 col-lg-3 py-2" data-noid="${offer.noid}">
+        <div class="offer-item col-12 col-md-3 col-lg-3 py-2" data-noid="${offer.noid}" onClick="gotoOffer(${offer.noid})">
             <div class="card h-100 hoverable">
                 <a href="/nft/offer/${offer.noid}" class="d-flex h-100">
                     <img src="${nftPreview}" class="card-img-top my-auto">
@@ -161,7 +165,7 @@ function renderOfferHor(offer) {
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
                                 
     return `
-        <div class="col-12 my-offer-item hoverable p-4" data-noid="${offer.noid}">
+        <div class="col-12 my-offer-item hoverable p-4" data-noid="${offer.noid}" onClick="gotoOffer(${offer.noid})>
         <div class="row">
             <div class="col-3 col-lg-2 my-auto">
                 <a href="/nft/offer/${offer.noid}">
