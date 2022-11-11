@@ -131,7 +131,7 @@ function renderOfferHor(offer) {
     
     if(offer.price_final) {
         mainPriceHtml = `
-            <div class="col-12 col-lg-6 my-auto text-center">
+            <div class="col-auto my-auto">
   			    <h4>${offer.price_final} ${offer.asset}</h4>
   			</div>
         `;
@@ -141,7 +141,7 @@ function renderOfferHor(offer) {
     
         if(offer.price_auction) {
             mainPriceHtml = `
-                <div class="col-12 col-lg-6 my-auto text-center">
+                <div class="col-auto my-auto">
                     <h4>${offer.price_auction} ${offer.asset}</h4>
       			</div>
             `;
@@ -149,7 +149,7 @@ function renderOfferHor(offer) {
         
         if(offer.price_buynow) {
             buynowPriceHtml = `
-                <div class="col-12 col-lg-6 my-auto text-center">
+                <div class="col-auto my-auto">
       			      <span class="small secondary">Buy Now</span>
                       <h5>${offer.price_buynow} ${offer.asset}</h5>
       			</div>
@@ -167,7 +167,7 @@ function renderOfferHor(offer) {
                     <img src="${nftPreview}" class="img-fluid">
                 </a>
             </div>
-            <div class="col-6">
+            <div class="col-10">
                 <div class="row">
                 
                         <div class="col-12">
@@ -178,15 +178,14 @@ function renderOfferHor(offer) {
                             <span class="countdown" data-timestamp="${offer.end_time}"></span>
                             (<i>${endTime}</i>)
                         </div>
-                
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="row">
                         
-                        ${mainPriceHtml}
-                        ${buynowPriceHtml}
-
+                        <div class="col-12">
+                            <div class="row">
+                                ${mainPriceHtml}
+                                ${buynowPriceHtml}
+                            </div>
+                        </div>
+                
                 </div>
             </div>
         </div>
