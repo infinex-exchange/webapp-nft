@@ -125,7 +125,7 @@ function renderOffer(offer) {
     `;        
 }
 
-function renderOfferHor(offer) {
+function renderOfferHor(offer, manage = false) {
     var nftPreview = '/nft/img/no_preview.png';
     if(offer.preview != null)
         nftPreview = offer.preview;
@@ -163,6 +163,15 @@ function renderOfferHor(offer) {
     }
     
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
+    
+    var manageHtml = '';
+    if(manage) {
+        manageHtml = `
+            <div class="col-12 pt-3">
+                <a href="/nft/sell/${offer.nftid}" class="btn btn-primary btn-sm">List again</a>
+            </div>
+        `;
+    }
                                 
     return `
         <div class="col-12 offer-item hoverable p-4" data-noid="${offer.noid}" onClick="gotoOffer(${offer.noid})">
@@ -190,6 +199,8 @@ function renderOfferHor(offer) {
                                 ${buynowPriceHtml}
                             </div>
                         </div>
+                        
+                        ${manageHtml}
                 
                 </div>
             </div>
