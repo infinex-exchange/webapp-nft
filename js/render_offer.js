@@ -73,33 +73,21 @@ function renderOffer(offer) {
     var mainPriceHtml = '';
     var buynowPriceHtml = '';
     
-    if(offer.price_final) {
+    if(offer.price_auction) {
         mainPriceHtml = `
             <div class="col-6 my-auto">
-  			    <h4>${offer.price_final} ${offer.asset}</h4>
+                <h4>${offer.price_auction} ${offer.asset}</h4>
   			</div>
         `;
     }
     
-    else {
-    
-        if(offer.price_auction) {
-            mainPriceHtml = `
-                <div class="col-6 my-auto">
-                    <h4>${offer.price_auction} ${offer.asset}</h4>
-      			</div>
-            `;
-        }
-        
-        if(offer.price_buynow) {
-            buynowPriceHtml = `
-                <div class="col-6 my-auto">
-      			      <span class="small secondary">Buy Now</span>
-                      <h5>${offer.price_buynow} ${offer.asset}</h5>
-      			</div>
-            `;
-        }
-    
+    if(offer.price_buynow) {
+        buynowPriceHtml = `
+            <div class="col-6 my-auto">
+  			      <span class="small secondary">Buy Now</span>
+                  <h5>${offer.price_buynow} ${offer.asset}</h5>
+  			</div>
+        `;
     }
                                 
     return `
@@ -133,39 +121,27 @@ function renderOfferHor(offer, manage = false) {
     var mainPriceHtml = '';
     var buynowPriceHtml = '';
     
-    if(offer.price_final) {
+    if(offer.price_auction) {
         mainPriceHtml = `
             <div class="col-auto my-auto">
-  			    <h4>${offer.price_final} ${offer.asset}</h4>
+                <h4>${offer.price_auction} ${offer.asset}</h4>
   			</div>
         `;
     }
     
-    else {
-    
-        if(offer.price_auction) {
-            mainPriceHtml = `
-                <div class="col-auto my-auto">
-                    <h4>${offer.price_auction} ${offer.asset}</h4>
-      			</div>
-            `;
-        }
-        
-        if(offer.price_buynow) {
-            buynowPriceHtml = `
-                <div class="col-auto my-auto">
-      			      <span class="small secondary">Buy Now</span>
-                      <h5>${offer.price_buynow} ${offer.asset}</h5>
-      			</div>
-            `;
-        }
-    
+    if(offer.price_buynow) {
+        buynowPriceHtml = `
+            <div class="col-auto my-auto">
+  			      <span class="small secondary">Buy Now</span>
+                  <h5>${offer.price_buynow} ${offer.asset}</h5>
+  			</div>
+        `;
     }
-    
+        
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
     
     var manageHtml = '';
-    if(manage && offer.price_final) {
+    if(manage && offer.buyer !== null) {
         manageHtml = `
             <div class="col-12 pt-3">
                 <span class="secondary">Buyer:</span>
@@ -173,7 +149,7 @@ function renderOfferHor(offer, manage = false) {
             </div>
         `;
     }
-    else if(manage && !offer.price_final) {
+    else if(manage && offer.buyer == null) {
         manageHtml = `
             <div class="col-12 pt-3">
                 <strong class="secondary">Item has not been sold</strong>
