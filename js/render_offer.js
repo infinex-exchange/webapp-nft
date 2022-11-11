@@ -179,7 +179,7 @@ function renderOfferHor(offer) {
                             (<i>${endTime}</i>)
                         </div>
                         
-                        <div class="col-12">
+                        <div class="col-12 pt-3">
                             <div class="row">
                                 ${mainPriceHtml}
                                 ${buynowPriceHtml}
