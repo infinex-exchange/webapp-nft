@@ -4,7 +4,7 @@
         <?php include(__DIR__.'/../../templates/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>My offers | Vayamos NFT</title>
+        <title>My sales | Vayamos NFT</title>
     </head>
     <body>
     
@@ -23,7 +23,7 @@
         <div class="col-12 p-0 ui-card ui-column">
             
             <div class="row">
-                <h3>My offers</h3>
+                <h3>My sales</h3>
             </div>
             
             <form>
@@ -49,7 +49,7 @@
         </div>
         
         <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
-        <script src="/nft/js/my_offers.js?<?php echo filemtime(__DIR__.'/js/my_offers.js'); ?>"></script>
+        <script src="/nft/js/my_offers.js?<?php echo filemtime(__DIR__.'/js/my_sales.js'); ?>"></script>
         
         <?php include(__DIR__.'/../../templates/modals.php'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>

@@ -21,7 +21,7 @@ $(document).on('authChecked', function() {
             var thisAS = this;
             
             $.ajax({
-                url: config.apiUrl + '/nft/my_offers',
+                url: config.apiUrl + '/nft/my_sales',
                 type: 'POST',
                 data: JSON.stringify(thisAS.data),
                 contentType: "application/json",

@@ -21,5 +21,5 @@ RewriteRule ^offer/([^/]+)/?$ offer.php [L]
 
 RewriteRule ^offers/?$ offers.php [L]
 
-RewriteRule ^my-offers/?$ my_offers.php [L]
-RewriteRule ^trades-history/?$ trades_history.php [L]
+RewriteRule ^my-sales/?$ my_sales.php [L]
+RewriteRule ^my-purchases/?$ my_purchases.php [L]

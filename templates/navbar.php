@@ -11,8 +11,8 @@
                 
                 <li class="nav-item">
                     <a class="nav-link auto-active" href="/nft/my-offers">
-                        <i class="fa-solid fa-address-card"></i>
-                        My offers
+                        <i class="fa-solid fa-shop"></i>
+                        My sales
                     </a>
                 </li>
                 
@@ -22,8 +22,8 @@
                 
                 <li class="nav-item">
                     <a class="nav-link auto-active" href="/nft/trades-history">
-                        <i class="fa-solid fa-clock-rotate-left"></i>
-                        Trades history
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        My purchases
                     </a>
                 </li>
             </ul>
