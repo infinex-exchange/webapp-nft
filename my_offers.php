@@ -22,7 +22,7 @@
         <!-- Main column -->
         <div class="col-12 p-0 ui-card ui-column">
             
-            <div class="row pb-2">
+            <div class="row">
                 <h3>My offers</h3>
             </div>
             
