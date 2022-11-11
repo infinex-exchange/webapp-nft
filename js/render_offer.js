@@ -131,7 +131,7 @@ function renderOfferHor(offer) {
     
     if(offer.price_final) {
         mainPriceHtml = `
-            <div class="col-6 my-auto">
+            <div class="col-12 col-lg-6 my-auto text-center">
   			    <h4>${offer.price_final} ${offer.asset}</h4>
   			</div>
         `;
@@ -141,7 +141,7 @@ function renderOfferHor(offer) {
     
         if(offer.price_auction) {
             mainPriceHtml = `
-                <div class="col-6 my-auto">
+                <div class="col-12 col-lg-6 my-auto text-center">
                     <h4>${offer.price_auction} ${offer.asset}</h4>
       			</div>
             `;
@@ -149,7 +149,7 @@ function renderOfferHor(offer) {
         
         if(offer.price_buynow) {
             buynowPriceHtml = `
-                <div class="col-6 my-auto">
+                <div class="col-12 col-lg-6 my-auto text-center">
       			      <span class="small secondary">Buy Now</span>
                       <h5>${offer.price_buynow} ${offer.asset}</h5>
       			</div>
