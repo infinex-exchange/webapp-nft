@@ -119,7 +119,7 @@
                     </a>
 	            </div>
 	            
-	            <div class="col-auto my-auto ms-auto">
+	            <div class="navbar-nav col-auto my-auto ms-auto">
                     <a href="#_" class="nav-link active" id="btn-vertical">
                         <i class="fa-solid fa-grip-vertical"></i>
                     </a>
