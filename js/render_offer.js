@@ -161,7 +161,8 @@ function renderOfferHor(offer) {
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
                                 
     return `
-        <div class="col-12 my-offer-item row hoverable p-2" data-noid="${offer.noid}">
+        <div class="col-12 my-offer-item row hoverable px-2 py-3" data-noid="${offer.noid}">
+        <div class="row">
             <div class="col-2">
                 <a href="/nft/offer/${offer.noid}">
                     <img src="${nftPreview}" class="img-fluid">
@@ -188,6 +189,7 @@ function renderOfferHor(offer) {
                 
                 </div>
             </div>
+        </div>
         </div>
     `;        
 }
