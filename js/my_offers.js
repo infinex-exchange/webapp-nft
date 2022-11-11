@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    if(!window.loggedIn)
+        return;
+    
     window.renderingStagesTarget = 1;
     
     initCountdowns();
@@ -18,7 +21,7 @@ $(document).ready(function() {
             var thisAS = this;
             
             $.ajax({
-                url: config.apiUrl + '/nft/offers',
+                url: config.apiUrl + '/nft/my_offers',
                 type: 'POST',
                 data: JSON.stringify(thisAS.data),
                 contentType: "application/json",
