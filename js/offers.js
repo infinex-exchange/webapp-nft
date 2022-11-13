@@ -50,7 +50,14 @@ $(document).ready(function() {
     
     gotoUiCard('offers');
     
-    window.renderFunction = renderOffer;
+    var renderMode = localStorage.getItem('nft_renderMode');
+    if(renderMode === null || renderMode == 'ver')
+        window.renderFunction = renderOffer;
+    else
+        window.renderFunction = renderOfferHor;
+    
+    var sort = localStorage.getItem('nft_sort');
+    var sortDir = localStorage.getItem('nft_sortDir');
     
     window.offersAS = new AjaxScroll(
         $('#offers-data'),
@@ -58,7 +65,9 @@ $(document).ready(function() {
         {
             api_key: window.apiKey,
             auction: true,
-            buynow: true
+            buynow: true,
+            sort: sort,
+            sort_dir: sortDir
         },
         function() {
             
@@ -127,6 +136,9 @@ $(document).ready(function() {
         
         $('.sort-item').removeClass('active');
         $(this).addClass('active');
+        
+        localStorage.setItem('nft_sort', window.offersAS.data.sort);
+        localStorage.setItem('nft_sortDir', window.offersAS.data.sort_dir);
     });
     
     $('.sort-item.active').trigger('click');
@@ -246,6 +258,7 @@ $(document).ready(function() {
         $(this).addClass('active');
         $('#btn-horizontal').removeClass('active');
         window.offersAS.reset();
+        localStorage.setItem('nft_renderMode', 'ver');
     });
     
     $('#btn-horizontal').click(function() {
@@ -256,5 +269,6 @@ $(document).ready(function() {
         $(this).addClass('active');
         $('#btn-vertical').removeClass('active');
         window.offersAS.reset();
+        localStorage.setItem('nft_renderMode', 'hor');
     });
 });
