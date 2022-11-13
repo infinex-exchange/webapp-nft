@@ -144,7 +144,7 @@ function renderOfferHor(offer, manage = false, purchase = false) {
     if(manage && !offer.active) {
         if(offer.buyer !== null) {
             manageHtml = `
-                <div class="col-12 pt-3">
+                <div class="col-12 pt-3 small">
                     <span class="secondary">
                         <i class="fa-solid fa-user"></i>
                         Buyer:
