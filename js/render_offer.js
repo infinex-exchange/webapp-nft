@@ -145,7 +145,10 @@ function renderOfferHor(offer, manage = false, purchase = false) {
         if(offer.buyer !== null) {
             manageHtml = `
                 <div class="col-12 pt-3">
-                    <span class="secondary">Buyer:</span>
+                    <span class="secondary">
+                        <i class="fa-solid fa-user"></i>
+                        Buyer:
+                    </span>
                     ${offer.buyer}
                 </div>
             `;
@@ -169,6 +172,21 @@ function renderOfferHor(offer, manage = false, purchase = false) {
                 `;
             }
         }
+        
+        manageHtml += `
+            <div class="col-12 pt-3">
+                <span class="secondary">
+                    <i class="fa-solid fa-gavel"></i>
+                    ${offer.count_bids} bids
+                </span>
+            </div>
+            <div class="col-12 pt-3">
+                <span class="secondary">
+                    <i class="fa-solid fa-eye"></i>
+                    ${offer.count_views} views
+                </span>
+            </div>
+        `;
     }
     if(purchase) {
         var innerHtml = '';
