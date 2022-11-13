@@ -60,18 +60,13 @@ $(document).ready(function() {
         $('#btn-horizontal').addClass('active');
     }
     
-    var sort = localStorage.getItem('nft_sort');
-    var sortDir = localStorage.getItem('nft_sortDir');
-    
     window.offersAS = new AjaxScroll(
         $('#offers-data'),
         $('#offers-data-preloader'),
         {
             api_key: window.apiKey,
             auction: true,
-            buynow: true,
-            sort: sort,
-            sort_dir: sortDir
+            buynow: true
         },
         function() {
             
@@ -145,7 +140,11 @@ $(document).ready(function() {
         localStorage.setItem('nft_sortDir', window.offersAS.data.sort_dir);
     });
     
-    $('.sort-item.active').trigger('click');
+    var sort = localStorage.getItem('nft_sort');
+    if(sort === null) sort = 'popularity';
+    var sortDir = localStorage.getItem('nft_sortDir');
+    if(sortDir === null) sortDir = 'DESC';
+    $('.sort-item[data-sort="' + sort + '"][data-sort-dir="' + sortDir + '"]').trigger('click');
     
     $('#filter-search').on('input', function() {
         if(typeof(window.searchTypingTimeout) !== 'undefined')

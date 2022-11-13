@@ -137,7 +137,7 @@
 				    <div class="dropdown-menu dropdown-menu-end">
 				        <ul class="nav flex-column">
 					        <li>
-							    <a class="dropdown-item sort-item active" href="#_" data-sort="popularity" data-sort-dir="DESC">
+							    <a class="dropdown-item sort-item" href="#_" data-sort="popularity" data-sort-dir="DESC">
 							        Popularity (highest<span class="d-none d-lg-inline"> to lowest</span>)
 							    </a>
 							</li>
