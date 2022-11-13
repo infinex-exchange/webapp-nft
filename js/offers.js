@@ -51,10 +51,14 @@ $(document).ready(function() {
     gotoUiCard('offers');
     
     var renderMode = localStorage.getItem('nft_renderMode');
-    if(renderMode === null || renderMode == 'ver')
+    if(renderMode === null || renderMode == 'ver') {
         window.renderFunction = renderOffer;
-    else
+        $('#btn-vertical').addClass('active');
+    }
+    else {
         window.renderFunction = renderOfferHor;
+        $('#btn-horizontal').addClass('active');
+    }
     
     var sort = localStorage.getItem('nft_sort');
     var sortDir = localStorage.getItem('nft_sortDir');
