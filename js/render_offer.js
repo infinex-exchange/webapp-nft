@@ -153,7 +153,9 @@ function renderOfferHor(offer, manage = false, purchase = false) {
         else {
             manageHtml = `
                 <div class="col-12 pt-3">
-                    <strong class="secondary">Item has not been sold</strong>
+                    <span class="badge bg-danger">
+                        Item has not been sold
+                    </span>
                 </div>
             `;
             if(offer.can_renew) {
