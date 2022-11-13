@@ -141,26 +141,28 @@ function renderOfferHor(offer, manage = false, purchase = false) {
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
     
     var manageHtml = '';
-    if(manage && !offer.active) {
-        if(offer.buyer !== null) {
-            manageHtml = `
-                <div class="col-12 pt-3 small">
-                    <span class="secondary">
-                        <i class="fa-solid fa-user"></i>
-                        Buyer:
-                    </span>
-                    ${offer.buyer}
-                </div>
-            `;
-        }
-        else {
-            manageHtml = `
-                <div class="col-12 pt-3">
-                    <span class="badge bg-danger">
-                        Item has not been sold
-                    </span>
-                </div>
-            `;
+    if(manage) {
+        if(!offer.active) {
+            if(offer.buyer !== null) {
+                manageHtml += `
+                    <div class="col-12 pt-3 small">
+                        <span class="secondary">
+                            <i class="fa-solid fa-user"></i>
+                            Buyer:
+                        </span>
+                        ${offer.buyer}
+                    </div>
+                `;
+            }
+            else {
+                manageHtml += `
+                    <div class="col-12 pt-3">
+                        <span class="badge bg-danger">
+                            Item has not been sold
+                        </span>
+                    </div>
+                `;
+            }
         }
         
         manageHtml += `
@@ -175,15 +177,15 @@ function renderOfferHor(offer, manage = false, purchase = false) {
         `;
         
         if(offer.can_renew) {
-                manageHtml += `
-                    <div class="col-12 pt-3">
-                        <a href="/nft/sell/${offer.nftid}" class="btn btn-primary">
-                            <i class="fa-solid fa-arrow-rotate-right"></i>
-                            Renew listing
-                        </a>
-                    </div>
-                `;
-            }
+            manageHtml += `
+                <div class="col-12 pt-3">
+                    <a href="/nft/sell/${offer.nftid}" class="btn btn-primary">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                        Renew listing
+                    </a>
+                </div>
+            `;
+        }
     }
     if(purchase) {
         var innerHtml = '';
