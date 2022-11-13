@@ -140,12 +140,15 @@ function renderOfferHor(offer, manage = false, purchase = false) {
         
     var endTime = new Date(offer.end_time * 1000).toLocaleString();
     
-    var manageHtml = '';
+    var manageHtml = `
+        <div class="col-12 pt-3"></div>
+    `;
+    
     if(manage) {
         if(!offer.active) {
             if(offer.buyer !== null) {
                 manageHtml += `
-                    <div class="col-12 pt-3 small">
+                    <div class="col-12 small">
                         <span class="secondary">
                             <i class="fa-solid fa-user"></i>
                             Buyer:
@@ -156,7 +159,7 @@ function renderOfferHor(offer, manage = false, purchase = false) {
             }
             else {
                 manageHtml += `
-                    <div class="col-12 pt-3">
+                    <div class="col-12">
                         <span class="badge bg-danger">
                             Item has not been sold
                         </span>
@@ -166,7 +169,7 @@ function renderOfferHor(offer, manage = false, purchase = false) {
         }
         
         manageHtml += `
-            <div class="col-12 pt-1 small secondary">
+            <div class="col-12 small secondary">
                 <i class="fa-solid fa-gavel"></i>
                 ${offer.count_bids} bids
             </div>
