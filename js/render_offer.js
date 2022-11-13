@@ -169,7 +169,7 @@ function renderOfferHor(offer, manage = false, purchase = false) {
         }
         
         manageHtml += `
-            <div class="col-12 small secondary">
+            <div class="col-12 pt-1 small secondary">
                 <i class="fa-solid fa-gavel"></i>
                 ${offer.count_bids} bids
             </div>
