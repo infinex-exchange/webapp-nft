@@ -171,7 +171,7 @@
                             </div>
                         </div>
                         
-                        <div class="row pt-2" id="nft-provenance">
+                        <div class="row pt-3" id="nft-provenance">
                         </div>                                
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                             </div>
                         </div>
                         
-                        <div class="row pt-2" id="author-provenance">
+                        <div class="row pt-3" id="author-provenance">
                         </div>                             
                     </div>
                 </div>
