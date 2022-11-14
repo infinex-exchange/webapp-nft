@@ -39,6 +39,20 @@ $(document).on('authChecked', function() {
                             var nftPreview = '/nft/img/no_preview.png';
                             if(nft.preview != null)
                                 nftPreview = nft.preview;
+                            
+                            var toggleHtml = '';
+                            if(nft.locked) {
+                                toggleHtml = `
+                                    <i class="fa-solid fa-lock fa-lg"></i>
+                                `;
+                            }
+                            else {
+                                toggleHtml = `
+                                    <a class="nav-link" href="#_" data-bs-toggle="dropdown">
+                                        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                                    </a>
+                                `;
+                            }
                                 
                             thisAS.append(`
                                 <div class="nft-item col-12 col-md-3 col-lg-3 py-2">
@@ -56,9 +70,7 @@ $(document).on('authChecked', function() {
                                                     </span>
                                                 </div>
                                                 <div class="col-1 ps-0 my-auto text-center secondary dropdown">
-                                    			    <a class="nav-link" href="#_" data-bs-toggle="dropdown">
-                                                        <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-                                                    </a>
+                                    			    ${toggleHtml}
                                                     <ul class="dropdown-menu dropdown-menu-end">
                                                         <li>
                                                             <a class="dropdown-item" href="/nft/details/${nftid}">
