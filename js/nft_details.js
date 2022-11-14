@@ -80,14 +80,14 @@ function getNftDetails(nftid, callback = null) {
                 if(v.verify_nft_url !== null)
                     $('#nft-provenance').append(`
                         <div class="col-12">
-                            <a class="link-ultra" href="${v.verify_nft_url}">Verify provenance on ${v.name}</a>
+                            <a class="link-ultra" href="${v.verify_nft_url}"><strong>Verify provenance on ${v.name}</strong></a>
                         </div>
                     `);
                 
                 if(v.verify_author_url !== null)
                     $('#author-provenance').append(`
                         <div class="col-12">
-                            <a class="link-ultra" href="${v.verify_author_url}">Verify provenance on ${v.name}</a>
+                            <a class="link-ultra" href="${v.verify_author_url}"><strong>Verify provenance on ${v.name}</strong></a>
                         </div>
                     `);                    
             });
