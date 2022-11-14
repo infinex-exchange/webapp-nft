@@ -169,6 +169,9 @@
                             </div>
                             <div class="col-12 wrap" id="nft-attributes">
                             </div>
+                        </div>
+                        
+                        <div class="row pt-2" id="nft-provenance">
                         </div>                                
                     </div>
                 </div>
@@ -247,7 +250,10 @@
                             </div>
                             <div class="col-12 wrap" id="author-royalty-address">
                             </div>
-                        </div>                            
+                        </div>
+                        
+                        <div class="row pt-2" id="author-provenance">
+                        </div>                             
                     </div>
                 </div>
                 

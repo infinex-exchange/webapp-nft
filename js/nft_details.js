@@ -76,6 +76,28 @@ function getNftDetails(nftid, callback = null) {
                 <img src="${data.nft.network.icon_url}" width="16" height="16"> ${data.nft.network.description}
             `);
             
+            $.each(data.nft.provenance, function(k, v) {
+                if(v.verify_nft_url !== null)
+                    $('#nft-provenance').append(`
+                        <div class="col-12">
+                            <a class="nav-link" href="${v.verify_nft_url}">Verify provenance on ${v.name}</a>
+                        </div>
+                    `);
+                
+                if(v.verify_author_url !== null)
+                    $('#author-provenance').append(`
+                        <div class="col-12">
+                            <a class="nav-link" href="${v.verify_author_url}">Verify provenance on ${v.name}</a>
+                        </div>
+                    `);                    
+            });
+            
+            if($('#nft-provenance').children().length == 0)
+                $('#nft-provenance').hide();
+            
+            if($('#author-provenance').children().length == 0)
+                $('#author-provenance').hide();
+            
             $(document).trigger('renderingStage');
             
             if(callback != null)
