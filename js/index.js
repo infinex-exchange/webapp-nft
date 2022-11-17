@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    window.renderingStagesTarget = 3;
+    window.renderingStagesTarget = 1;
     
     initCountdowns();
     
@@ -9,6 +9,9 @@ $(document).ready(function() {
         sort: 'end_time',
         sort_dir: 'ASC',
         offset: 0
+    },
+    function(count) {
+        $(document).trigger('renderingStage');
     });
     
     getFeaturedOffers($('#featured-nft-data'), {

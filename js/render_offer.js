@@ -274,7 +274,6 @@ function getFeaturedOffers(div, req, callback = null) {
                 div.append(renderOffer(v));
             });
             updateCountdowns();
-	        $(document).trigger('renderingStage');
             
             if(callback != null)
                 callback(data.offers.length);
