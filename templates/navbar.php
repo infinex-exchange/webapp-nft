@@ -28,6 +28,17 @@
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto user-only">
+                <li class="nav-item">
+                    <a href="/nft/studio" class="nav-link">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        NFT Studio
+                    </a>
+                </li>
+                
+                <li class="nav-item nav-separ px-2">
+                    <span class="nav-link">&bull;</span>
+                </li>
+                
                 <?php include(__DIR__.'/menu_inner_right.php'); ?>
             </ul>
         </div> 
