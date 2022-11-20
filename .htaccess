@@ -23,5 +23,3 @@ RewriteRule ^offers/?$ offers.php [L]
 
 RewriteRule ^my-sales/?$ my_sales.php [L]
 RewriteRule ^my-purchases/?$ my_purchases.php [L]
-
-RewriteRule ^studio(/.*)?$ studio/$1 [L]
