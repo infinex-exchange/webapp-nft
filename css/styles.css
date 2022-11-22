@@ -11,13 +11,10 @@
 
 /* Jumbotron background */
 
-@media (min-width: 992px) {
-    .jumbotron {
-        background-image: url("/nft/img/nft_jumbotron.png");
-        background-position: bottom right;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+.jumbotron-nft {
+    background-image: url("/nft/img/nft_jumbotron.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 /* Navbar */
