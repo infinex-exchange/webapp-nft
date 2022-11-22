@@ -17,7 +17,7 @@
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 h-rest pt-2 p-0">
         
-            <div class="jumbotron row m-0 px-4 py-3 py-lg-5">
+            <div class="jumbotron-nft row m-0 px-4 py-3 py-lg-5">
                 <div class="col-12">
                     <h1>Vayamos NFT</h1>
                     <p>Discover exclusive NFT collections from the world's top artists.</p>
