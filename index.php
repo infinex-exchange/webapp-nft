@@ -20,7 +20,7 @@
             <div class="jumbotron-nft row m-0 px-4 py-3 py-lg-5">
                 <div class="col-12">
                     <h1>Vayamos NFT</h1>
-                    <p>Discover exclusive NFT collections from the world's top artists.</p>
+                    <strong>Discover exclusive NFT collections from the world's top artists.</strong>
                 </div>
             </div>
             
