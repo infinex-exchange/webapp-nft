@@ -5,7 +5,7 @@
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <?php include(__DIR__.'/../../../imports/qrcode.html'); ?>
-        <title>Deposit | Vayamos NFT</title>
+        <title>Deposit | Infinex NFT</title>
     </head>
     <body>
     

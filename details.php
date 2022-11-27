@@ -3,7 +3,7 @@
     <head>
         <?php include('../../templates/head.php'); ?>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Vayamos NFT</title>
+        <title>Infinex NFT</title>
     </head>
     <body>
     

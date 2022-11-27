@@ -3,7 +3,7 @@
     <head>
         <?php include('../../templates/head.php'); ?>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Vayamos NFT</title>
+        <title>Infinex NFT</title>
     </head>
     <body>
     
@@ -293,7 +293,7 @@
                     <div class="modal-body">
                         Are you sure you want to purchase this NFT?
                         <br>
-                        The amount of <span id="mcbn-price"></span> will be charged from your Vayamos account.
+                        The amount of <span id="mcbn-price"></span> will be charged from your Infinex account.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>

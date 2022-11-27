@@ -3,7 +3,7 @@
     <head>
         <?php include('../../templates/head.php'); ?>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Vayamos NFT</title>
+        <title>Infinex NFT</title>
     </head>
     <body class="body-background">
     
@@ -19,7 +19,7 @@
         
             <div class="jumbotron-nft row m-0 px-4 py-3 py-lg-5">
                 <div class="col-12">
-                    <h1>Vayamos NFT</h1>
+                    <h1>Infinex NFT</h1>
                     <strong>Discover exclusive NFT collections from the world's top artists.</strong>
                 </div>
             </div>
@@ -71,26 +71,6 @@
             </div>
         
         <!-- / Root container -->
-        </div>
-        
-        <div class="modal fade" tabindex="-1" role="dialog" id="modal-confirm-buy">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Confirm payment</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Are you sure you want to purchase the Mining Cloud contract?
-                        <br>
-                        The amount of <span id="mcb-price"></span> will be charged from your Vayamos account.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button id="mcb-buy" type="button" class="btn btn-primary">Buy</button>
-                    </div>
-                </div>
-            </div>
         </div>
         
         <?php include('../../templates/modals.php'); ?>

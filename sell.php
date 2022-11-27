@@ -5,7 +5,7 @@
         <?php include('../../imports/bignumber.html'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Create offer | Vayamos NFT</title>
+        <title>Create offer | Infinex NFT</title>
     </head>
     <body>
     
