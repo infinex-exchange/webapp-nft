@@ -109,7 +109,7 @@ $(document).on('authChecked', function() {
                         if(thisAS.offset == 0)
                             $(document).trigger('renderingStage');
                             
-                        if(data.nfts.length != 50)
+                        if(Object.keys(data.nfts).length != 50)
                             thisAS.noMoreData();
                     } else {
                         msgBoxRedirect(data.error);
