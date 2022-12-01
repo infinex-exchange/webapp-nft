@@ -82,9 +82,8 @@ function initSelectNft(endpoint = '/nft/wallet/nfts') {
                     });
                         
                     thisAS.done();
-                    
-                    console.log(data.nfts.length);        
-                    if(data.nfts.length != 50)
+                          
+                    if(Object.keys(data.nfts).length != 50)
                         thisAS.noMoreData();
                 } else {
                     msgBoxRedirect(data.error);
