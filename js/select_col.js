@@ -88,8 +88,7 @@ function initSelectCol(endpoint = '/nft/collections') {
                         
                     thisAS.done();
                             
-                    console.log(data.collections.length);
-                    if(data.collections.length != 50)
+                    if(Object.keys(data.collections).length != 50)
                         thisAS.noMoreData();
                 } else {
                     msgBoxRedirect(data.error);
