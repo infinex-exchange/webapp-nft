@@ -11,7 +11,7 @@
         <div id="select-col-data-preloader">
             Loading...
         </div>
-        <div class="select-col-item row p-1 hoverable" data-colid="" data-name="None">
+        <div class="select-col-item select-col-item-none row p-1 hoverable" data-colid="" data-name="None">
             <div class="col-auto m-auto">
                 <strong class="secondary">None</strong>
             </div>

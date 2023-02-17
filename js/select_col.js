@@ -37,6 +37,9 @@ function initSelectCol(endpoint = '/nft/collections', allowNone = false) {
     $('#select-col').val(allowNone ? 'None' : '');
     $('#select-col-data').empty();
     
+    if(!allowNone)
+        $('.select-col-item-none').hide();
+    
     window.selectColAS = new AjaxScroll(
         $('#select-col-data'),
         $('#select-col-data-preloader'),
