@@ -32,9 +32,9 @@ $(document).ready(function() {
     });
 });
 
-function initSelectCol(endpoint = '/nft/collections') {
+function initSelectCol(endpoint = '/nft/collections', allowNone = false) {
     $('#select-col').data('colid', '');
-    $('#select-col').val('');
+    $('#select-col').val(allowNone ? 'None' : '');
     $('#select-col-data').empty();
     
     window.selectColAS = new AjaxScroll(

@@ -11,6 +11,11 @@
         <div id="select-col-data-preloader">
             Loading...
         </div>
+        <div class="select-col-item row p-1 hoverable" data-colid="" data-name="None">
+            <div class="col-auto m-auto">
+                <strong class="secondary">None</strong>
+            </div>
+        </div>
     </div>
 </div>
 <script src="/nft/js/select_col.js?<?php echo filemtime(__DIR__.'/../js/select_col.js'); ?>"></script>
