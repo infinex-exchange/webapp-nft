@@ -32,6 +32,12 @@
                             My purchases
                         </a>
                     </li>
+                    <li>
+                        <a class="dropdown-item auto-active" href="/nft/studio">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            NFT Studio
+                        </a>
+                    </li>
                 </ul>
             </div>
           </li>
