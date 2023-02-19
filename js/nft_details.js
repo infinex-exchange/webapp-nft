@@ -50,7 +50,7 @@ function getNftDetails(nftid, callback = null) {
             });
             $('#nft-attributes').html(attributesHtml == '' ? '-' : `<ul class="m-0">${attributesHtml}</ul>`);
             
-            if(typeof(data.nft.collection) !== 'undefined') {
+            if(typeof(data.nft.collection.name) !== 'undefined') {
                 var colNameHtml = data.nft.collection.name;
                 
                 if(data.nft.collection.icon_url !== null)
