@@ -14,8 +14,18 @@ var txTypeDict = {
 
 var txStatusIconDict = {
     PENDING: 'fa-solid fa-clock',
+    PROCESSING: 'fa-solid fa-cog fa-spin',
     DONE: 'fa-solid fa-check',
+    CANCEL_PENDING: 'fa-solid fa-xmark fa-spin',
     CANCELED: 'fa-solid fa-xmark'
+};
+
+var txStatusDict = {
+    PENDING: 'Pending',
+    PROCESSING: 'Executing',
+    DONE: 'Done',
+    CANCEL_PENDING: 'Canceling',
+    CANCELED: 'Canceled'
 };
 
 var txExecTimeDict = {
@@ -55,7 +65,7 @@ function mobileTxDetails(item, update = false) {
     var confirms = $(item).data('confirms');
     var nxid = $(item).data('nxid');
     
-    $('#mtd-status').html(status);
+    $('#mtd-status').html(txStatusDict[status]);
     $('#mtd-status-icon').removeClass()
                          .addClass(txStatusIconDict[status]);
     if(confirms != '')
@@ -73,7 +83,7 @@ function mobileTxDetails(item, update = false) {
     else
         $('#mtd-delayed-alert').hide();
     
-    if(type == 'WITHDRAWAL' && status == 'PENDING')
+    if(type == 'WITHDRAWAL' && (status == 'PENDING' || status == 'PROCESSING'))
         $('#mtd-cancel-btn').show();
     else
         $('#mtd-cancel-btn').hide();
@@ -183,7 +193,7 @@ function renderTxHistoryItem(data, forceSmall) {
             
             <div class="text-end my-auto ${dNoneDLgBlock}" style="width: 20%">
                 <i class="${txStatusIconDict[data.status]}"></i>
-                ${data.status}
+                ${txStatusDict[data.status]}
                 ${bigConfHtml}
             </div>
             
