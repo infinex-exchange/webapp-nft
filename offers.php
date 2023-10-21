@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../templates/head.php'); ?>
+        <?php include('../../inc/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Infinex NFT</title>
@@ -9,12 +9,9 @@
     <body>
     
         <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Navbar -->
-        <div id="main-navbar">
-	        <?php include('../../templates/navbar.php'); ?>
-	    </div>
         <?php include(__DIR__.'/templates/navbar.php'); ?>
         
         <!-- Root container -->
@@ -184,7 +181,6 @@
         </div>
         </div>
         
-        <?php include('../../templates/modals.php'); ?>
         <script src="/nft/js/js_sizing.js?<?php echo filemtime(__DIR__.'/js/js_sizing.js'); ?>"></script>
         <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/offers.js?<?php echo filemtime(__DIR__.'/js/offers.js'); ?>"></script>

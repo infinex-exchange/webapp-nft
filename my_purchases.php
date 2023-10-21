@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include(__DIR__.'/../../templates/head.php'); ?>
+        <?php include(__DIR__.'/../../inc/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>My purchases | Infinex NFT</title>
@@ -9,10 +9,9 @@
     <body>
     
         <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
         <?php include(__DIR__.'/templates/navbar.php'); ?>
         
         <!-- Root container -->
@@ -47,7 +46,6 @@
         <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/my_purchases.js?<?php echo filemtime(__DIR__.'/js/my_purchases.js'); ?>"></script>
         
-        <?php include(__DIR__.'/../../templates/modals.php'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
     
     </body>

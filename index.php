@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../templates/head.php'); ?>
+        <?php include('../../inc/head.php'); ?>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Infinex NFT</title>
     </head>
     <body class="body-background">
     
         <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
         <?php include(__DIR__.'/templates/navbar.php'); ?>
         
         <!-- Root container -->
@@ -73,12 +72,11 @@
         <!-- / Root container -->
         </div>
         
-        <?php include('../../templates/modals.php'); ?>
         <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
         <!-- Footer -->
-        <?php include('../../templates/footer.html'); ?>
+        <?php include('../../inc/footer.php'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
     
     </body>
