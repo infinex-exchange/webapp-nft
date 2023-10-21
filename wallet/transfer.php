@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../../templates/head.php'); ?>
-        <?php include('../../../imports/bignumber.html'); ?>
+        <?php include('../../../inc/head.php'); ?>
         <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../../../js/validate.js'); ?>"></script>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
@@ -11,10 +10,9 @@
     <body>
     
         <!-- Preloader -->
-        <?php include(__DIR__.'/../../../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../../inc/body.php'); ?>
         
         <!-- Navbar -->
-        <?php include(__DIR__.'/../../../templates/navbar.php'); ?>
         <?php include(__DIR__.'/../templates/navbar.php'); ?>
         
         <!-- Root container -->
@@ -101,7 +99,6 @@
         <?php include(__DIR__.'/../templates/tx_history.html'); ?>
         <script src="/nft/wallet/transfer.js?<?php echo filemtime(__DIR__.'/transfer.js'); ?>"></script>
         
-        <?php include(__DIR__.'/../../../templates/modals.php'); ?>
         <?php include(__DIR__.'/../../../templates/2fa.php'); ?>
         <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     

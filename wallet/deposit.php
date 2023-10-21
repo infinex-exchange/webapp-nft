@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include(__DIR__.'/../../../templates/head.php'); ?>
+        <?php include(__DIR__.'/../../../inc/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
-        <?php include(__DIR__.'/../../../imports/qrcode.html'); ?>
+        <?php include(__DIR__.'/../../../vendor/qrcode.html'); ?>
         <title>Deposit | Infinex NFT</title>
     </head>
     <body>
     
         <!-- Preloader -->
-        <?php include(__DIR__.'/../../../templates/preloader.html'); ?>
+        <?php include(__DIR__.'/../../../inc/body.php'); ?>
         
         <!-- Navbar -->
-        <?php include(__DIR__.'/../../../templates/navbar.php'); ?>
         <?php include(__DIR__.'/../templates/navbar.php'); ?>
         
         <!-- Root container -->
@@ -121,7 +120,6 @@
         <?php include(__DIR__.'/../templates/tx_history.html'); ?>
         <script src="/nft/wallet/deposit.js?<?php echo filemtime(__DIR__.'/deposit.js'); ?>"></script>
         
-        <?php include(__DIR__.'/../../../templates/modals.php'); ?>
         <?php include(__DIR__.'/../templates/mobile_nav.php'); ?>
     
     </body>
