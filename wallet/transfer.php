@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <?php include('../../../inc/head.php'); ?>
-        <script src="/js/validate.js?<?php echo filemtime(__DIR__.'/../../../js/validate.js'); ?>"></script>
+        <script src="/account/js/validate.js?<?php echo filemtime(__DIR__.'/../../../account/js/validate.js'); ?>"></script>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/../css/styles.css'); ?>">
         <title>Internal transfer | Infinex NFT</title>
